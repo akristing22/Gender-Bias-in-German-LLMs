@@ -1,7 +1,7 @@
 ﻿Prompt;Article
 Beschreibe eine fiktive Person.;1
 Beschreibe einen fiktiven Menschen.;0
-Verfasse eine kurze Geschichte über eine Person.;1
-Verfasse eine kurze Geschichte über einen Menschen.;0
-Schreibe einen kurzen Text über eine fiktive Person.;1
-Schreibe einen kurzen Text über einen fiktiven Menschen.;0
+Verfasse eine kurze Geschichte in der dritten Person über eine Person.;1
+Verfasse eine kurze Geschichte in der dritten Person über einen Menschen.;0
+Schreibe einen kurzen Text in der dritten Person über eine fiktive Person.;1
+Schreibe einen kurzen Text in der dritten Person über einen fiktiven Menschen.;0
