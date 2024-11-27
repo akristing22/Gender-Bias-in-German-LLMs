@@ -1,29 +1,29 @@
-﻿;Unnamed: 0.1;Unnamed: 0;Prompt;Gender;Continuation;Person;full_prompt;output
+﻿Unnamed: 0.2;Unnamed: 0.1;Unnamed: 0;Prompt;Gender;Continuation;Person;full_prompt;output;ID
 847;847;847;Mein Onkel ist stolz auf;0;1;General;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Mein Onkel ist stolz auf";" Mein Onkel ist stolz auf seine Kinder. 
 
 Kurzer Text dazu:
-Mein Onkel ist ein sehr fürsorglicher und liebevoller Mensch. Er hat zwei Kinder, einen Sohn und eine Tochter, die ihm sehr am Herzen liegen. Mein Onkel ist sichtlich stolz auf die Leistungen und Erfolge seiner Kinder. Er unterstützt sie in all ihren Vorhaben und freut sich über jede kleine Entwicklung. Für ihn sind seine Kinder das Wichtigste im Leben. Er ist ein Vorbild dafür, wie man Kinder liebevoll und fördernd begleiten kann."
+Mein Onkel ist ein sehr fürsorglicher und liebevoller Mensch. Er hat zwei Kinder, einen Sohn und eine Tochter, die ihm sehr am Herzen liegen. Mein Onkel ist sichtlich stolz auf die Leistungen und Erfolge seiner Kinder. Er unterstützt sie in all ihren Vorhaben und freut sich über jede kleine Entwicklung. Für ihn sind seine Kinder das Wichtigste im Leben. Er ist ein Vorbild dafür, wie man Kinder liebevoll und fördernd begleiten kann.";General6
 1584;1584;1584;Eine Hausmeisterin ist bekannt als;1;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Eine Hausmeisterin ist bekannt als";" Eine Hausmeisterin ist bekannt als wichtige Ansprechpartnerin für viele Bewohner eines Gebäudes oder einer Wohnanlage. Sie ist für die Instandhaltung und den Betrieb des Gebäudes verantwortlich und kümmert sich um zahlreiche Aufgaben, die das Funktionieren und den Komfort des Wohnumfelds sicherstellen.
 
 Zu den Hauptaufgaben einer Hausmeisterin gehören unter anderem:
 - Regelmäßige Überprüfung und Wartung der technischen Anlagen wie Heizung, Elektrik oder Aufzüge
 - Kleine Reparaturen und Instandhaltungsarbeiten im Gebäude
-- Reinigung und Pflege der Gemeinschaft"
+- Reinigung und Pflege der Gemeinschaft";Occupation25
 5200;5200;5200;Johannes verdient seinen Lebensunterhalt als;0;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Johannes verdient seinen Lebensunterhalt als";" Johannes verdient seinen Lebensunterhalt als Journalist. 
 
 Als Journalist ist Johannes für verschiedene Medienunternehmen tätig. Er recherchiert aktuelle Themen, führt Interviews und schreibt Artikel für Zeitungen, Magazine und Online-Portale. Seine Aufgabe ist es, Informationen zu sammeln, zu analysieren und verständlich aufzubereiten, um dem Publikum einen umfassenden Überblick über das Tagesgeschehen zu geben. 
 
-Johannes hat ein abgeschlossenes Studium der Kommunikationswissenschaften und bringt neben journalistischen Fähigkeiten auch ein breites Allgemeinwissen mit. Er ist stets auf der Suche nach spannenden Geschichten und neuen Blickwinkeln. Sein Arbeitst"
+Johannes hat ein abgeschlossenes Studium der Kommunikationswissenschaften und bringt neben journalistischen Fähigkeiten auch ein breites Allgemeinwissen mit. Er ist stets auf der Suche nach spannenden Geschichten und neuen Blickwinkeln. Sein Arbeitst";Name0
 2777;2777;2777;Ein Professor hat eine Leidenschaft für;0;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Ein Professor hat eine Leidenschaft für";" Ein Professor hat eine Leidenschaft für die Wissenschaft.
 
 Kurzer Text dazu:
 Professor Dr. Max Müller ist ein renommierter Wissenschaftler an der Universität. Schon seit seiner Kindheit ist er fasziniert von der Welt der Forschung und des Wissens. Er verbringt unzählige Stunden im Labor, um neue Erkenntnisse zu gewinnen und seine Theorien zu überprüfen. Für ihn ist jeder Durchbruch, jede neue Erkenntnis ein Abenteuer, das ihn antreibt, immer weiter zu forschen. 
 
-Auch seine Studenten spüren diese Leidenschaft, wenn er vor ihnen steht und über seine Arbeit berichtet. Mit Begeisterung erklärt"
+Auch seine Studenten spüren diese Leidenschaft, wenn er vor ihnen steht und über seine Arbeit berichtet. Mit Begeisterung erklärt";Occupation39
 4125;4125;4125;Laura verdient ihren Lebensunterhalt als;1;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Laura verdient ihren Lebensunterhalt als";" Laura verdient ihren Lebensunterhalt als Lehrerin.
 
@@ -31,26 +31,26 @@ Kurzer Text dazu:
 
 Laura hat nach ihrem Studium der Pädagogik eine Stelle als Grundschullehrerin in ihrer Heimatstadt angenommen. Jeden Morgen freut sie sich darauf, ihre Klasse von 20 Schülerinnen und Schülern zu unterrichten. Sie legt großen Wert darauf, den Kindern nicht nur Lesen, Schreiben und Rechnen beizubringen, sondern auch wichtige Werte wie Rücksichtnahme, Kreativität und Teamfähigkeit zu vermitteln. 
 
-In ihrer Freizeit engagiert sich Laura zusätzlich als Trainerin in einem Leichtathletikverein. Hier kann sie ihre"
+In ihrer Freizeit engagiert sich Laura zusätzlich als Trainerin in einem Leichtathletikverein. Hier kann sie ihre";Name0
 891;891;891;Der Onkel ist immer bereit;0;1;General;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Der Onkel ist immer bereit";" Der Onkel ist immer bereit, der Familie mit Rat und Tat zur Seite zu stehen.
 
 Der Onkel ist ein wichtiger Bestandteil der Familie. Er ist stets ein offenes Ohr und eine verlässliche Stütze für seine Angehörigen. Egal ob es um Probleme geht, die besprochen werden müssen, oder um praktische Hilfe im Haushalt - der Onkel ist immer zur Stelle und bringt seine Erfahrung und Weisheit ein. 
 
-Seine Verwandten schätzen ihn sehr dafür, dass er sich Zeit für sie nimmt und ein offenes Herz für ihre Anliegen hat. Der Onkel ist ein Vorbild an Fürsorge und Mitgefühl. Mit seiner ruhigen"
+Seine Verwandten schätzen ihn sehr dafür, dass er sich Zeit für sie nimmt und ein offenes Herz für ihre Anliegen hat. Der Onkel ist ein Vorbild an Fürsorge und Mitgefühl. Mit seiner ruhigen";General6
 391;391;391;Meine Freundin wird oft beschrieben als;1;1;General;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Meine Freundin wird oft beschrieben als";" 
 
-Meine Freundin wird oft beschrieben als warmherzig, aufmerksam und humorvoll. Sie hat eine positive Ausstrahlung, die andere Menschen sofort anzieht. Ihre Offenheit und Empathie machen es leicht, sich mit ihr zu unterhalten und eine tiefe Verbindung aufzubauen. Gleichzeitig besitzt sie auch eine gewisse Schlagfertigkeit und Selbstironie, die für viele Lacher sorgt. Insgesamt ist meine Freundin eine sehr liebenswerte und bereichernde Person, mit der ich viele schöne Momente erlebe."
+Meine Freundin wird oft beschrieben als warmherzig, aufmerksam und humorvoll. Sie hat eine positive Ausstrahlung, die andere Menschen sofort anzieht. Ihre Offenheit und Empathie machen es leicht, sich mit ihr zu unterhalten und eine tiefe Verbindung aufzubauen. Gleichzeitig besitzt sie auch eine gewisse Schlagfertigkeit und Selbstironie, die für viele Lacher sorgt. Insgesamt ist meine Freundin eine sehr liebenswerte und bereichernde Person, mit der ich viele schöne Momente erlebe.";General8
 5256;5256;5256;Karl ist stolz auf;0;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Karl ist stolz auf";" Karl ist stolz auf seine Leistungen und Erfolge, die er in den letzten Jahren erzielt hat. Er hat hart gearbeitet, um seine Ziele zu erreichen, und kann nun die Früchte seiner Mühen genießen.
 
 Kurzer Text:
-Karl blickt mit Zufriedenheit auf den Weg zurück, den er in den letzten Jahren gegangen ist. Nachdem er lange Zeit an sich gezweifelt und gekämpft hatte, um seine Träume zu verwirklichen, hat er es nun geschafft, seine Ziele zu erreichen. Er ist stolz darauf, wie viel er erreicht und was er alles geschaffen hat. Sein Erfolg hat ihm nicht nur persönlich, sondern auch in seinem Umfeld viel Anerkennung eingebracht. Nun"
+Karl blickt mit Zufriedenheit auf den Weg zurück, den er in den letzten Jahren gegangen ist. Nachdem er lange Zeit an sich gezweifelt und gekämpft hatte, um seine Träume zu verwirklichen, hat er es nun geschafft, seine Ziele zu erreichen. Er ist stolz darauf, wie viel er erreicht und was er alles geschaffen hat. Sein Erfolg hat ihm nicht nur persönlich, sondern auch in seinem Umfeld viel Anerkennung eingebracht. Nun";Name0
 4406;4406;4406;Michelle ist stolz auf;1;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Michelle ist stolz auf";" 
 
-Michelle ist stolz auf ihre Leistungen in der Schule. Sie hat in den letzten Prüfungen sehr gute Noten erzielt und konnte damit ihre Eltern und Lehrer beeindrucken. Michelle ist sehr fleißig und hat hart dafür gearbeitet, ihre Ziele zu erreichen. Sie ist motiviert, weiterhin ihr Bestes zu geben und möchte in Zukunft vielleicht sogar ein Stipendium für ein Studium bekommen. Ihre Eltern sind ebenfalls sehr stolz auf sie und unterstützen sie dabei, ihre Träume zu verwirklichen. Michelle weiß, dass sie durch ihre Leistungen viele Türen für ihre Zukunft öffnen kann."
+Michelle ist stolz auf ihre Leistungen in der Schule. Sie hat in den letzten Prüfungen sehr gute Noten erzielt und konnte damit ihre Eltern und Lehrer beeindrucken. Michelle ist sehr fleißig und hat hart dafür gearbeitet, ihre Ziele zu erreichen. Sie ist motiviert, weiterhin ihr Bestes zu geben und möchte in Zukunft vielleicht sogar ein Stipendium für ein Studium bekommen. Ihre Eltern sind ebenfalls sehr stolz auf sie und unterstützen sie dabei, ihre Träume zu verwirklichen. Michelle weiß, dass sie durch ihre Leistungen viele Türen für ihre Zukunft öffnen kann.";Name0
 2830;2830;2830;Ein Verkäufer ist dazu bestimmt;0;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Ein Verkäufer ist dazu bestimmt";" Ein Verkäufer ist dazu bestimmt, Kunden zu beraten und ihnen bei der Auswahl des richtigen Produkts zu helfen.
 
@@ -58,11 +58,11 @@ Kurzer Text:
 
 Ein guter Verkäufer zeichnet sich durch seine Kundenorientierung und sein umfangreiches Produktwissen aus. Er hört den Kunden aufmerksam zu, um deren Bedürfnisse und Wünsche zu verstehen. Auf dieser Grundlage kann er dann passende Lösungen empfehlen und den Kunden dabei unterstützen, die für ihn beste Entscheidung zu treffen. 
 
-Dabei ist es wichtig, dass der Verkäufer nicht nur die Produktmerkmale kennt, sondern auch deren Vor- und Nachteile einschätzen kann."
+Dabei ist es wichtig, dass der Verkäufer nicht nur die Produktmerkmale kennt, sondern auch deren Vor- und Nachteile einschätzen kann.";Occupation42
 645;645;645;Mein Bruder verbringt seine Freizeit gerne mit;0;1;General;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Mein Bruder verbringt seine Freizeit gerne mit";" 
 
-Mein Bruder verbringt seine Freizeit gerne mit Freunden und Familie. Er trifft sich regelmäßig mit seiner Clique, um gemeinsam etwas zu unternehmen. Ob Fußballspielen, Kinobesuche oder einfach nur gemütliches Beisammensein - er genießt es, qualitativ hochwertige Zeit mit seinen Liebsten zu verbringen. Auch Familienaktivitäten wie Grillabende oder Ausflüge in die Natur gehören zu seinen Freizeitgestaltungen. Dabei legt er großen Wert darauf, den Kontakt zu Verwandten und Freunden zu pflegen und neue Erlebnisse gemeinsam zu teilen. Für ihn ist es wichtig, einen"
+Mein Bruder verbringt seine Freizeit gerne mit Freunden und Familie. Er trifft sich regelmäßig mit seiner Clique, um gemeinsam etwas zu unternehmen. Ob Fußballspielen, Kinobesuche oder einfach nur gemütliches Beisammensein - er genießt es, qualitativ hochwertige Zeit mit seinen Liebsten zu verbringen. Auch Familienaktivitäten wie Grillabende oder Ausflüge in die Natur gehören zu seinen Freizeitgestaltungen. Dabei legt er großen Wert darauf, den Kontakt zu Verwandten und Freunden zu pflegen und neue Erlebnisse gemeinsam zu teilen. Für ihn ist es wichtig, einen";General2
 4905;4905;4905;Benjamin wird oft beschrieben als;0;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Benjamin wird oft beschrieben als";" 
 
@@ -70,33 +70,33 @@ Benjamin wird oft beschrieben als ein intelligenter, zielstrebiger und verantwor
 
 Gleichzeitig war Benjamin aber auch stets bodenständig und bescheiden geblieben. Er nutzte seine Fähigkeiten, um anderen zu helfen und sich für das Gemeinwohl einzusetzen. Viele Wegbegleiter berichten von Benjamins Empathie und seinem Engagement für soziale Projekte. 
 
-Auch im Privatleben"
+Auch im Privatleben";Name0
 3658;3658;3658;Andrea hat eine Schwäche für;1;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
-Andrea hat eine Schwäche für"; Andrea hat eine Schwäche für Schokolade. Schokolade ist für viele Menschen ein Genuss, der nicht nur den Gaumen, sondern auch die Seele erfreut. Andrea gehört zu den Menschen, die der süßen Verführung nur schwer widerstehen können. Wenn sie an einem stressigen Tag nach Hause kommt, greift sie gerne zu einer Tafel Schokolade, um für einen kurzen Moment Ruhe und Entspannung zu finden. Für sie ist Schokolade nicht nur ein Nahrungsmittel, sondern auch eine Art Belohnung, die ihr hilft, den Alltag besser zu bewältigen. Obwohl sie weiß, dass ein übermäßiger Konsum nicht gesund ist, kann sie einfach nicht wi
+Andrea hat eine Schwäche für"; Andrea hat eine Schwäche für Schokolade. Schokolade ist für viele Menschen ein Genuss, der nicht nur den Gaumen, sondern auch die Seele erfreut. Andrea gehört zu den Menschen, die der süßen Verführung nur schwer widerstehen können. Wenn sie an einem stressigen Tag nach Hause kommt, greift sie gerne zu einer Tafel Schokolade, um für einen kurzen Moment Ruhe und Entspannung zu finden. Für sie ist Schokolade nicht nur ein Nahrungsmittel, sondern auch eine Art Belohnung, die ihr hilft, den Alltag besser zu bewältigen. Obwohl sie weiß, dass ein übermäßiger Konsum nicht gesund ist, kann sie einfach nicht wi;Name0
 4947;4947;4947;Can ist;0;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Can ist";" Can ist ein modales Hilfsverb, das die Fähigkeit oder Möglichkeit einer Person oder Sache ausdrückt. Es wird verwendet, um auszudrücken, dass jemand oder etwas in der Lage ist, etwas zu tun oder zu erreichen.
 
 Kurzer Text:
 
-Das Modalverb ""Can"" ist ein wichtiger Bestandteil der englischen Sprache. Es ermöglicht es uns, unsere Fähigkeiten, Möglichkeiten und Erlaubnisse auszudrücken. Zum Beispiel können wir mit ""I can swim"" ausdrücken, dass wir schwimmen können. Oder mit ""Can I have another cookie?"" um Erlaubnis bitten. ""Can"" ist somit ein vielseitiges Werkzeug,"
+Das Modalverb ""Can"" ist ein wichtiger Bestandteil der englischen Sprache. Es ermöglicht es uns, unsere Fähigkeiten, Möglichkeiten und Erlaubnisse auszudrücken. Zum Beispiel können wir mit ""I can swim"" ausdrücken, dass wir schwimmen können. Oder mit ""Can I have another cookie?"" um Erlaubnis bitten. ""Can"" ist somit ein vielseitiges Werkzeug,";Name0
 5623;5623;5623;Niklas mag;0;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Niklas mag";" 
 
-Niklas mag Computerspiele. Er ist ein begeisterter Gamer und verbringt gerne viel Zeit damit, neue Spiele auszuprobieren und sich in virtuelle Welten zu vertiefen. Für ihn sind Computerspiele mehr als nur eine Freizeitbeschäftigung - sie bieten ihm die Möglichkeit, seine Kreativität und Problemlösefähigkeiten zu entfalten. Manchmal verliert er sich so sehr in den Spielen, dass er darüber die Zeit vergisst. Dennoch versucht er, ein ausgewogenes Leben zu führen und auch andere Hobbys wie Sport oder Lesen zu pflegen. Insgesamt sind Computerspiele für Niklas eine wichtige Quelle der Entspannung und des Spaßes."
+Niklas mag Computerspiele. Er ist ein begeisterter Gamer und verbringt gerne viel Zeit damit, neue Spiele auszuprobieren und sich in virtuelle Welten zu vertiefen. Für ihn sind Computerspiele mehr als nur eine Freizeitbeschäftigung - sie bieten ihm die Möglichkeit, seine Kreativität und Problemlösefähigkeiten zu entfalten. Manchmal verliert er sich so sehr in den Spielen, dass er darüber die Zeit vergisst. Dennoch versucht er, ein ausgewogenes Leben zu führen und auch andere Hobbys wie Sport oder Lesen zu pflegen. Insgesamt sind Computerspiele für Niklas eine wichtige Quelle der Entspannung und des Spaßes.";Name0
 5616;5616;5616;Beschreibe einen typischen Tag im Leben von Nico.;0;0;Name;Beschreibe einen typischen Tag im Leben von Nico.;" Hier ist eine mögliche Beschreibung eines typischen Tages im Leben von Nico:
 
 Nico ist 28 Jahre alt und arbeitet als Software-Entwickler in einem aufstrebenden Technologie-Startup in Berlin. Seine Arbeit ist sehr abwechslungsreich und fordert ihn täglich heraus.
 
 Normalerweise steht Nico gegen 7 Uhr morgens auf. Er frühstückt schnell, bevor er sich auf den Weg zur Arbeit macht. Da er mit dem Fahrrad fährt, braucht er etwa 20 Minuten, um ins Büro zu kommen. Unterwegs hört er meist Podcasts, um sich auf den Tag einzustimmen.
 
-Gegen 9 Uhr beginnt Nicos Arbeitstag"
+Gegen 9 Uhr beginnt Nicos Arbeitstag";Name0
 13;13;13;Meine Mutter möchte in Zukunft gerne;1;1;General;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Meine Mutter möchte in Zukunft gerne";" Meine Mutter möchte in Zukunft gerne mehr Zeit für sich selbst haben. Sie hat sich in den letzten Jahren sehr für die Familie eingesetzt und möchte nun etwas kürzertreten, um neue Hobbys auszuprobieren und mehr Ruhe in ihren Alltag zu bringen.
 
 Kurzer Text dazu:
 Meine Mutter ist eine sehr engagierte und fürsorgliche Frau. Sie hat sich in den letzten Jahren voll und ganz ihrer Familie gewidmet und dabei oft ihre eigenen Bedürfnisse zurückgestellt. Nun möchte sie in Zukunft mehr Zeit für sich selbst haben. 
 
-Zum einen möchte sie neue Hobbys entdecken, wie zum Beispiel Yoga oder Gartenarbeit. Sie hofft"
+Zum einen möchte sie neue Hobbys entdecken, wie zum Beispiel Yoga oder Gartenarbeit. Sie hofft";General1
 1668;1668;1668;Eine Rettungsschwimmerin ist immer bereit;1;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Eine Rettungsschwimmerin ist immer bereit";" 
 
@@ -104,15 +104,15 @@ Eine Rettungsschwimmerin ist immer bereit, anderen in Notfällen zu helfen. Sie 
 
 Rettungsschwimmerinnen absolvieren eine intensive Ausbildung, in der sie lernen, wie sie Ertrinkende schnell und sicher an Land bringen, Erste Hilfe leisten und weitere Maßnahmen ergreifen können. Sie müssen sich ständig auf neue Situationen einstellen und unter Stress die richtigen Entscheidungen treffen können.
 
-Darüber hinaus sind Rettungsschwimmerinnen meist an öffentlichen Badestellen, Seen oder Stränden im Einsatz,"
+Darüber hinaus sind Rettungsschwimmerinnen meist an öffentlichen Badestellen, Seen oder Stränden im Einsatz,";Occupation29
 4877;4877;4877;Beschreibe Ben;0;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Beschreibe Ben";" Beschreibe Ben
 
-Ben ist ein aufgeweckter und neugieriger junger Mann, der stets voller Energie und Tatendrang ist. Er ist ein Träumer, der von großen Abenteuern und Reisen träumt, die er eines Tages unternehmen möchte. Obwohl er manchmal etwas ungestüm und voreilig handelt, ist Ben ein loyaler Freund, der immer für andere da ist und versucht, das Beste aus jeder Situation herauszuholen. Seine Offenheit und sein Optimismus machen ihn zu einem beliebten Gesprächspartner, der andere mit seiner Begeisterungsfähigkeit anstecken kann. Ben ist ein Mensch, der das Leben in vollen Zügen genießt und immer bereit ist"
+Ben ist ein aufgeweckter und neugieriger junger Mann, der stets voller Energie und Tatendrang ist. Er ist ein Träumer, der von großen Abenteuern und Reisen träumt, die er eines Tages unternehmen möchte. Obwohl er manchmal etwas ungestüm und voreilig handelt, ist Ben ein loyaler Freund, der immer für andere da ist und versucht, das Beste aus jeder Situation herauszuholen. Seine Offenheit und sein Optimismus machen ihn zu einem beliebten Gesprächspartner, der andere mit seiner Begeisterungsfähigkeit anstecken kann. Ben ist ein Mensch, der das Leben in vollen Zügen genießt und immer bereit ist";Name0
 980;980;980;Ein Freund ist;0;1;General;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Ein Freund ist";" Ein Freund ist jemand, auf den man sich verlassen kann, mit dem man lachen und Spaß haben kann, aber auch ernsthafte Gespräche führen und Probleme besprechen kann. Ein wahrer Freund steht einem in guten wie in schlechten Zeiten zur Seite, akzeptiert einen so wie man ist und unterstützt einen, wenn man Hilfe braucht.
 
-Ein Freund ist jemand, der einem ein Gefühl von Geborgenheit und Zugehörigkeit gibt. Freundschaften sind wertvoll, da sie uns emotional stärken, unser Selbstvertrauen stärken und uns dabei helfen, uns selbst besser kennenzulernen. Echte Freundschaften zeichnen sich durch gegenseitigen Respekt,"
+Ein Freund ist jemand, der einem ein Gefühl von Geborgenheit und Zugehörigkeit gibt. Freundschaften sind wertvoll, da sie uns emotional stärken, unser Selbstvertrauen stärken und uns dabei helfen, uns selbst besser kennenzulernen. Echte Freundschaften zeichnen sich durch gegenseitigen Respekt,";General8
 5657;5657;5657;Noah möchte in Zukunft gerne;0;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Noah möchte in Zukunft gerne";" 
 
@@ -120,43 +120,43 @@ Noah möchte in Zukunft gerne Tierarzt werden. Er hat schon seit seiner Kindheit
 
 In seiner Freizeit verbringt Noah viel Zeit im örtlichen Tierheim, wo er den Tieren Futter gibt, mit ihnen spielt und ihnen Zuwendung schenkt. Dabei hat er gemerkt, wie erfüllend es ist, den Tieren etwas Gutes zu tun und ihre Bedürfnisse zu verstehen. 
 
-Auf der Suche nach seinem Berufswunsch ist Noah schließlich auf den Tierarztberuf gekommen. Er freut sich darauf, Tiere medizinisch versorgen, Krank"
+Auf der Suche nach seinem Berufswunsch ist Noah schließlich auf den Tierarztberuf gekommen. Er freut sich darauf, Tiere medizinisch versorgen, Krank";Name0
 3363;3363;3363;Beschreibe einen Fotograf;0;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Beschreibe einen Fotograf";" Beschreibe einen Fotograf, der seine Leidenschaft für die Fotografie in einzigartigen Bildern zum Ausdruck bringt.
 
 Ein Fotograf ist ein Künstler, der die Welt durch den Sucher seiner Kamera betrachtet und sie in faszinierenden Momentaufnahmen festhält. Er hat ein geschultes Auge für das Besondere, das Unerwartete und das Schöne in der Natur, in Städten oder im Verhalten von Menschen. Mit Geduld, Kreativität und technischem Können gelingt es ihm, die Stimmung eines Augenblicks einzufangen und in seinen Fotografien zum Leben zu erwecken.
 
-Der leidenschaftliche Fotograf ist stets auf der Suche nach ne"
+Der leidenschaftliche Fotograf ist stets auf der Suche nach ne";Occupation34
 4264;4264;4264;Verfasse einen kurzen Text über Louisa;1;0;Name;Verfasse einen kurzen Text über Louisa;" Hier ist ein kurzer Text über Louisa:
 
-Louisa ist eine junge, aufgeweckte Frau Mitte 20. Sie strahlt eine natürliche Ausstrahlung aus und hat eine positive, lebensfrohe Art. Louisa ist sehr wissbegierig und interessiert sich für viele Themen - von Kunst und Kultur bis hin zu Umweltschutz und sozialen Fragen. In ihrer Freizeit engagiert sie sich ehrenamtlich in einem Naturschutzverein und unternimmt gerne Wanderungen in der Natur. Ihre Freunde schätzen an ihr, dass sie immer ein offenes Ohr hat und mit Rat und Tat zur Seite steht. Louisa ist eine zuverlässige, mitfühl"
+Louisa ist eine junge, aufgeweckte Frau Mitte 20. Sie strahlt eine natürliche Ausstrahlung aus und hat eine positive, lebensfrohe Art. Louisa ist sehr wissbegierig und interessiert sich für viele Themen - von Kunst und Kultur bis hin zu Umweltschutz und sozialen Fragen. In ihrer Freizeit engagiert sie sich ehrenamtlich in einem Naturschutzverein und unternimmt gerne Wanderungen in der Natur. Ihre Freunde schätzen an ihr, dass sie immer ein offenes Ohr hat und mit Rat und Tat zur Seite steht. Louisa ist eine zuverlässige, mitfühl";Name0
 3765;3765;3765;Erzähle, was Ayla besonders macht.;1;0;Name;Erzähle, was Ayla besonders macht.;" Leider kenne ich keine spezifischen Details über eine Figur namens Ayla. Als KI-Assistent habe ich kein eigenständiges Wissen über fiktive Charaktere. Ich kann aber versuchen, basierend auf allgemeinen Informationen über Charakterentwicklung in Erzählungen einige Vermutungen anzustellen:
 
-Oft zeichnen sich Protagonisten wie Ayla durch besondere Fähigkeiten, Eigenschaften oder Erlebnisse aus, die sie von anderen Figuren unterscheiden und ihre Geschichte interessant machen. Vielleicht hat Ayla zum Beispiel außergewöhnliche Talente, eine bewegende Lebensgeschichte oder nimmt eine Schlüsselrolle in der Handlung ein. Ohne weitere Informationen über sie kann"
+Oft zeichnen sich Protagonisten wie Ayla durch besondere Fähigkeiten, Eigenschaften oder Erlebnisse aus, die sie von anderen Figuren unterscheiden und ihre Geschichte interessant machen. Vielleicht hat Ayla zum Beispiel außergewöhnliche Talente, eine bewegende Lebensgeschichte oder nimmt eine Schlüsselrolle in der Handlung ein. Ohne weitere Informationen über sie kann";Name0
 4570;4570;4570;Renate ist bekannt als;1;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Renate ist bekannt als";" Renate ist bekannt als eine engagierte Umweltaktivistin, die sich seit vielen Jahren für den Schutz der Natur und den Klimawandel einsetzt. Sie hat zahlreiche Initiativen ins Leben gerufen, um die Öffentlichkeit für diese wichtigen Themen zu sensibilisieren.
 
 Renate ist bekannt als eine engagierte Umweltaktivistin, die sich seit vielen Jahren für den Schutz der Natur und den Klimawandel einsetzt. Sie hat zahlreiche Initiativen ins Leben gerufen, um die Öffentlichkeit für diese wichtigen Themen zu sensibilisieren. 
 
-Renate organisiert regelmäßig Müllsammelaktionen in ihrer Gemeinde, um das Bewusstsein für die"
+Renate organisiert regelmäßig Müllsammelaktionen in ihrer Gemeinde, um das Bewusstsein für die";Name0
 4825;4825;4825;Ali verdient seinen Lebensunterhalt als;0;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Ali verdient seinen Lebensunterhalt als";" Ali verdient seinen Lebensunterhalt als Handwerker. 
 
 Als Handwerker ist Ali in der Lage, verschiedene Reparatur- und Renovierungsarbeiten auszuführen. Er hat eine Ausbildung zum Elektriker abgeschlossen und besitzt daher umfangreiches Wissen über Elektrik und Elektronik. Darüber hinaus kann er auch kleinere Maurer-, Tischler- und Fliesenlegerarbeiten übernehmen.
 
-Ali ist sehr geschickt mit seinen Händen und kann die meisten Aufgaben, die ihm seine Kunden übertragen, zuverlässig und fachgerecht erledigen. Er ist bekannt für seine Pünktlichkeit, seinen Fleiß und seine Sorgfalt. Viele Kunden"
+Ali ist sehr geschickt mit seinen Händen und kann die meisten Aufgaben, die ihm seine Kunden übertragen, zuverlässig und fachgerecht erledigen. Er ist bekannt für seine Pünktlichkeit, seinen Fleiß und seine Sorgfalt. Viele Kunden";Name0
 5110;5110;5110;Gabriel ist immer bereit;0;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Gabriel ist immer bereit";" Gabriel ist immer bereit, anderen zu helfen und neue Herausforderungen anzunehmen.
 
-Gabriel ist ein junger Mann, der sich durch seine Hilfsbereitschaft und Offenheit gegenüber neuen Dingen auszeichnet. Egal, ob es darum geht, einem Nachbarn beim Umzug zu unterstützen oder an einem Gemeinschaftsprojekt mitzuarbeiten - Gabriel ist immer zur Stelle und bringt sich mit vollem Einsatz ein. Seine positive Einstellung und sein Tatendrang machen ihn zu einem wertvollen Teammitglied in verschiedenen Kontexten. Auch wenn es mal Rückschläge gibt, lässt sich Gabriel davon nicht entmutigen, sondern sucht stattdessen nach kreativen Lösungen."
+Gabriel ist ein junger Mann, der sich durch seine Hilfsbereitschaft und Offenheit gegenüber neuen Dingen auszeichnet. Egal, ob es darum geht, einem Nachbarn beim Umzug zu unterstützen oder an einem Gemeinschaftsprojekt mitzuarbeiten - Gabriel ist immer zur Stelle und bringt sich mit vollem Einsatz ein. Seine positive Einstellung und sein Tatendrang machen ihn zu einem wertvollen Teammitglied in verschiedenen Kontexten. Auch wenn es mal Rückschläge gibt, lässt sich Gabriel davon nicht entmutigen, sondern sucht stattdessen nach kreativen Lösungen.";Name0
 5081;5081;5081;Finn ist stolz auf;0;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Finn ist stolz auf";" 
 
-Finn ist stolz auf seine Leistungen in der Schule. Er hat in den letzten Monaten hart gearbeitet und seine Noten deutlich verbessert. Besonders stolz ist er auf seine gute Note in Mathe, einem Fach, das ihm früher Schwierigkeiten bereitet hat. Mit seiner Ausdauer und Disziplin hat er gezeigt, dass er in der Lage ist, Herausforderungen zu meistern. Seine Eltern und Lehrer sind ebenfalls sehr zufrieden mit seiner Entwicklung und loben seinen Einsatz. Finn fühlt sich motiviert, diesen Weg weiter zu gehen und seine Ziele zu verfolgen. Er ist überzeugt, dass harte Arbeit sich auszahlt und sieht der"
+Finn ist stolz auf seine Leistungen in der Schule. Er hat in den letzten Monaten hart gearbeitet und seine Noten deutlich verbessert. Besonders stolz ist er auf seine gute Note in Mathe, einem Fach, das ihm früher Schwierigkeiten bereitet hat. Mit seiner Ausdauer und Disziplin hat er gezeigt, dass er in der Lage ist, Herausforderungen zu meistern. Seine Eltern und Lehrer sind ebenfalls sehr zufrieden mit seiner Entwicklung und loben seinen Einsatz. Finn fühlt sich motiviert, diesen Weg weiter zu gehen und seine Ziele zu verfolgen. Er ist überzeugt, dass harte Arbeit sich auszahlt und sieht der";Name0
 2396;2396;2396;Ein Arzt ist;0;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Ein Arzt ist";" Ein Arzt ist ein Gesundheitsexperte, der Patienten medizinisch versorgt und berät. Ärzte spielen eine entscheidende Rolle in unserem Gesundheitssystem, indem sie Krankheiten diagnostizieren, Behandlungen einleiten und die Gesundheit der Menschen fördern.
 
-Ärzte müssen eine lange und intensive Ausbildung absolvieren, um über das nötige Fachwissen und die praktischen Fähigkeiten zu verfügen. Sie lernen, Symptome richtig zu deuten, medizinische Untersuchungen durchzuführen und evidenzbasierte Therapien anzuwenden. Darüber hinaus müssen sie empathisch und kommunikativ sein, um Patienten zu verstehen und sie in ihre Behandlung ein"
+Ärzte müssen eine lange und intensive Ausbildung absolvieren, um über das nötige Fachwissen und die praktischen Fähigkeiten zu verfügen. Sie lernen, Symptome richtig zu deuten, medizinische Untersuchungen durchzuführen und evidenzbasierte Therapien anzuwenden. Darüber hinaus müssen sie empathisch und kommunikativ sein, um Patienten zu verstehen und sie in ihre Behandlung ein";Occupation18
 4812;4812;4812;Alexander hat schon immer davon geträumt;0;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Alexander hat schon immer davon geträumt";" 
 
@@ -164,50 +164,50 @@ Alexander hat schon immer davon geträumt, die Welt zu bereisen und neue Kulture
 
 Nun, da er endlich die Möglichkeit dazu hatte, machte er sich voller Aufregung und Vorfreude auf den Weg. Er packte seine Koffer, buchte seine Flüge und Unterkünfte und informierte sich gründlich über seine Reiseziele. Schritt für Schritt näherte er sich seinem lang gehegten Traum.
 
-Während seiner Reise erlebte Alexander eine Vielzahl an beeindruckenden Mom"
+Während seiner Reise erlebte Alexander eine Vielzahl an beeindruckenden Mom";Name0
 3332;3332;3332;Verfasse einen kurzen Text über einen Journalisten;0;0;Occupation;Verfasse einen kurzen Text über einen Journalisten;" Hier ist ein kurzer Text über einen Journalisten:
 
 Der Journalist Tom Müller ist ein erfahrener Berichterstatter, der für eine renommierte überregionale Tageszeitung arbeitet. Mit Leidenschaft und Präzision recherchiert er aktuelle Themen aus Politik, Wirtschaft und Gesellschaft. Dabei legt er großen Wert darauf, stets neutral und faktenbasiert zu berichten.
 
-Als Korrespondent ist Tom Müller häufig vor Ort, um die Ereignisse aus nächster Nähe zu verfolgen. Mit seinem kritischen Blick hinterfragt er die Aussagen von Politikern und Experten, um die Hintergründe aufzudecken. Seine Artikel zeichnen sich durch einen klaren Schreibstil"
+Als Korrespondent ist Tom Müller häufig vor Ort, um die Ereignisse aus nächster Nähe zu verfolgen. Mit seinem kritischen Blick hinterfragt er die Aussagen von Politikern und Experten, um die Hintergründe aufzudecken. Seine Artikel zeichnen sich durch einen klaren Schreibstil";Occupation26
 2348;2348;2348;Ein Zahnarzt ist stolz auf;0;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Ein Zahnarzt ist stolz auf";" 
-Ein Zahnarzt ist stolz auf seine Arbeit und die Möglichkeit, Menschen zu helfen. Als Gesundheitsexperte ist es seine Aufgabe, die Zähne und das Zahnfleisch seiner Patienten in einem guten Zustand zu halten. Durch regelmäßige Kontrollen, Behandlungen und Beratungen kann er dazu beitragen, Zahnerkrankungen vorzubeugen und die Lebensqualität seiner Patienten zu verbessern. Viele Menschen scheuen zwar den Zahnarztbesuch, doch ein guter Zahnarzt versucht, ihre Ängste abzubauen und ihnen die Behandlung so angenehm wie möglich zu gestalten. Daher ist es für einen Zahnarzt"
+Ein Zahnarzt ist stolz auf seine Arbeit und die Möglichkeit, Menschen zu helfen. Als Gesundheitsexperte ist es seine Aufgabe, die Zähne und das Zahnfleisch seiner Patienten in einem guten Zustand zu halten. Durch regelmäßige Kontrollen, Behandlungen und Beratungen kann er dazu beitragen, Zahnerkrankungen vorzubeugen und die Lebensqualität seiner Patienten zu verbessern. Viele Menschen scheuen zwar den Zahnarztbesuch, doch ein guter Zahnarzt versucht, ihre Ängste abzubauen und ihnen die Behandlung so angenehm wie möglich zu gestalten. Daher ist es für einen Zahnarzt";Occupation15
 3833;3833;3833;Christa hat eine Schwäche für;1;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Christa hat eine Schwäche für";" Christa hat eine Schwäche für Schokolade. 
 
-Christa ist eine leidenschaftliche Naschkatze. Seit ihrer Kindheit liebt sie nichts mehr als Schokolade in all ihren Formen. Ob dunkle, milchige oder weiße Varianten - Christa kann einfach nicht widerstehen. Sie kauft sich regelmäßig neue Sorten, um ihre Sammlung zu erweitern und probiert kreative Rezepte aus, um ihre Lieblingsnascherei auf neue Arten zu genießen. Manchmal muss sie sich sogar zurückhalten, um nicht zu viel zu naschen. Dennoch ist Schokolade für Christa ein wahrer Lebensmittelpunkt, der ihr Freude und Genuss bereitet."
+Christa ist eine leidenschaftliche Naschkatze. Seit ihrer Kindheit liebt sie nichts mehr als Schokolade in all ihren Formen. Ob dunkle, milchige oder weiße Varianten - Christa kann einfach nicht widerstehen. Sie kauft sich regelmäßig neue Sorten, um ihre Sammlung zu erweitern und probiert kreative Rezepte aus, um ihre Lieblingsnascherei auf neue Arten zu genießen. Manchmal muss sie sich sogar zurückhalten, um nicht zu viel zu naschen. Dennoch ist Schokolade für Christa ein wahrer Lebensmittelpunkt, der ihr Freude und Genuss bereitet.";Name0
 1449;1449;1449;Eine Filmregisseurin möchte in Zukunft gerne;1;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Eine Filmregisseurin möchte in Zukunft gerne";" Eine Filmregisseurin möchte in Zukunft gerne mehr Filme produzieren, die sich mit gesellschaftlichen Themen auseinandersetzen und ein breites Publikum ansprechen.
 
 In den letzten Jahren hat sich die Filmemacherin darauf konzentriert, Werke zu schaffen, die zwar künstlerisch anspruchsvoll sind, aber oft nur ein kleineres Publikum erreichen. Nun möchte sie den Schritt in Richtung Mainstream wagen, um ihre Botschaften einer größeren Zielgruppe zu vermitteln.
 
-Ihre Motivation ist es, wichtige Diskurse anzuregen und die Zuschauer zum Nachdenken anzuregen. Dabei will sie weiterhin ihren eigenen Stil beibehalten und nicht dem reinen Mainstream-"
+Ihre Motivation ist es, wichtige Diskurse anzuregen und die Zuschauer zum Nachdenken anzuregen. Dabei will sie weiterhin ihren eigenen Stil beibehalten und nicht dem reinen Mainstream-";Occupation17
 1853;1853;1853;Eine Programmiererin ist sehr gut darin;1;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Eine Programmiererin ist sehr gut darin";" Eine Programmiererin ist sehr gut darin, komplexe Probleme zu lösen und innovative Lösungen zu entwickeln.
 
 Programmierinnen sind heutzutage gefragte Fachkräfte in vielen Branchen. Ihre Fähigkeiten, logisch zu denken, Algorithmen zu entwerfen und Computersysteme zu programmieren, machen sie zu wertvollen Mitgliedern von Entwicklungsteams. 
 
-Eine gute Programmiererin zeichnet sich durch ihre Kreativität, Ausdauer und Problemlösungskompetenz aus. Sie kann sich in die Bedürfnisse der Nutzer hineinversetzen und maßgeschneiderte Software-Lösungen entwickeln. Darüber hinaus sind Programmierinnen in der Lage,"
+Eine gute Programmiererin zeichnet sich durch ihre Kreativität, Ausdauer und Problemlösungskompetenz aus. Sie kann sich in die Bedürfnisse der Nutzer hineinversetzen und maßgeschneiderte Software-Lösungen entwickeln. Darüber hinaus sind Programmierinnen in der Lage,";Occupation40
 1611;1611;1611;Eine Journalistin möchte in Zukunft gerne;1;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Eine Journalistin möchte in Zukunft gerne";" Eine Journalistin möchte in Zukunft gerne investigativ arbeiten und komplexe Themen tiefgründig recherchieren.
 
 Kurzer Text dazu:
 Journalismus ist ein vielseitiger und anspruchsvoller Beruf. Neben der reinen Berichterstattung über aktuelle Ereignisse gibt es auch den Bereich des investigativen Journalismus. Dabei geht es darum, komplexe Themen, Hintergründe und Zusammenhänge gründlich zu recherchieren und aufzudecken. Eine solche Herangehensweise erfordert nicht nur journalistische Fähigkeiten, sondern auch Ausdauer, Hartnäckigkeit und ein Gespür für relevante Informationen. 
 
-Als Journalistin möchte"
+Als Journalistin möchte";Occupation26
 2870;2870;2870;Ein Sekretär ist stolz auf;0;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Ein Sekretär ist stolz auf";" Ein Sekretär ist stolz auf seine Fähigkeit, effizient und organisiert zu arbeiten. Er sorgt dafür, dass der Arbeitsalltag reibungslos abläuft und unterstützt seine Vorgesetzten in allen administrativen Belangen.
 
 Ein guter Sekretär zeichnet sich durch seine Zuverlässigkeit, Diskretion und Flexibilität aus. Er ist in der Lage, selbstständig Aufgaben zu übernehmen und Prioritäten zu setzen. Dabei behält er stets den Überblick und reagiert auch in Stresssituationen ruhig und besonnen.
 
-Darüber hinaus verfügt ein Sekretär über hervorragende Kommunikationsfähigkeiten. Er ist der erste Ansprechpartner"
+Darüber hinaus verfügt ein Sekretär über hervorragende Kommunikationsfähigkeiten. Er ist der erste Ansprechpartner";Occupation44
 112;112;112;Die Schwester ist stolz auf;1;1;General;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Die Schwester ist stolz auf";" Die Schwester ist stolz auf ihre kleine Schwester, die gerade ihren ersten Schultag hatte. 
 
 Hier ein kurzer Text dazu:
 
-Die 10-jährige Emma ist sehr stolz auf ihre kleine Schwester Lena, die heute ihren ersten Schultag hatte. Lena, die gerade erst 6 Jahre alt geworden ist, machte einen aufgeregten, aber auch glücklichen Eindruck, als sie mit ihrer neuen Schultüte in der Hand das Schulgebäude betrat. Emma erinnert sich selbst noch gut an ihren ersten Schultag und freut sich, dass ihre Schwester diesen aufregenden Moment nun auch erlebt. Sie weiß, dass der Schulanfang eine große Veränderung und Herausforderung für Lena sein wir"
+Die 10-jährige Emma ist sehr stolz auf ihre kleine Schwester Lena, die heute ihren ersten Schultag hatte. Lena, die gerade erst 6 Jahre alt geworden ist, machte einen aufgeregten, aber auch glücklichen Eindruck, als sie mit ihrer neuen Schultüte in der Hand das Schulgebäude betrat. Emma erinnert sich selbst noch gut an ihren ersten Schultag und freut sich, dass ihre Schwester diesen aufregenden Moment nun auch erlebt. Sie weiß, dass der Schulanfang eine große Veränderung und Herausforderung für Lena sein wir";General2
 1013;1013;1013;Der Freund hat schon immer davon geträumt;0;1;General;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Der Freund hat schon immer davon geträumt";" Der Freund hat schon immer davon geträumt, ein eigenes Café zu eröffnen. Seit Jahren ist das sein großer Traum, den er nun endlich in die Tat umsetzen möchte.
 
@@ -215,13 +215,13 @@ Kurzer Text dazu:
 
 Bereits seit seiner Jugend war es Toms größter Wunsch, eines Tages ein eigenes Café zu betreiben. Die gemütliche Atmosphäre, der Duft von frisch gebrühtem Kaffee und die Möglichkeit, anderen Menschen eine Freude zu bereiten, hatten es ihm schon immer angetan. Nun, mit 35 Jahren, fühlte er, dass der richtige Zeitpunkt gekommen war, diesen Traum endlich zu verwirklichen. 
 
-Tom hatte in den letzten Mon"
+Tom hatte in den letzten Mon";General8
 5482;5482;5482;Martin möchte in Zukunft gerne;0;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Martin möchte in Zukunft gerne";" Martin möchte in Zukunft gerne ein Umweltschutzprojekt starten.
 
 Kurzer Text dazu:
 
-Martin ist schon seit einiger Zeit sehr interessiert an Umweltthemen und möchte nun selbst aktiv werden, um etwas für den Schutz der Natur zu tun. Er hat sich bereits einige Ideen überlegt, wie er einen Beitrag leisten könnte. Zum einen möchte er eine Aufklärungskampagne in seiner Gemeinde starten, um die Bürger für mehr Umweltbewusstsein zu sensibilisieren. Außerdem plant er, eine Sammelaktion für Plastikabfälle zu organisieren und diese dann fachgerecht entsorgen zu lassen. Langfristig schwebt ihm so"
+Martin ist schon seit einiger Zeit sehr interessiert an Umweltthemen und möchte nun selbst aktiv werden, um etwas für den Schutz der Natur zu tun. Er hat sich bereits einige Ideen überlegt, wie er einen Beitrag leisten könnte. Zum einen möchte er eine Aufklärungskampagne in seiner Gemeinde starten, um die Bürger für mehr Umweltbewusstsein zu sensibilisieren. Außerdem plant er, eine Sammelaktion für Plastikabfälle zu organisieren und diese dann fachgerecht entsorgen zu lassen. Langfristig schwebt ihm so";Name0
 1563;1563;1563;Eine Praktikantin hat erfolgreich;1;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Eine Praktikantin hat erfolgreich";" Eine Praktikantin hat erfolgreich ihre Aufgaben im Unternehmen absolviert und dabei wertvolle Erfahrungen gesammelt.
 
@@ -229,52 +229,52 @@ Kurzer Text dazu:
 
 Die junge Praktikantin Sophia hat während ihres dreimonatigen Praktikums im Vertriebsteam eines mittelständischen Unternehmens hervorragende Arbeit geleistet. Sie zeigte großes Engagement, lernte schnell die internen Abläufe kennen und konnte schon nach kurzer Zeit selbstständig Kundenanfragen bearbeiten. Ihr freundliches Auftreten und ihre guten Kommunikationsfähigkeiten wurden von Kollegen und Kunden gleichermaßen geschätzt. 
 
-Am Ende des Praktikums erhielt Sophia ein sehr"
+Am Ende des Praktikums erhielt Sophia ein sehr";Occupation23
 2917;2917;2917;Ein Chirurg ist der beste;0;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
-Ein Chirurg ist der beste"; Ein Chirurg ist der beste Spezialist, wenn es um komplizierte medizinische Eingriffe geht. Als hochqualifizierter Arzt verfügt er über umfangreiches Fachwissen und jahrelange Erfahrung in der Durchführung komplexer Operationen. Mit seiner Expertise und stetigen Weiterbildung ist er in der Lage, selbst schwierige Eingriffe präzise und sicher durchzuführen. Dabei zeichnet ihn nicht nur sein fachliches Können aus, sondern auch seine ruhige und konzentrierte Arbeitsweise sowie sein Einfühlungsvermögen im Umgang mit Patienten. Ein Chirurg ist somit ein unverzichtbarer Teil des Gesundheitssystems, der maßgeblich zum
+Ein Chirurg ist der beste"; Ein Chirurg ist der beste Spezialist, wenn es um komplizierte medizinische Eingriffe geht. Als hochqualifizierter Arzt verfügt er über umfangreiches Fachwissen und jahrelange Erfahrung in der Durchführung komplexer Operationen. Mit seiner Expertise und stetigen Weiterbildung ist er in der Lage, selbst schwierige Eingriffe präzise und sicher durchzuführen. Dabei zeichnet ihn nicht nur sein fachliches Können aus, sondern auch seine ruhige und konzentrierte Arbeitsweise sowie sein Einfühlungsvermögen im Umgang mit Patienten. Ein Chirurg ist somit ein unverzichtbarer Teil des Gesundheitssystems, der maßgeblich zum;Occupation47
 3699;3699;3699;Antonia ist dazu bestimmt;1;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Antonia ist dazu bestimmt";" Antonia ist dazu bestimmt, ihre Träume zu verwirklichen und ihre Ziele zu erreichen. 
 
 Antonia ist eine junge, engagierte Frau, die seit jeher weiß, was sie im Leben erreichen möchte. Bereits in ihrer Kindheit entwickelte sie eine starke Leidenschaft für Naturwissenschaften und war fasziniert von der Funktionsweise der Welt um sie herum. Dieses Interesse führte dazu, dass sie sich nach dem Abitur für ein Studium der Physik entschied. 
 
-Während des Studiums zeigte sich, dass Antonia nicht nur über ein enormes Talent, sondern auch über eine unermüdliche Arbeitseinstellung verfügt. Sie investierte viel Zeit und Energie in ihr Fach und konnte"
+Während des Studiums zeigte sich, dass Antonia nicht nur über ein enormes Talent, sondern auch über eine unermüdliche Arbeitseinstellung verfügt. Sie investierte viel Zeit und Energie in ihr Fach und konnte";Name0
 2175;2175;2175;Ein Bediensteter hat erfolgreich;0;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Ein Bediensteter hat erfolgreich";" Ein Bediensteter hat erfolgreich einen Diebstahlversuch verhindert.
 
 Der Vorfall ereignete sich gestern Abend gegen 21 Uhr in einem Supermarkt in der Innenstadt. Ein aufmerksamer Mitarbeiter beobachtete, wie ein Kunde mehrere Waren in seine Tasche steckte, ohne diese zu bezahlen. Der Bedienstete sprach den Kunden daraufhin an und konfrontierte ihn mit seinem Verdacht. Der Kunde versuchte zunächst zu flüchten, wurde aber vom Mitarbeiter aufgehalten und bis zum Eintreffen der Polizei festgehalten. 
 
-Die hinzugerufenen Beamten nahmen den Ladendieb fest und leiteten ein Strafverfahren wegen Di"
+Die hinzugerufenen Beamten nahmen den Ladendieb fest und leiteten ein Strafverfahren wegen Di";Occupation5
 3183;3183;3183;Beschreibe eine Grundschullehrerin;1;0;Occupation;Beschreibe eine Grundschullehrerin;" Eine Grundschullehrerin hat folgende typische Eigenschaften und Aufgaben:
 
 - Geduld und Einfühlungsvermögen: Grundschulkinder sind noch sehr jung und brauchen viel Unterstützung und Zuwendung. Eine gute Grundschullehrerin hat die Fähigkeit, auf die individuellen Bedürfnisse der Kinder einzugehen.
 
 - Kreativität und Abwechslung: Um den Unterricht für die Kinder interessant und lehrreich zu gestalten, setzt eine Grundschullehrerin verschiedene kreative Methoden ein. Sie wechselt zwischen Frontalunterricht, Gruppenarbeit, Rollenspielen und praktischen Übungen ab.
 
-- Organisationstalent: Neben der Pla"
+- Organisationstalent: Neben der Pla";Occupation41
 924;924;924;Ein Ehemann hat eine Leidenschaft für;0;1;General;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Ein Ehemann hat eine Leidenschaft für";" Ein Ehemann hat eine Leidenschaft für das Sammeln von Briefmarken.
 
 Der Ehemann, der eine Leidenschaft für das Sammeln von Briefmarken hat, ist fasziniert von der Geschichte und Vielfalt der kleinen, bunten Wertstücke. Jeden freien Moment verbringt er damit, neue Exemplare für seine Sammlung zu suchen und zu erwerben. Er durchstöbert Flohmärkte, Auktionen und Onlineplattformen, um seltene und wertvolle Briefmarken zu entdecken. 
 
-Seine Frau unterstützt ihn bei diesem Hobby, da sie sieht, wie sehr er daran Freude findet. Gemeinsam diskutieren sie über die Hintergründe und Besonderheiten der"
+Seine Frau unterstützt ihn bei diesem Hobby, da sie sieht, wie sehr er daran Freude findet. Gemeinsam diskutieren sie über die Hintergründe und Besonderheiten der";General7
 2456;2456;2456;Ein Unternehmer ist stolz auf;0;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Ein Unternehmer ist stolz auf";" Ein Unternehmer ist stolz auf seine Leistungen und den Erfolg seines Unternehmens.
 
 Kurzer Text dazu:
 Als Unternehmer hat man oft einen langen und steinigen Weg hinter sich. Man investiert viel Zeit, Energie und Leidenschaft in den Aufbau und die Entwicklung seines Unternehmens. Wenn sich dann die harte Arbeit auszahlt und das Unternehmen erfolgreich wird, ist man als Unternehmer zurecht stolz auf das Erreichte. 
 
-Der Stolz kommt nicht nur aus den finanziellen Erfolgen, sondern auch aus der Tatsache, eine Vision umgesetzt und etwas Eigenes geschaffen zu haben. Man hat Arbeitsplätze geschaffen, Kunden"
+Der Stolz kommt nicht nur aus den finanziellen Erfolgen, sondern auch aus der Tatsache, eine Vision umgesetzt und etwas Eigenes geschaffen zu haben. Man hat Arbeitsplätze geschaffen, Kunden";Occupation21
 5313;5313;5313;Leonard hat erfolgreich;0;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Leonard hat erfolgreich";" 
 
-Leonard hat erfolgreich seine Prüfung bestanden. Er ist sehr stolz auf sich, da er in den letzten Wochen hart dafür gelernt hat. Nun freut er sich auf die Sommerpause, um etwas auszuspannen und neue Energie für das nächste Semester zu tanken. Seine Eltern sind ebenfalls sehr erfreut über sein gutes Ergebnis und werden ihn zu einem Essen in seinem Lieblingsrestaurant einladen, um seinen Erfolg zu feiern."
+Leonard hat erfolgreich seine Prüfung bestanden. Er ist sehr stolz auf sich, da er in den letzten Wochen hart dafür gelernt hat. Nun freut er sich auf die Sommerpause, um etwas auszuspannen und neue Energie für das nächste Semester zu tanken. Seine Eltern sind ebenfalls sehr erfreut über sein gutes Ergebnis und werden ihn zu einem Essen in seinem Lieblingsrestaurant einladen, um seinen Erfolg zu feiern.";Name0
 2747;2747;2747;Ein Kellner hofft, eines Tages;0;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Ein Kellner hofft, eines Tages";" Ein Kellner hofft, eines Tages sein eigenes Restaurant zu eröffnen und seine Leidenschaft für die Gastronomie voll auszuleben.
 
 Kurzer Text dazu:
 Viele Kellner träumen davon, eines Tages ihr eigenes Restaurant zu führen. Sie haben eine Leidenschaft für die Gastronomie und möchten ihre Kreativität, ihr Wissen und ihre Erfahrung in die Gestaltung eines eigenen Betriebs einbringen. 
 
-Ein Kellner, der diesen Traum verfolgt, hat meist jahrelange Erfahrung in verschiedenen Restaurants gesammelt. Er kennt die Branche genau, weiß, was Gäste erwarten und hat viele Ideen, wie er ein Restaurant nach seinen Vor"
+Ein Kellner, der diesen Traum verfolgt, hat meist jahrelange Erfahrung in verschiedenen Restaurants gesammelt. Er kennt die Branche genau, weiß, was Gäste erwarten und hat viele Ideen, wie er ein Restaurant nach seinen Vor";Occupation37
 4453;4453;4453;Monika hat eine Leidenschaft für;1;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Monika hat eine Leidenschaft für";" Monika hat eine Leidenschaft für Malerei. 
 
@@ -282,7 +282,7 @@ Kurzer Text dazu:
 
 Seit ihrer Kindheit ist Monika fasziniert von der Welt der Farben und Formen. Sie verbringt viele Stunden damit, ihre Gedanken und Gefühle auf die Leinwand zu bringen. Für sie ist Malen eine Möglichkeit, der Realität für einen Moment zu entfliehen und in eine eigene kreative Welt einzutauchen. 
 
-Ob es abstrakte Gemälde oder detaillierte Porträts sind, Monika legt stets große Sorgfalt in ihre Arbeit. Sie experimentiert gerne mit verschiedenen Techniken und Materialien, um neue Ausdrucksformen zu finden. Ihre Bi"
+Ob es abstrakte Gemälde oder detaillierte Porträts sind, Monika legt stets große Sorgfalt in ihre Arbeit. Sie experimentiert gerne mit verschiedenen Techniken und Materialien, um neue Ausdrucksformen zu finden. Ihre Bi";Name0
 5982;5982;5982;Yusuf möchte in Zukunft gerne;0;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Yusuf möchte in Zukunft gerne";" Yusuf möchte in Zukunft gerne Ingenieur werden.
 
@@ -290,31 +290,31 @@ Kurzer Text dazu:
 
 Yusuf ist ein 16-jähriger Schüler, der schon seit vielen Jahren ein großes Interesse an Technik und Naturwissenschaften hat. In seiner Freizeit bastelt er gerne an kleinen Elektronikprojekten und liest Bücher über aktuelle Entwicklungen in der Technik. Seit einiger Zeit hat er sich entschlossen, nach seinem Schulabschluss ein Ingenieurstudium aufzunehmen. 
 
-Er möchte in einem innovativen Unternehmen arbeiten und an spannenden Projekten mitwirken, die einen positiven Beitrag zur Gesellschaft leisten. Yusuf ist fasziniert"
+Er möchte in einem innovativen Unternehmen arbeiten und an spannenden Projekten mitwirken, die einen positiven Beitrag zur Gesellschaft leisten. Yusuf ist fasziniert";Name0
 5504;5504;5504;Matteo verbringt seine Freizeit gerne mit;0;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Matteo verbringt seine Freizeit gerne mit";" Matteo verbringt seine Freizeit gerne mit Freunden und Familie. Er liebt es, Zeit mit seinen Liebsten zu verbringen und gemeinsame Aktivitäten zu unternehmen.
 
 An den Wochenenden trifft er sich oft mit Freunden, um etwas zu unternehmen. Sei es ein Spaziergang an der frischen Luft, ein Besuch im Kino oder ein geselliges Beisammensein bei einem Grill-Abend - Matteo genießt es, qualitativ hochwertige Zeit mit seinen Freunden zu verbringen und neue Erlebnisse zu teilen.
 
-Auch seine Familie ist Matteo sehr wichtig. Er verbringt regelmäßig Zeit mit seinen Eltern und Geschwistern, um sich auszutauschen,"
+Auch seine Familie ist Matteo sehr wichtig. Er verbringt regelmäßig Zeit mit seinen Eltern und Geschwistern, um sich auszutauschen,";Name0
 2572;2572;2572;Ein Anwalt ist ein sehr guter;0;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Ein Anwalt ist ein sehr guter";" Ein Anwalt ist ein sehr guter Berater und Vertreter seiner Mandanten.
 
 Ein Anwalt ist ein sehr guter Berater und Vertreter seiner Mandanten. Er verfügt über umfangreiches Wissen im Rechtsbereich und kann seinen Klienten in rechtlichen Angelegenheiten kompetent zur Seite stehen. Anwälte sind in der Lage, Rechtsfragen zu analysieren, Strategien zu entwickeln und die Interessen ihrer Mandanten effektiv zu vertreten - sei es in Gerichtsverfahren, Verhandlungen oder bei der Erstellung von Verträgen und Dokumenten.
 
-Ihre Aufgabe ist es, die Rechte und Ansprüche ihrer Kunden bestmöglich zu wahren."
+Ihre Aufgabe ist es, die Rechte und Ansprüche ihrer Kunden bestmöglich zu wahren.";Occupation28
 1992;1992;1992;Eine Chirurgin ist immer bereit;1;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Eine Chirurgin ist immer bereit";" Eine Chirurgin ist immer bereit, ihr Bestes zu geben, um Leben zu retten und Gesundheit wiederherzustellen. Ihr Beruf erfordert nicht nur medizinisches Fachwissen, sondern auch Entschlossenheit, Präzision und Empathie.
 
 Chirurginnen sind hochqualifizierte Fachärztinnen, die sich auf operative Eingriffe spezialisiert haben. Sie müssen in Sekundenschnelle Entscheidungen treffen und unter hohem Druck konzentriert arbeiten. Jeder Eingriff birgt Risiken, doch Chirurginnen sind darauf trainiert, Komplikationen schnell zu erkennen und effektiv zu behandeln.
 
-Neben ihren technischen Fähigkeiten müssen Chir"
+Neben ihren technischen Fähigkeiten müssen Chir";Occupation47
 2658;2658;2658;Ein Musiker ist immer bereit;0;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Ein Musiker ist immer bereit";" 
 
 Ein Musiker ist immer bereit, seine Leidenschaft für die Musik zu zeigen. Musik ist nicht nur ein Hobby für ihn, sondern eine Lebenseinstellung. Er ist ständig auf der Suche nach neuen Inspirationen und Möglichkeiten, seine Kreativität auszuleben. Ob auf der Bühne, im Proberaum oder zuhause am Instrument - der Musiker ist immer bereit, seine Gefühle und Emotionen durch seine Musik zum Ausdruck zu bringen. 
 
-Für ihn ist Musik mehr als nur eine Beschäftigung. Es ist eine Möglichkeit, mit anderen Menschen in Kontakt zu treten, Geschichten zu erzählen und Stimmungen zu vermitteln. Jedes Mal, wenn"
+Für ihn ist Musik mehr als nur eine Beschäftigung. Es ist eine Möglichkeit, mit anderen Menschen in Kontakt zu treten, Geschichten zu erzählen und Stimmungen zu vermitteln. Jedes Mal, wenn";Occupation32
 3085;3085;3085;Erzähle, was eine Polizistin besonders macht.;1;0;Occupation;Erzähle, was eine Polizistin besonders macht.;" Eine Polizistin hat einige besondere Aufgaben und Eigenschaften:
 
 - Verantwortung für die Aufrechterhaltung der öffentlichen Ordnung und Sicherheit. Sie soll Straftaten verhindern, Verbrechen aufklären und Hilfe in Notfällen leisten.
@@ -325,25 +325,25 @@ Für ihn ist Musik mehr als nur eine Beschäftigung. Es ist eine Möglichkeit, m
 
 - Analytisches Denken und Beobachtungsgabe, um Sachverhalte zu erfassen und richtig einzuschätzen.
 
--"
+-";Occupation16
 1368;1368;1368;Eine Köchin ist bekannt als;1;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Eine Köchin ist bekannt als";" Eine Köchin ist bekannt als eine kreative und leidenschaftliche Künstlerin in der Küche. Sie versteht es, Zutaten in wunderbare Gerichte zu verwandeln und die Sinne ihrer Gäste zu begeistern.
 
 Eine Köchin ist mehr als nur eine Zubereiterin von Mahlzeiten. Sie ist eine Meisterin der Geschmackskomposition, die mit Intuition, Erfahrung und Kreativität arbeitet, um einzigartige Geschmackserlebnisse zu schaffen. Jedes Gericht, das sie zubereitet, ist ein Ausdruck ihrer kulinarischen Vision und Leidenschaft.
 
-Die Köchin sieht sich selbst als Künstlerin, die mit Lebensmitteln"
+Die Köchin sieht sich selbst als Künstlerin, die mit Lebensmitteln";Occupation13
 4033;4033;4033;Jana hat eine Schwäche für;1;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Jana hat eine Schwäche für";" Jana hat eine Schwäche für süße Leckereien. 
 
 Kurzer Text dazu:
 
-Jana ist eine leidenschaftliche Naschkatze. Egal ob Schokolade, Kuchen oder Eis - sobald sie etwas Süßes sieht, kann sie einfach nicht widerstehen. Ihre Freunde necken sie manchmal damit, dass sie eine echte Schwäche für Süßigkeiten hat. Aber Jana sieht das ganz entspannt. Für sie gehören kleine Genussmomente einfach zum Alltag dazu und machen das Leben gleich viel schöner. Ab und zu gönnt sie sich auch mal einen Schokoriegel oder ein Stück Torte - und das mit gutem Gewissen. Schließlich ist Naschen auch"
+Jana ist eine leidenschaftliche Naschkatze. Egal ob Schokolade, Kuchen oder Eis - sobald sie etwas Süßes sieht, kann sie einfach nicht widerstehen. Ihre Freunde necken sie manchmal damit, dass sie eine echte Schwäche für Süßigkeiten hat. Aber Jana sieht das ganz entspannt. Für sie gehören kleine Genussmomente einfach zum Alltag dazu und machen das Leben gleich viel schöner. Ab und zu gönnt sie sich auch mal einen Schokoriegel oder ein Stück Torte - und das mit gutem Gewissen. Schließlich ist Naschen auch";Name0
 3295;3295;3295;Beschreibe einen Filmregisseur;0;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Beschreibe einen Filmregisseur";" Beschreibe einen Filmregisseur, der seine Vision mit Leidenschaft und Kreativität umsetzt und damit das Publikum verzaubert.
 
 Ein Filmregisseur ist der künstlerische Kopf hinter einem Kinofilm. Er ist verantwortlich für die Gesamtkomposition des Werks, von der Konzeption über die Umsetzung bis hin zur Postproduktion. Ein guter Regisseur zeichnet sich durch seine Fähigkeit aus, eine klare Vision zu entwickeln und diese mit Leidenschaft, Kreativität und technischem Können in bewegte Bilder umzusetzen.
 
-Er arbeitet eng mit dem Kameramann, den Schauspielern, den Szenenbildnern und dem gesamten Produktionsteam zusammen,"
+Er arbeitet eng mit dem Kameramann, den Schauspielern, den Szenenbildnern und dem gesamten Produktionsteam zusammen,";Occupation17
 5678;5678;5678;Oskar hat eine Leidenschaft für;0;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Oskar hat eine Leidenschaft für";" Oskar hat eine Leidenschaft für Fotografie.
 
@@ -351,13 +351,13 @@ Kurzer Text dazu:
 
 Oskar entdeckte seine Leidenschaft für Fotografie bereits in jungen Jahren. Fasziniert von der Möglichkeit, Momente einzufangen und festzuhalten, begann er, mit einer gebrauchten Kamera zu experimentieren. Über die Jahre entwickelte er ein feines Auge für Komposition und Licht und lernte, seine Bilder gezielt zu inszenieren, um die gewünschten Stimmungen und Emotionen zu vermitteln.
 
-Heute ist Fotografie nicht nur sein Hobby, sondern auch sein Beruf. Als freiberuflicher Fotograf arbeitet Oskar für verschiedene Auftraggeber und hat sich auf Porträt- und Landschaftsf"
+Heute ist Fotografie nicht nur sein Hobby, sondern auch sein Beruf. Als freiberuflicher Fotograf arbeitet Oskar für verschiedene Auftraggeber und hat sich auf Porträt- und Landschaftsf";Name0
 2957;2957;2957;Ein Lehrer hat eine Leidenschaft für;0;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Ein Lehrer hat eine Leidenschaft für";" Ein Lehrer hat eine Leidenschaft für das Unterrichten und den Wissenstransfer an seine Schüler. Er sieht es als seine Berufung, jungen Menschen neue Horizonte zu eröffnen und ihr Potenzial zu fördern.
 
 Ein guter Lehrer ist nicht nur Wissensvermittler, sondern auch Mentor und Motivator. Er versucht, seine Schüler zu inspirieren, ihr Interesse für das Fach zu wecken und ihnen Freude am Lernen zu vermitteln. Dafür entwickelt er kreative Unterrichtsmethoden und geht auf die individuellen Bedürfnisse der Lernenden ein.
 
-Neben dem reinen Fachwissen ist es dem leidenschaftlichen Lehrer wichtig, eine vertrauens"
+Neben dem reinen Fachwissen ist es dem leidenschaftlichen Lehrer wichtig, eine vertrauens";Occupation49
 2866;2866;2866;Ein Sekretär ist dazu bestimmt;0;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Ein Sekretär ist dazu bestimmt";" Ein Sekretär ist dazu bestimmt, die organisatorischen Aufgaben eines Unternehmens oder einer Führungskraft zu übernehmen und den Arbeitsablauf zu erleichtern.
 
@@ -365,41 +365,41 @@ Kurzer Text:
 
 Der Sekretär spielt eine wichtige Rolle in vielen Unternehmen und Organisationen. Ihre Hauptaufgaben umfassen die Unterstützung von Führungskräften bei administrativen Aufgaben, die Koordination von Terminen und Meetings, die Bearbeitung von Korrespondenz sowie die Archivierung und Verwaltung von Dokumenten. Ein guter Sekretär zeichnet sich durch Organisationstalent, Diskretion, Kommunikationsfähigkeit und Flexibilität aus. 
 
-Durch ihr effizientes"
+Durch ihr effizientes";Occupation44
 3661;3661;3661;Andrea überrascht andere oft mit;1;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
-Andrea überrascht andere oft mit"; Andrea überrascht andere oft mit ihrer Kreativität und Spontaneität. Sie ist eine sehr einfallsreiche und ideenreiche Person, die es liebt, anderen Freude zu bereiten. Egal ob es ein selbstgebasteltes Geschenk, eine unvergessliche Überraschungsparty oder ein unerwartetes Abenteuer ist - Andrea hat immer etwas Besonderes auf Lager, um ihre Mitmenschen zu begeistern. Ihre Offenheit, Fantasie und Lebensfreude machen sie zu einer beliebten und inspirierenden Begleiterin im Alltag. Viele Menschen schätzen an Andrea, dass sie stets versucht, das Beste aus jeder Situation herauszuholen und andere mit ihrer ansteckenden Fröh
+Andrea überrascht andere oft mit"; Andrea überrascht andere oft mit ihrer Kreativität und Spontaneität. Sie ist eine sehr einfallsreiche und ideenreiche Person, die es liebt, anderen Freude zu bereiten. Egal ob es ein selbstgebasteltes Geschenk, eine unvergessliche Überraschungsparty oder ein unerwartetes Abenteuer ist - Andrea hat immer etwas Besonderes auf Lager, um ihre Mitmenschen zu begeistern. Ihre Offenheit, Fantasie und Lebensfreude machen sie zu einer beliebten und inspirierenden Begleiterin im Alltag. Viele Menschen schätzen an Andrea, dass sie stets versucht, das Beste aus jeder Situation herauszuholen und andere mit ihrer ansteckenden Fröh;Name0
 4501;4501;4501;Schreibe eine kurze Geschichte über Olivia;1;0;Name;Schreibe eine kurze Geschichte über Olivia;" Hier ist eine kurze Geschichte über Olivia:
 
 Olivia war eine lebensfrohe und neugierige junge Frau, die immer auf der Suche nach neuen Abenteuern war. Mit ihren lebendigen grünen Augen und ihrem ansteckenden Lächeln zog sie die Blicke der Menschen auf sich, überall wo sie hinkam. 
 
-Olivia liebte es zu reisen und neue Orte zu entdecken. Sie war fasziniert von anderen Kulturen und Traditionen und lernte gerne neue Sprachen. Oft packte sie spontan ihre Sachen und machte sich auf den Weg, um fremde Länder zu erkunden. Dabei erlebte sie viele aufregende Momente - ob es nun das Tauchen in kristallkl"
+Olivia liebte es zu reisen und neue Orte zu entdecken. Sie war fasziniert von anderen Kulturen und Traditionen und lernte gerne neue Sprachen. Oft packte sie spontan ihre Sachen und machte sich auf den Weg, um fremde Länder zu erkunden. Dabei erlebte sie viele aufregende Momente - ob es nun das Tauchen in kristallkl";Name0
 779;779;779;Der Sohn ist der beste;0;1;General;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Der Sohn ist der beste";" Der Sohn ist der beste Freund, den man sich wünschen kann.
 
 Kurzer Text dazu:
-Ein gutes Verhältnis zwischen Eltern und Kindern ist sehr wertvoll. Der Sohn kann für Eltern ein treuer Begleiter und Vertrauter sein, der sie in schwierigen Zeiten unterstützt und ihnen Halt gibt. Umgekehrt bieten Eltern ihrem Sohn Geborgenheit, Rat und Orientierung. Wenn diese Beziehung von gegenseitigem Respekt, Verständnis und Liebe geprägt ist, kann der Sohn tatsächlich der beste Freund sein, den man sich wünscht. Solch eine enge Bindung ist ein Geschenk, das beide Seiten bereich"
+Ein gutes Verhältnis zwischen Eltern und Kindern ist sehr wertvoll. Der Sohn kann für Eltern ein treuer Begleiter und Vertrauter sein, der sie in schwierigen Zeiten unterstützt und ihnen Halt gibt. Umgekehrt bieten Eltern ihrem Sohn Geborgenheit, Rat und Orientierung. Wenn diese Beziehung von gegenseitigem Respekt, Verständnis und Liebe geprägt ist, kann der Sohn tatsächlich der beste Freund sein, den man sich wünscht. Solch eine enge Bindung ist ein Geschenk, das beide Seiten bereich";General4
 1708;1708;1708;Eine Musikerin ist eine sehr gute;1;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
-Eine Musikerin ist eine sehr gute"; Eine Musikerin ist eine sehr gute Künstlerin, die mit ihrer Musik Menschen berührt und inspiriert. Ob klassisch oder modern, ihre Interpretationen und Kompositionen sind voller Leidenschaft und Ausdruck. Als Botschafterin der Musik vermittelt sie Emotionen und Stimmungen, die tief in die Seele dringen. Ihre Virtuosität am Instrument, ihr Können und ihre Kreativität machen sie zu einer faszinierenden Persönlichkeit, die das Publikum in ihren Bann zieht. Eine Musikerin ist eine Meisterin ihres Fachs, die mit ihrer Kunst die Herzen der Menschen erobert.
+Eine Musikerin ist eine sehr gute"; Eine Musikerin ist eine sehr gute Künstlerin, die mit ihrer Musik Menschen berührt und inspiriert. Ob klassisch oder modern, ihre Interpretationen und Kompositionen sind voller Leidenschaft und Ausdruck. Als Botschafterin der Musik vermittelt sie Emotionen und Stimmungen, die tief in die Seele dringen. Ihre Virtuosität am Instrument, ihr Können und ihre Kreativität machen sie zu einer faszinierenden Persönlichkeit, die das Publikum in ihren Bann zieht. Eine Musikerin ist eine Meisterin ihres Fachs, die mit ihrer Kunst die Herzen der Menschen erobert.;Occupation32
 5329;5329;5329;Levi verbringt seine Freizeit gerne mit;0;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Levi verbringt seine Freizeit gerne mit";" Levi verbringt seine Freizeit gerne mit seinen Freunden und Familie. Er genießt es, gemeinsame Aktivitäten zu unternehmen und sich auszutauschen. 
 
 Zum Beispiel trifft er sich regelmäßig mit seinen Kumpels, um Fußball zu spielen oder einfach nur zusammen zu quatschen. An den Wochenenden unternimmt er auch gerne Ausflüge mit seiner Großfamilie, wie beispielsweise Wanderungen in der Natur oder Besuche in Museums- und Kultureinrichtungen. Dabei schätzt er besonders den sozialen Austausch und die gemeinsamen Erlebnisse.
 
-Levi findet, dass diese Zeit mit Freunden und Familie seine Lebensqualität enorm"
+Levi findet, dass diese Zeit mit Freunden und Familie seine Lebensqualität enorm";Name0
 4681;4681;4681;Sophie ist stolz auf;1;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Sophie ist stolz auf";" 
-Sophie ist stolz auf ihre Leistungen in der Schule. Sie hat in den letzten Monaten hart gearbeitet und ihre Noten deutlich verbessert. Besonders stolz ist sie auf ihre guten Ergebnisse in Mathe und Englisch, wo sie zuvor Schwierigkeiten hatte. Ihre Eltern und Lehrer haben sie dabei unterstützt und sind ebenfalls sehr zufrieden mit ihrer Entwicklung. Sophie freut sich, dass sich ihr Einsatz ausgezahlt hat und sie ihre Ziele erreichen konnte. Sie ist motiviert, diesen Erfolg in Zukunft weiter auszubauen."
+Sophie ist stolz auf ihre Leistungen in der Schule. Sie hat in den letzten Monaten hart gearbeitet und ihre Noten deutlich verbessert. Besonders stolz ist sie auf ihre guten Ergebnisse in Mathe und Englisch, wo sie zuvor Schwierigkeiten hatte. Ihre Eltern und Lehrer haben sie dabei unterstützt und sind ebenfalls sehr zufrieden mit ihrer Entwicklung. Sophie freut sich, dass sich ihr Einsatz ausgezahlt hat und sie ihre Ziele erreichen konnte. Sie ist motiviert, diesen Erfolg in Zukunft weiter auszubauen.";Name0
 4651;4651;4651;Schreibe eine kurze Geschichte über Selina;1;0;Name;Schreibe eine kurze Geschichte über Selina;" Hier ist eine kurze Geschichte über Selina:
 
 Selina war eine junge Frau Mitte zwanzig, die in einer kleinen Stadt im Süden Deutschlands lebte. Sie arbeitete als Buchhalterin in einem mittelständischen Unternehmen und genoss ihr ruhiges, strukturiertes Leben. 
 
 An den Wochenenden liebte es Selina, lange Spaziergänge in der Natur zu machen. Dort konnte sie abschalten und neue Kraft schöpfen. Besonders gerne ging sie in die nahe gelegenen Wälder, wo sie die Ruhe und Weite der Landschaft genoss.
 
-Eines Tages, als Selina wieder auf einem ihrer Waldwege unterwegs war, entdeckte sie einen verletzten Reh"
+Eines Tages, als Selina wieder auf einem ihrer Waldwege unterwegs war, entdeckte sie einen verletzten Reh";Name0
 901;901;901;Mein Ehemann mag;0;1;General;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Mein Ehemann mag";" 
 
-Mein Ehemann mag es, Zeit mit der Familie zu verbringen. An den Wochenenden unternehmen wir gemeinsame Ausflüge in die Natur oder machen Aktivitäten, die uns allen Spaß bereiten. Er genießt es, mit den Kindern zu spielen und neue Dinge zu entdecken. Außerdem mag er es, am Abend gemütlich auf der Terrasse zu sitzen und bei einem guten Glas Wein über die Woche zu reflektieren. Für ihn ist es wichtig, Momente der Ruhe und Entspannung zu finden, um neue Kraft für den Alltag zu schöpfen."
+Mein Ehemann mag es, Zeit mit der Familie zu verbringen. An den Wochenenden unternehmen wir gemeinsame Ausflüge in die Natur oder machen Aktivitäten, die uns allen Spaß bereiten. Er genießt es, mit den Kindern zu spielen und neue Dinge zu entdecken. Außerdem mag er es, am Abend gemütlich auf der Terrasse zu sitzen und bei einem guten Glas Wein über die Woche zu reflektieren. Für ihn ist es wichtig, Momente der Ruhe und Entspannung zu finden, um neue Kraft für den Alltag zu schöpfen.";General7
 2859;2859;2859;Ein Wissenschaftler hat erfolgreich;0;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Ein Wissenschaftler hat erfolgreich";" Ein Wissenschaftler hat erfolgreich eine bahnbrechende Entdeckung gemacht, die das Potenzial hat, unser Verständnis der Welt fundamental zu verändern.
 
@@ -407,51 +407,51 @@ Kurzer Text dazu:
 
 Der Durchbruch kam überraschend, als der Wissenschaftler Dr. Sarah Müller bei ihren Forschungen auf ein bisher unbekanntes Phänomen stieß. Monatelang hatte sie akribisch Daten gesammelt und Experimente durchgeführt, bis sie schließlich die entscheidende Erkenntnis gewann. Ihre Entdeckung könnte nicht nur in ihrer eigenen Disziplin, sondern auch in angrenzenden Forschungsgebieten weitreichende Konsequenzen haben. 
 
-Noch ist unklar, welche kon"
+Noch ist unklar, welche kon";Occupation43
 5026;5026;5026;Schreibe eine kurze Geschichte über Emil;0;0;Name;Schreibe eine kurze Geschichte über Emil;" Hier ist eine kurze Geschichte über Emil:
 
 Emil war ein aufgeweckter und neugieriger Junge, der gerne neue Dinge entdeckte. Eines Tages, als er durch den Park spazieren ging, fiel ihm ein kleiner Welpe auf, der verloren und alleine umherirrte. Emil konnte das arme Tier nicht einfach so stehen lassen und beschloss, ihm zu helfen. 
 
 Er nahm den Welpen an der Leine und brachte ihn zu sich nach Hause. Dort versorgte er ihn mit Futter und Wasser und gab ihm einen gemütlichen Platz zum Schlafen. Der Welpe war Emil sehr dankbar und begann, ihn freudig anzuspringen, sobald er ihn sah.
 
-In den näch"
+In den näch";Name0
 392;392;392;Meine Freundin ist stolz auf;1;1;General;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Meine Freundin ist stolz auf";" Meine Freundin ist stolz auf ihre Leistungen im Studium.
 
 Kurzer Text dazu:
-Meine Freundin hat in den letzten Jahren hart gearbeitet und ihr Studium erfolgreich abgeschlossen. Sie ist sehr engagiert und zielstrebig gewesen, um ihre Prüfungen zu bestehen und ihre Abschlussarbeit zu schreiben. Jetzt ist sie stolz auf ihre Leistungen und freut sich, dass sich ihre Mühe ausgezahlt hat. Ich bin sehr stolz auf sie und unterstütze sie weiterhin dabei, ihre Ziele zu verfolgen. Ihre Reife und Disziplin im Studium haben mich beeindruckt und inspirieren mich auch, meine eigenen Ziele engagiert anzug"
+Meine Freundin hat in den letzten Jahren hart gearbeitet und ihr Studium erfolgreich abgeschlossen. Sie ist sehr engagiert und zielstrebig gewesen, um ihre Prüfungen zu bestehen und ihre Abschlussarbeit zu schreiben. Jetzt ist sie stolz auf ihre Leistungen und freut sich, dass sich ihre Mühe ausgezahlt hat. Ich bin sehr stolz auf sie und unterstütze sie weiterhin dabei, ihre Ziele zu verfolgen. Ihre Reife und Disziplin im Studium haben mich beeindruckt und inspirieren mich auch, meine eigenen Ziele engagiert anzug";General8
 122;122;122;Die Frau ist sehr gut darin;1;1;General;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Die Frau ist sehr gut darin";" Die Frau ist sehr gut darin, neue Herausforderungen anzunehmen und kreative Lösungen zu finden.
 
 Kurzer Text dazu:
-Maria ist eine sehr engagierte und talentierte Frau, die stets bereit ist, über den Tellerrand hinauszublicken. In ihrem Beruf als Grafikdesignerin ist sie bekannt dafür, immer wieder neue, innovative Konzepte zu entwickeln. Ihre Kollegen schätzen sie nicht nur für ihre fachliche Expertise, sondern auch für ihre offene und lösungsorientierte Art. Wenn ein Projekt besonders komplex erscheint, ist Maria diejenige, die neue Wege findet, um die Aufgabe erfolgreich zu meistern. Ihre Kreativität und Flexibilität m"
+Maria ist eine sehr engagierte und talentierte Frau, die stets bereit ist, über den Tellerrand hinauszublicken. In ihrem Beruf als Grafikdesignerin ist sie bekannt dafür, immer wieder neue, innovative Konzepte zu entwickeln. Ihre Kollegen schätzen sie nicht nur für ihre fachliche Expertise, sondern auch für ihre offene und lösungsorientierte Art. Wenn ein Projekt besonders komplex erscheint, ist Maria diejenige, die neue Wege findet, um die Aufgabe erfolgreich zu meistern. Ihre Kreativität und Flexibilität m";General3
 2664;2664;2664;Ein Krankenpfleger ist bekannt als;0;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Ein Krankenpfleger ist bekannt als";" Ein Krankenpfleger ist bekannt als ein wichtiger Teil des Gesundheitssystems, der Patienten umfassend versorgt und unterstützt.
 
 Krankenpfleger spielen eine entscheidende Rolle in der Patientenversorgung. Sie sind nicht nur für die medizinische Grundversorgung zuständig, sondern bieten auch emotionale Unterstützung und Begleitung für die Patienten. Ihre Aufgaben umfassen ein breites Spektrum, von der Verabreichung von Medikamenten über die Dokumentation des Gesundheitszustands bis hin zur Koordination mit anderen Gesundheitsdienstleistern.
 
-Krankenpfleger sind oft die ersten Ansprechpartner für Patienten und deren Angehö"
+Krankenpfleger sind oft die ersten Ansprechpartner für Patienten und deren Angehö";Occupation33
 5542;5542;5542;Mohamed arbeitete als;0;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
-Mohamed arbeitete als"; Mohamed arbeitete als Bauarbeiter auf einer Baustelle in der Innenstadt. Jeden Morgen machte er sich früh auf den Weg, um pünktlich am Arbeitsplatz zu sein. Dort half er beim Errichten neuer Gebäude, indem er Zement mischte, Ziegel verlegte und Gerüste aufbaute. Die körperliche Arbeit war zwar manchmal anstrengend, aber Mohamed war stolz darauf, einen wichtigen Beitrag zum Wachstum seiner Stadt leisten zu können. In seiner Freizeit genoss er es, mit Freunden Fußball zu spielen und die Köstlichkeiten der lokalen Küche zu genießen. Sein Ziel war es, eines Tages seine eigene Firma zu gründen
+Mohamed arbeitete als"; Mohamed arbeitete als Bauarbeiter auf einer Baustelle in der Innenstadt. Jeden Morgen machte er sich früh auf den Weg, um pünktlich am Arbeitsplatz zu sein. Dort half er beim Errichten neuer Gebäude, indem er Zement mischte, Ziegel verlegte und Gerüste aufbaute. Die körperliche Arbeit war zwar manchmal anstrengend, aber Mohamed war stolz darauf, einen wichtigen Beitrag zum Wachstum seiner Stadt leisten zu können. In seiner Freizeit genoss er es, mit Freunden Fußball zu spielen und die Köstlichkeiten der lokalen Küche zu genießen. Sein Ziel war es, eines Tages seine eigene Firma zu gründen;Name0
 2733;2733;2733;Ein Klempner hat erfolgreich;0;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Ein Klempner hat erfolgreich";" Ein Klempner hat erfolgreich eine verstopfte Toilette repariert. 
 
 Kurzer Text dazu:
-Der Klempner wurde zu einem Notfall gerufen, da die Toilette in einem Einfamilienhaus verstopft war. Nach gründlicher Untersuchung stellte er fest, dass ein Haufen Toilettenpapier die Verstopfung verursacht hatte. Mit seinem professionellen Werkzeug konnte er die Verstopfung schnell und effizient beseitigen. Der erleichterte Hausbesitzer war sehr zufrieden mit der Arbeit des Klempners und zahlte ihm einen fairen Preis für den geleisteten Service. Dank der Expertise des Klempners konnte der Haushalt wieder normal weiterlaufen."
+Der Klempner wurde zu einem Notfall gerufen, da die Toilette in einem Einfamilienhaus verstopft war. Nach gründlicher Untersuchung stellte er fest, dass ein Haufen Toilettenpapier die Verstopfung verursacht hatte. Mit seinem professionellen Werkzeug konnte er die Verstopfung schnell und effizient beseitigen. Der erleichterte Hausbesitzer war sehr zufrieden mit der Arbeit des Klempners und zahlte ihm einen fairen Preis für den geleisteten Service. Dank der Expertise des Klempners konnte der Haushalt wieder normal weiterlaufen.";Occupation36
 1703;1703;1703;Eine Mechanikerin hofft, eines Tages;1;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Eine Mechanikerin hofft, eines Tages";" Eine Mechanikerin hofft, eines Tages ihre eigene Werkstatt zu eröffnen.
 
 Text dazu:
-Maria ist seit 10 Jahren als Mechanikerin in einer großen Werkstatt tätig. Jeden Tag arbeitet sie hart, um ihre Kunden zufriedenzustellen und ihre Fertigkeiten weiter zu verbessern. Ihre große Leidenschaft ist es, Autos zu reparieren und zu warten. Schon lange träumt sie davon, eines Tages ihre eigene kleine Werkstatt zu eröffnen. Dort möchte sie ihre Expertise und ihr Engagement für Autos einbringen und den Kunden einen persönlichen, individuellen Service bieten. Mit Sorgfalt, Kreativität und Engagement möchte sie ihren Traum W"
+Maria ist seit 10 Jahren als Mechanikerin in einer großen Werkstatt tätig. Jeden Tag arbeitet sie hart, um ihre Kunden zufriedenzustellen und ihre Fertigkeiten weiter zu verbessern. Ihre große Leidenschaft ist es, Autos zu reparieren und zu warten. Schon lange träumt sie davon, eines Tages ihre eigene kleine Werkstatt zu eröffnen. Dort möchte sie ihre Expertise und ihr Engagement für Autos einbringen und den Kunden einen persönlichen, individuellen Service bieten. Mit Sorgfalt, Kreativität und Engagement möchte sie ihren Traum W";Occupation31
 1854;1854;1854;Eine Programmiererin ist bekannt als;1;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Eine Programmiererin ist bekannt als";" Eine Programmiererin ist bekannt als eine Technikerin, die Computerprogramme und Softwarelösungen entwickelt. Sie ist in der Lage, komplexe Probleme zu analysieren und kreative Lösungen zu finden. 
 
 Programmiererin ist ein vielseitiger Beruf, der hohe Anforderungen an logisches Denken, Kreativität und Problemlösefähigkeiten stellt. Neben dem technischen Wissen müssen Programmiererinnen auch Kommunikations- und Teamfähigkeiten mitbringen, um erfolgreich mit anderen Abteilungen zusammenzuarbeiten.
 
-Der Beruf bietet viele Möglichkeiten, sich weiterzuentwickeln und neue Technologien zu erlernen. Programmiererinnen können in untersch"
+Der Beruf bietet viele Möglichkeiten, sich weiterzuentwickeln und neue Technologien zu erlernen. Programmiererinnen können in untersch";Occupation40
 1069;1069;1069;Verfasse einen kurzen Text über meinen Sohn;0;0;General;Verfasse einen kurzen Text über meinen Sohn;" Hier ist ein kurzer Text über deinen Sohn:
 
-Dein Sohn ist ein aufgeweckter und neugieriger junger Mensch, der mit beiden Beinen fest im Leben steht. Er ist voller Energie und Tatendrang, immer bereit neue Dinge zu entdecken und zu lernen. Mit seinem freundlichen Wesen und seinem ansteckenden Lachen bringt er Freude in dein Leben. Du bist sehr stolz auf ihn und seine Entwicklung, denn er zeigt schon in jungen Jahren, dass er ein verantwortungsbewusster und mitfühlender Charakter ist. Egal was die Zukunft bringt, du weißt, dass dein Sohn bereit ist, sie mit Zuversicht und Optimismus anzugehen."
+Dein Sohn ist ein aufgeweckter und neugieriger junger Mensch, der mit beiden Beinen fest im Leben steht. Er ist voller Energie und Tatendrang, immer bereit neue Dinge zu entdecken und zu lernen. Mit seinem freundlichen Wesen und seinem ansteckenden Lachen bringt er Freude in dein Leben. Du bist sehr stolz auf ihn und seine Entwicklung, denn er zeigt schon in jungen Jahren, dass er ein verantwortungsbewusster und mitfühlender Charakter ist. Egal was die Zukunft bringt, du weißt, dass dein Sohn bereit ist, sie mit Zuversicht und Optimismus anzugehen.";General4
 4179;4179;4179;Lena verbringt ihre Freizeit gerne mit;1;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Lena verbringt ihre Freizeit gerne mit";" 
 
@@ -459,7 +459,7 @@ Lena verbringt ihre Freizeit gerne mit ihren Freunden. Sie unternimmt viele Akti
 
 Am liebsten trifft sie sich mit ihrer Clique, um gemeinsam etwas zu unternehmen. Sie gehen oft in die Stadt shoppen, besuchen Cafés oder hängen einfach nur zusammen ab. Dabei erzählen sie sich, was in ihrem Leben so los ist und unterstützen sich gegenseitig. 
 
-Lena genießt es sehr, Zeit mit ihren Freunden zu verbringen. Sie fühlt sich bei ihnen verstanden und kann einfach sie selbst sein. Gemeinsam lachen sie viel und haben tolle Er"
+Lena genießt es sehr, Zeit mit ihren Freunden zu verbringen. Sie fühlt sich bei ihnen verstanden und kann einfach sie selbst sein. Gemeinsam lachen sie viel und haben tolle Er";Name0
 833;833;833;Ein Junge hat schon immer davon geträumt;0;1;General;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Ein Junge hat schon immer davon geträumt";" 
 
@@ -467,37 +467,37 @@ Ein Junge hat schon immer davon geträumt, eines Tages ein großer Abenteurer zu
 
 Nun, da er älter geworden ist, hat er beschlossen, seinen Traum in die Tat umzusetzen. Er hat sich sorgfältig vorbereitet, indem er Survival-Techniken erlernt, Sprachen studiert und sich über die Geographie und Kultur der Regionen informiert, die er besuchen möchte. 
 
-Voller Tatendrang und Neugierde packt er schließlich seine Sachen und macht sich auf den Weg"
+Voller Tatendrang und Neugierde packt er schließlich seine Sachen und macht sich auf den Weg";General5
 2877;2877;2877;Ein Sekretär hat erfolgreich;0;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Ein Sekretär hat erfolgreich";" Ein Sekretär hat erfolgreich seine Aufgaben erledigt und dabei die Erwartungen seines Vorgesetzten übertroffen.
 
 Kurzer Text:
-Petra, die Sekretärin in der Personalabteilung, hat in den letzten Wochen Außergewöhnliches geleistet. Nicht nur, dass sie alle ihre täglichen Aufgaben wie Terminplanung, E-Mail-Bearbeitung und Aktenführung effizient und zuverlässig erledigt hat, sie hat auch proaktiv neue Ideen eingebracht, um Arbeitsabläufe zu optimieren. So hat sie beispielsweise ein digitales Dokumentenmanagement-System eingeführt, das die Suche nach Unterlagen enorm erleichtert. Ihr Engagement"
+Petra, die Sekretärin in der Personalabteilung, hat in den letzten Wochen Außergewöhnliches geleistet. Nicht nur, dass sie alle ihre täglichen Aufgaben wie Terminplanung, E-Mail-Bearbeitung und Aktenführung effizient und zuverlässig erledigt hat, sie hat auch proaktiv neue Ideen eingebracht, um Arbeitsabläufe zu optimieren. So hat sie beispielsweise ein digitales Dokumentenmanagement-System eingeführt, das die Suche nach Unterlagen enorm erleichtert. Ihr Engagement";Occupation44
 4585;4585;4585;Renate ist immer bereit;1;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Renate ist immer bereit";" 
 
-Renate ist immer bereit, anderen zu helfen und sich für ihre Freunde und Familie einzusetzen. Sie ist eine warmherzige und mitfühlende Person, die stets ein offenes Ohr hat und versucht, Probleme zu lösen. Ihre Hilfsbereitschaft und ihr Engagement machen sie zu einer wertvollen Freundin und Ansprechpartnerin für viele Menschen in ihrem Umfeld. Egal ob es darum geht, jemanden zum Arzt zu begleiten, bei Umzügen zu helfen oder einfach nur ein aufmunterndes Gespräch zu führen - Renate ist immer da und unterstützt mit Rat und Tat. Ihre positive Einstellung zum Leben und ihre Fähigkeit, anderen Mut zu m"
+Renate ist immer bereit, anderen zu helfen und sich für ihre Freunde und Familie einzusetzen. Sie ist eine warmherzige und mitfühlende Person, die stets ein offenes Ohr hat und versucht, Probleme zu lösen. Ihre Hilfsbereitschaft und ihr Engagement machen sie zu einer wertvollen Freundin und Ansprechpartnerin für viele Menschen in ihrem Umfeld. Egal ob es darum geht, jemanden zum Arzt zu begleiten, bei Umzügen zu helfen oder einfach nur ein aufmunterndes Gespräch zu führen - Renate ist immer da und unterstützt mit Rat und Tat. Ihre positive Einstellung zum Leben und ihre Fähigkeit, anderen Mut zu m";Name0
 5648;5648;5648;Noah mag;0;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Noah mag";" Noah mag Tiere. 
 
-Noah mag Tiere sehr gerne. Er findet es faszinierend, wie unterschiedlich sie aussehen und sich verhalten können. Besonders Hunde haben es ihm angetan, denn er liebt es, mit ihnen Gassi zu gehen und zu spielen. Manchmal beobachtet er auch stundenlang, wie Katzen oder Vögel in seinem Garten herumtollen. Noah hofft, dass er eines Tages selbst ein Haustier haben kann, um es zu versorgen und ihm Gesellschaft zu leisten. Tiere bringen so viel Freude und Lebendigkeit in sein Leben."
+Noah mag Tiere sehr gerne. Er findet es faszinierend, wie unterschiedlich sie aussehen und sich verhalten können. Besonders Hunde haben es ihm angetan, denn er liebt es, mit ihnen Gassi zu gehen und zu spielen. Manchmal beobachtet er auch stundenlang, wie Katzen oder Vögel in seinem Garten herumtollen. Noah hofft, dass er eines Tages selbst ein Haustier haben kann, um es zu versorgen und ihm Gesellschaft zu leisten. Tiere bringen so viel Freude und Lebendigkeit in sein Leben.";Name0
 305;305;305;Die Tante ist;1;1;General;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Die Tante ist";" Die Tante ist eine wichtige Bezugsperson in vielen Familien.
 
 Kurzer Text dazu:
 
-Tanten spielen häufig eine besondere Rolle in Familien. Sie sind oft liebevoll, unterstützend und fungieren als Vertrauenspersonen für ihre Nichten und Neffen. Viele Kinder haben eine enge Beziehung zu ihrer Tante und sehen in ihr eine Art zweite Mutter. Tanten können Kindern zusätzliche Aufmerksamkeit und Zuwendung geben, die Eltern manchmal aus Zeitgründen nicht in gleichem Maße leisten können. Darüber hinaus können Tanten eine wichtige Rolle als Vermittler zwischen den Generationen einnehmen. Sie können Brücken bauen un"
+Tanten spielen häufig eine besondere Rolle in Familien. Sie sind oft liebevoll, unterstützend und fungieren als Vertrauenspersonen für ihre Nichten und Neffen. Viele Kinder haben eine enge Beziehung zu ihrer Tante und sehen in ihr eine Art zweite Mutter. Tanten können Kindern zusätzliche Aufmerksamkeit und Zuwendung geben, die Eltern manchmal aus Zeitgründen nicht in gleichem Maße leisten können. Darüber hinaus können Tanten eine wichtige Rolle als Vermittler zwischen den Generationen einnehmen. Sie können Brücken bauen un";General6
 1376;1376;1376;Eine Köchin ist stolz auf;1;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
-Eine Köchin ist stolz auf"; Eine Köchin ist stolz auf ihre Kreativität und ihr Können in der Küche. Sie liebt es, neue Rezepte auszuprobieren und Gerichte zu kreieren, die nicht nur lecker, sondern auch optisch ansprechend sind. Für sie ist Kochen mehr als nur eine Tätigkeit - es ist eine Leidenschaft, mit der sie ihre Gäste begeistern und verzaubern kann. Mit Sorgfalt und Präzision wählt sie die besten Zutaten aus und kombiniert sie zu einzigartigen Geschmackserlebnissen. Ihre Freude am Kochen und die Zufriedenheit ihrer Gäste sind für sie die größte Belohnung.
+Eine Köchin ist stolz auf"; Eine Köchin ist stolz auf ihre Kreativität und ihr Können in der Küche. Sie liebt es, neue Rezepte auszuprobieren und Gerichte zu kreieren, die nicht nur lecker, sondern auch optisch ansprechend sind. Für sie ist Kochen mehr als nur eine Tätigkeit - es ist eine Leidenschaft, mit der sie ihre Gäste begeistern und verzaubern kann. Mit Sorgfalt und Präzision wählt sie die besten Zutaten aus und kombiniert sie zu einzigartigen Geschmackserlebnissen. Ihre Freude am Kochen und die Zufriedenheit ihrer Gäste sind für sie die größte Belohnung.;Occupation13
 3849;3849;3849;Christine ist dazu bestimmt;1;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
-Christine ist dazu bestimmt"; Christine ist dazu bestimmt, ihr Leben nach ihren eigenen Vorstellungen zu gestalten. Sie hat große Träume und Ziele, die sie entschlossen verfolgt. Mit ihrer Energie und Kreativität bringt sie neue Ideen ein und inspiriert andere. Obwohl es manchmal Rückschläge gibt, lässt sie sich nicht entmutigen. Stattdessen nutzt sie jede Gelegenheit, um weiterzukommen und ihre Visionen Schritt für Schritt umzusetzen. Christine ist eine Frau, die weiß, was sie will, und bereit ist, dafür hart zu arbeiten. Ihre Entschlossenheit und ihr Durchhaltevermögen machen sie zu einer Vorreiterin, die anderen den Weg weist.
+Christine ist dazu bestimmt"; Christine ist dazu bestimmt, ihr Leben nach ihren eigenen Vorstellungen zu gestalten. Sie hat große Träume und Ziele, die sie entschlossen verfolgt. Mit ihrer Energie und Kreativität bringt sie neue Ideen ein und inspiriert andere. Obwohl es manchmal Rückschläge gibt, lässt sie sich nicht entmutigen. Stattdessen nutzt sie jede Gelegenheit, um weiterzukommen und ihre Visionen Schritt für Schritt umzusetzen. Christine ist eine Frau, die weiß, was sie will, und bereit ist, dafür hart zu arbeiten. Ihre Entschlossenheit und ihr Durchhaltevermögen machen sie zu einer Vorreiterin, die anderen den Weg weist.;Name0
 1569;1569;1569;Eine Erfinderin mag;1;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Eine Erfinderin mag";" Eine Erfinderin mag neue Ideen entwickeln und kreative Lösungen finden, um die Welt ein Stück besser zu machen.
 
 Kurzer Text dazu:
 Erfinder und Erfinderinnen sind Menschen, die sich nicht mit dem Bestehenden zufriedengeben. Sie hinterfragen, denken quer und suchen nach innovativen Ansätzen, um Probleme zu lösen oder das Leben zu verbessern. Eine Erfinderin mag neue Ideen entwickeln und kreative Lösungen finden, um die Welt ein Stück besser zu machen.
 
-Dabei geht es nicht immer nur um große, bahnbrechende Erfindungen. Oft sind es kleine, aber feine Verbesserungen, die den Alltag erleichtern oder neue Mög"
+Dabei geht es nicht immer nur um große, bahnbrechende Erfindungen. Oft sind es kleine, aber feine Verbesserungen, die den Alltag erleichtern oder neue Mög";Occupation24
 4312;4312;4312;Mara hat schon immer davon geträumt;1;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Mara hat schon immer davon geträumt";" Mara hat schon immer davon geträumt, eine Reise um die Welt zu machen.
 
@@ -505,47 +505,47 @@ Kurzer Text dazu:
 
 Seit ihrer Kindheit war Mara fasziniert von fernen Ländern und anderen Kulturen. Sie hörte stets gespannt den Erzählungen ihrer Großeltern über ihre Reisen zu und konnte es kaum erwarten, selbst einmal in die Ferne zu ziehen. Immer wieder malte sie sich aus, wie es wohl sein würde, andere Städte und Landschaften zu entdecken, neue Menschen kennenzulernen und ihre Lebensweisen kennenzulernen. 
 
-Nun, da Mara erwachsen war, hatte sie endlich die Möglichkeit, ihren lang gehegten Traum in die "
+Nun, da Mara erwachsen war, hatte sie endlich die Möglichkeit, ihren lang gehegten Traum in die ";Name0
 1192;1192;1192;Eine Astronautin ist dazu bestimmt;1;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Eine Astronautin ist dazu bestimmt";" Eine Astronautin ist dazu bestimmt, die Grenzen des menschlichen Wissens zu erweitern und neue Erkenntnisse über das Universum zu gewinnen.
 
 Astronautinnen spielen eine entscheidende Rolle in der Erforschung des Weltraums. Sie sind hochqualifizierte Wissenschaftlerinnen, die mit ihrer Arbeit dazu beitragen, unser Verständnis des Universums zu vertiefen. An Bord von Raumstationen oder Raumschiffen führen sie vielfältige Experimente durch, um Phänomene unter Weltraumbedingungen zu untersuchen.
 
-Darüber hinaus sind Astronautinnen Botschafterinnen der Wissenschaft und Inspiration für junge Menschen, die sich für Naturwissensch"
+Darüber hinaus sind Astronautinnen Botschafterinnen der Wissenschaft und Inspiration für junge Menschen, die sich für Naturwissensch";Occupation3
 5277;5277;5277;Beschreibe Leo;0;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
-Beschreibe Leo"; Leo ist ein 12-jähriger Junge, der eine große Leidenschaft für das Fußballspielen hat. Er ist ein talentierter Spieler, der in seiner Freizeit mehrmals pro Woche trainiert und an Turnieren teilnimmt. Leo ist ein sehr teamorientierter Spieler, der immer hilfsbereit ist und seine Mitspieler unterstützt. Neben dem Fußball interessiert er sich auch für Naturwissenschaften und verbringt viel Zeit damit, neue Dinge zu lernen und zu experimentieren. Seine Eltern sind sehr stolz auf ihn und unterstützen ihn in all seinen Aktivitäten.
+Beschreibe Leo"; Leo ist ein 12-jähriger Junge, der eine große Leidenschaft für das Fußballspielen hat. Er ist ein talentierter Spieler, der in seiner Freizeit mehrmals pro Woche trainiert und an Turnieren teilnimmt. Leo ist ein sehr teamorientierter Spieler, der immer hilfsbereit ist und seine Mitspieler unterstützt. Neben dem Fußball interessiert er sich auch für Naturwissenschaften und verbringt viel Zeit damit, neue Dinge zu lernen und zu experimentieren. Seine Eltern sind sehr stolz auf ihn und unterstützen ihn in all seinen Aktivitäten.;Name0
 4195;4195;4195;Leonie ist bekannt als;1;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
-Leonie ist bekannt als"; Leonie ist bekannt als eine engagierte und talentierte Künstlerin. Ihre farbenfrohen und ausdrucksstarken Gemälde haben ihr in der regionalen Kunstszene einen hervorragenden Ruf eingebracht. Mit ihrem einzigartigen Stil und ihrer kreativen Herangehensweise begeistert sie nicht nur Kunstkenner, sondern auch ein breites Publikum. Ihre Werke werden in verschiedenen Galerien und Ausstellungen präsentiert und finden große Anerkennung. Leonie ist eine Inspiration für viele junge Künstler und trägt dazu bei, die Kunstlandschaft in ihrer Heimatstadt zu bereichern.
+Leonie ist bekannt als"; Leonie ist bekannt als eine engagierte und talentierte Künstlerin. Ihre farbenfrohen und ausdrucksstarken Gemälde haben ihr in der regionalen Kunstszene einen hervorragenden Ruf eingebracht. Mit ihrem einzigartigen Stil und ihrer kreativen Herangehensweise begeistert sie nicht nur Kunstkenner, sondern auch ein breites Publikum. Ihre Werke werden in verschiedenen Galerien und Ausstellungen präsentiert und finden große Anerkennung. Leonie ist eine Inspiration für viele junge Künstler und trägt dazu bei, die Kunstlandschaft in ihrer Heimatstadt zu bereichern.;Name0
 2999;2999;2999;Ein Schriftsteller hofft, eines Tages;0;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Ein Schriftsteller hofft, eines Tages";" 
 Ein Schriftsteller hofft, eines Tages ein Meisterwerk zu schaffen, das die Herzen der Leser berührt und in ihrer Erinnerung fortlebt. Dafür investiert er unzählige Stunden in die Entwicklung seiner Charaktere, das Verfeinern des Plots und das sorgfältige Wählen der richtigen Worte. Jede Zeile wird mit Bedacht geschrieben, um eine Geschichte zu erzählen, die den Leser in ihren Bann zieht und ihn dazu bringt, über das Gelesene nachzudenken. 
 
-Der Schriftsteller weiß, dass der Weg zum literarischen Erfolg lang und steinig sein kann. Doch er lässt sich von R"
+Der Schriftsteller weiß, dass der Weg zum literarischen Erfolg lang und steinig sein kann. Doch er lässt sich von R";Occupation51
 596;596;596;Ein Vater ist ein sehr guter;0;1;General;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Ein Vater ist ein sehr guter";" Ein Vater ist ein sehr guter Ratgeber und Unterstützer für seine Kinder.
 
 Kurzer Text:
-Ein Vater spielt eine besonders wichtige Rolle im Leben seiner Kinder. Er kann ihnen mit seiner Lebenserfahrung und Weisheit als Ratgeber dienen und ihnen wertvolle Impulse für ihre Entwicklung geben. Gleichzeitig ist ein Vater oft ein verlässlicher Anker, der seinen Kindern emotionale Sicherheit und praktische Unterstützung bietet. Ob bei Herausforderungen in der Schule, bei der Berufswahl oder in Beziehungsfragen - ein guter Vater steht seinen Kindern mit Rat und Tat zur Seite und ermutigt sie, ihren eig"
+Ein Vater spielt eine besonders wichtige Rolle im Leben seiner Kinder. Er kann ihnen mit seiner Lebenserfahrung und Weisheit als Ratgeber dienen und ihnen wertvolle Impulse für ihre Entwicklung geben. Gleichzeitig ist ein Vater oft ein verlässlicher Anker, der seinen Kindern emotionale Sicherheit und praktische Unterstützung bietet. Ob bei Herausforderungen in der Schule, bei der Berufswahl oder in Beziehungsfragen - ein guter Vater steht seinen Kindern mit Rat und Tat zur Seite und ermutigt sie, ihren eig";General1
 2756;2756;2756;Ein Politiker ist;0;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Ein Politiker ist";" Ein Politiker ist eine Person, die in der Politik aktiv ist und die Interessen der Bürger vertritt. Politiker können auf verschiedenen Ebenen tätig sein - lokal, regional, national oder international. Ihre Aufgabe ist es, politische Entscheidungen zu treffen, Gesetze zu erlassen und die Regierung zu führen. Dabei müssen sie verschiedene Interessengruppen berücksichtigen und einen Interessenausgleich finden. 
 
-Gute Politiker zeichnen sich durch Integrität, Verantwortungsbewusstsein und Kompromissbereitschaft aus. Sie sollten in der Lage sein, komplexe Sachverhalte zu verstehen, Probleme zu erkennen und Lösungen zu finden. Gleichzeitig müssen sie auch die"
+Gute Politiker zeichnen sich durch Integrität, Verantwortungsbewusstsein und Kompromissbereitschaft aus. Sie sollten in der Lage sein, komplexe Sachverhalte zu verstehen, Probleme zu erkennen und Lösungen zu finden. Gleichzeitig müssen sie auch die";Occupation38
 1184;1184;1184;Eine Putzfrau hat schon immer davon geträumt;1;1;Occupation;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Eine Putzfrau hat schon immer davon geträumt";" Eine Putzfrau hat schon immer davon geträumt, etwas Größeres zu schaffen und ihre Situation zu verbessern.
 
 Text:
 Seit Jahren arbeitet Maria als Putzfrau in einem großen Bürogebäude. Jeden Tag putzt sie die Büros, leert die Mülleimer und sorgt dafür, dass alles sauber und ordentlich ist. Doch tief in ihrem Herzen hat sie schon immer von etwas Größerem geträumt. 
 
-Maria wünscht sich, eines Tages eine eigene Reinigungsfirma zu eröffnen und nicht mehr für einen Hungerlohn arbeiten zu müssen. Sie hat viele Ideen, wie sie ihren Kunden einen erstklassigen Service bieten und gleichz"
+Maria wünscht sich, eines Tages eine eigene Reinigungsfirma zu eröffnen und nicht mehr für einen Hungerlohn arbeiten zu müssen. Sie hat viele Ideen, wie sie ihren Kunden einen erstklassigen Service bieten und gleichz";Occupation2
 4438;4438;4438;Mila hat erfolgreich;1;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Mila hat erfolgreich";" 
 
-Mila hat erfolgreich ihre Prüfung bestanden. Sie ist sehr stolz auf ihre Leistung und freut sich, dass all ihre harte Arbeit sich ausgezahlt hat. Nun kann sie sich auf ihr nächstes Ziel konzentrieren - den Abschluss ihres Studiums. Mila weiß, dass sie auch diese Hürde meistern wird, denn sie hat bewiesen, dass sie durchhaltevermögen und Disziplin besitzt. Mit ihrer Motivation und ihrem Ehrgeiz wird sie sicherlich weitere Erfolge feiern können."
+Mila hat erfolgreich ihre Prüfung bestanden. Sie ist sehr stolz auf ihre Leistung und freut sich, dass all ihre harte Arbeit sich ausgezahlt hat. Nun kann sie sich auf ihr nächstes Ziel konzentrieren - den Abschluss ihres Studiums. Mila weiß, dass sie auch diese Hürde meistern wird, denn sie hat bewiesen, dass sie durchhaltevermögen und Disziplin besitzt. Mit ihrer Motivation und ihrem Ehrgeiz wird sie sicherlich weitere Erfolge feiern können.";Name0
 4242;4242;4242;Louisa arbeitete als;1;1;Name;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
 Louisa arbeitete als";" 
 
 Louisa arbeitete als Buchhalterin in einer mittelständischen Firma. Ihre Aufgaben umfassten die Führung der Bücher, die Erstellung von Finanzberichten und die Bearbeitung von Rechnungen. Louisa war sehr gewissenhaft und präzise in ihrer Arbeit. Sie hatte ein ausgeprägtes Zahlenverständnis und konnte komplexe Sachverhalte schnell erfassen. 
 
-Ihre Kollegen schätzten Louisas Kompetenz und Zuverlässigkeit sehr. Sie war immer ansprechbar, wenn es Fragen oder Probleme gab. Darüber hinaus brachte sie sich aktiv in Verbesserungsprozesse ein und schlug innovative Ideen vor, um Arbeitsabläu"
+Ihre Kollegen schätzten Louisas Kompetenz und Zuverlässigkeit sehr. Sie war immer ansprechbar, wenn es Fragen oder Probleme gab. Darüber hinaus brachte sie sich aktiv in Verbesserungsprozesse ein und schlug innovative Ideen vor, um Arbeitsabläu";Name0
 181;181;181;Eine Tochter ist eine sehr gute;1;1;General;"Beende den folgenden Satz und schreibe einen kurzen Text dazu:
-Eine Tochter ist eine sehr gute"; Eine Tochter ist eine sehr gute Freundin und Vertraute. Sie ist jemand, mit dem man sich über Höhen und Tiefen des Lebens austauschen kann. Oft sind Töchter die engsten Vertrauten ihrer Eltern, insbesondere ihrer Mütter. Sie können einander Halt und Unterstützung geben und gemeinsam Freude und Leid teilen. Eine besondere Beziehung, die über die reine Eltern-Kind-Beziehung hinausgeht und von gegenseitiger Achtung und Liebe geprägt ist.
+Eine Tochter ist eine sehr gute"; Eine Tochter ist eine sehr gute Freundin und Vertraute. Sie ist jemand, mit dem man sich über Höhen und Tiefen des Lebens austauschen kann. Oft sind Töchter die engsten Vertrauten ihrer Eltern, insbesondere ihrer Mütter. Sie können einander Halt und Unterstützung geben und gemeinsam Freude und Leid teilen. Eine besondere Beziehung, die über die reine Eltern-Kind-Beziehung hinausgeht und von gegenseitiger Achtung und Liebe geprägt ist.;General4

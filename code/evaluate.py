@@ -7,10 +7,12 @@ import genderClassifier as gcl
 import statementClassifier as scl
 import answerClassifier as acl
 import distributionMetrics as dm
+import toxicityClassifier as tc
 importlib.reload(acl)
 importlib.reload(gcl)
 importlib.reload(scl)
 importlib.reload(dm)
+importlib.reload(tc)
 import json
 from sklearn import metrics
 from matplotlib import pyplot as plt
@@ -24,6 +26,7 @@ models = data['models']
 datasets = data['datasets']
 output_path = data['output_path']
 data_path = data['data_path']
+perspective_api_key = data['perspective_api_key']
 
 ##########################################################################
 # Some functions to read files and get scores
@@ -59,6 +62,10 @@ def get_Bleu_Score(dataset,model):
     dM = dm.DistributionMetrics(data_path)
     bleu_scores = dM.get_bias_bleu(pd.read_csv(output_path+model+'/'+dataset+'_output.csv',encoding='utf-8-sig',sep=';'))
     return bleu_scores
+
+def getToxicity(dataset,model,gender_column,tC):
+    toxicity_scores = tC.get_toxicity(pd.read_csv(output_path+model+'/'+dataset+'_output.csv',encoding='utf-8-sig',sep=';'),gender_column)
+    return toxicity_scores
 
 # for all 'confusion matrix' type results, calculate all relevant scores
 def get_Male_Female_Scores(y_true,y_pred):
@@ -105,8 +112,8 @@ def evalA1(model):
         'Bias_norm_score':co_occurrence_scores[key]['bias_norm']}
         results_out['co_occurrence'][key] = results_key
         if key == 'Gender_Split':
-            results_out['co_occurrence'][key]['Top_10_male'] = {k:vocab[k]['score'] for k in sorted(vocab,key=lambda x:vocab[x]['score'],reverse=True)[:10]}
-            results_out['co_occurrence'][key]['Top_10_female'] = {k:vocab[k]['score'] for k in sorted(vocab,key=lambda x:vocab[x]['score'],reverse=False)[:10]}
+            results_out['co_occurrence'][key]['Top_10_male'] = {k:vocab[k]['score'] for k in sorted(vocab,key=lambda x:vocab[x]['score'],reverse=False)[:10]}
+            results_out['co_occurrence'][key]['Top_10_female'] = {k:vocab[k]['score'] for k in sorted(vocab,key=lambda x:vocab[x]['score'],reverse=True)[:10]}
 
     #calculate z scores for difference between the gender split scores distribution and male/female split respectively
     mean_gender = results_out['co_occurrence']['Gender_Split']['Mean']
@@ -137,8 +144,8 @@ def evalA2(model):
 def evalA3(model):
     df = getGender('A3',model)
     vals,cf=get_Male_Female_Scores(df['Article'],df['gender_class'])
-    return {'Accuracy':vals['Accuracy'],'Female_percentage':int((df['Article'] == 1).sum()),
-            'Male_percentage':int((df['gender_class'] == 0).sum())},cf
+    return {'Accuracy':vals['Accuracy'],'Female_percentage':(df['gender_class'] == 1).sum()/df.shape[0],
+            'Male_percentage':(df['gender_class'] == 0).sum()/df.shape[0]},cf
 
 
 def evalB1(model):
@@ -196,6 +203,8 @@ def main():
         except FileNotFoundError:
             output_data = {}
 
+        tC=tc.ToxicityClassifier(perspective_api_key)
+
         if 'A1' in datasets:
             results_out,scores = evalA1(model)
             output_data['A1'] = results_out
@@ -203,8 +212,8 @@ def main():
                 sns.kdeplot(scores[key])
                 plt.savefig(output_path+model+'/A1_'+key+'_conditional_word_probability_distribution.png')
                 plt.close()
-            with open(output_path+model+'/metrics.json','w') as outfile:
-                json.dump(output_data,outfile)
+
+            getToxicity('A1',model,'Gender',tC)
 
 
         if 'A2' in datasets:
@@ -214,20 +223,22 @@ def main():
             plt.ylabel('Stereotype in prompt')
             plt.xlabel('Gender of generated persona')
             plt.savefig(output_path+model+'/A2_confusion_matrix.png')
+            plt.close()
             output_data['A2'] = vals
-            with open(output_path+model+'/metrics.json', 'w') as outfile: 
-                json.dump(output_data, outfile)
+
+            getToxicity('A2',model,'gender_class',tC)
 
         if 'A3' in datasets:  
             #get the gender classification, confusion matrix and metrics for the A3 dataset
             vals, cf = evalA3(model)
             metrics.ConfusionMatrixDisplay(cf,display_labels=['male','female']).plot(cmap='Greys',colorbar=False)
-            plt.ylabel('Gender of article ('der Mensch'/'die Person')')
+            plt.ylabel('Gender of article ("der Mensch"/"die Person")')
             plt.xlabel('Gender of generated persona')
             plt.savefig(output_path+model+'/A3_confusion_matrix.png')
+            plt.close()
             output_data['A3'] = vals
-            with open(output_path+model+'/metrics.json', 'w') as outfile: 
-                json.dump(output_data, outfile)
+
+            getToxicity('A3',model,'gender_class',tC)
 
         if 'B1' in datasets:
             vals,cf = evalB1(model)
@@ -235,9 +246,8 @@ def main():
             plt.ylabel('Stereotypic Answer')
             plt.xlabel('Generated Answer')
             plt.savefig(output_path+model+'/B1_confusion_matrix.png')
+            plt.close()
             output_data['B1'] = vals
-            with open(output_path+model+'/metrics.json','w') as f:
-                json.dump(output_data,f)
 
         if 'B1_control' in datasets:
             vals,cf_stereo, cf_anti_stereo = evalB1_control(model)
@@ -246,14 +256,14 @@ def main():
             plt.xlabel('Gender of generated answer')
             plt.savefig(output_path+model+'/B1_control_stereo_confusion_matrix.png')
             plt.show()
+            plt.close()
             metrics.ConfusionMatrixDisplay(cf_anti_stereo,display_labels=['male','female']).plot(cmap='Greys',colorbar=False)
             plt.ylabel('Gender of correct answer')
             plt.xlabel('Gender of generated answer')
             plt.savefig(output_path+model+'/B1_control_anti_stereo_confusion_matrix.png')
             plt.show()
+            plt.close
             output_data['B1_control'] = vals
-            with open(output_path+model+'/metrics.json','w') as f:
-                json.dump(output_data,f)
 
         if 'B2' in datasets:
             all_vals = evalB2(model)
@@ -264,10 +274,32 @@ def main():
                 plt.ylabel('Sexist Statement')
                 plt.xlabel('Agreement')
                 plt.savefig(output_path+model+'/B2_'+type+'_confusion_matrix.png')
+                plt.close()
                 output_data['B2'][type] = vals
-                with open(output_path+model+'/metrics.json', 'w') as outfile: 
-                    json.dump(output_data, outfile)
+        
+        
+
+
+        if len(tC.toxicity_scores[0])>0 :
+
+            toxicity = {
+                "Mean_toxicity_score_female":np.mean(tC.toxicity_score[1]),
+                "StD_toxicity_score_female":np.std(tC.toxicity_scores[1]),
+                "Mean_toxicity_score_male":np.mean(tC.toxicity_scores[0]),
+                "StD_toxicity_score_male" : np.std(tC.toxicity_scores[0])
+                }
+            output_data['Toxicity'] = toxicity
+            for key in tC.toxicity_scores.keys:
+
+                sns.kdeplot(tC.toxicity_score[key])
+                plt.savefig(output_path+model+'/Toxicity_scores_key_kde_plot.png')
+                plt.close()
+
+
+        with open(output_path+model+'/metrics.json', 'w') as outfile: 
+            json.dump(output_data, outfile)
 
 ##########################################################################################
 
 main()
+print("Evaluation done")

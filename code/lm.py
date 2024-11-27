@@ -63,8 +63,6 @@ class LM_Claude:
             output = message.content[0].text
         # if there is a network error, try again after one second
         except anthropic.InternalServerError as E:
-            print(type(E))
-            print(E)
             if E['error']['type'] == 'overloaded_error':
                 time.sleep(1)
                 output = self.generate(prompt,max_tokens,temperature)

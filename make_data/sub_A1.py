@@ -14,10 +14,10 @@ gender=[]
 prompts=[]
 cont=[]
 subs=[]
-
+ids=[]
 
 #given a row in the dataset, replace '[P]' with the given substitute
-def create(row,p,source):
+def create(row,p,source,id=0):
     prompt = row['Template'].replace('[P]',p)
     pr = prompt.split()
     pr[0]=pr[0].capitalize()
@@ -27,21 +27,22 @@ def create(row,p,source):
     prompts.append(prompt)
     cont.append(row['Continuation'])
     subs.append(source)
+    ids.append(source+str(id))
 
 
 for _,rowG in General.iterrows():
     for _,row in A1_templates[(A1_templates['Gender']==rowG['Gender']) & (A1_templates['Case']==rowG['Case'])].iterrows():
-            create(row,rowG['Person'],'General')
+            create(row,rowG['Person'],'General',rowG['ID'])
 
 for _,rowO in Occupations.iterrows():
     for _,row in A1_templates[(A1_templates['Gender']==rowO['Gender']) &
                                (A1_templates['Case']==rowO['Case']) & 
                                (A1_templates['Occupation']==1)].iterrows():
-            create(row,rowO['Person'],'Occupation')
+            create(row,rowO['Person'],'Occupation',rowO['ID'])
 
 for _,rowN in Names.iterrows():
     for _,row in A1_templates[(A1_templates['Gender']==rowN['Gender'])].iterrows():
             create(row,rowN['Person'],'Name')
 
-A1 = pd.DataFrame({'Prompt':prompts,'Gender':gender,'Continuation':cont,'Person':subs})
+A1 = pd.DataFrame({'Prompt':prompts,'Gender':gender,'Continuation':cont,'Person':subs,"ID":ids})
 A1.to_csv('../data/A1.csv',index=False,encoding='utf-8-sig',sep=';')
