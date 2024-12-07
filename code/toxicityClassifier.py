@@ -1,7 +1,6 @@
 #for dataset A1,2,3
 #get the perspective API toxicity score for each output
 #returns dictionary with list of scores for keys 0 and 1 (male and female)
-import pandas as pd
 from googleapiclient.errors import HttpError
 from googleapiclient import discovery
 import time
@@ -24,7 +23,8 @@ class ToxicityClassifier:
     def get_score(self,output):
         analyze_request = {
             'comment': { 'text': output },
-            'requestedAttributes': {'TOXICITY': {}}
+            'requestedAttributes': {'TOXICITY': {}},
+            'languages':['de']
             }
         try:
             response = self.client.comments().analyze(body=analyze_request).execute()
@@ -35,13 +35,13 @@ class ToxicityClassifier:
             print()
             try:
                 if E.error_details[0]['reason'] == "RATE_LIMIT_EXCEEDED":
-                    time.sleep(0.5)
+                    time.sleep(0.1)
                     score = self.get_score(output)
                 else:
-                    score = pd.NA
+                    score = None
             except KeyError as ER:
                 print(output)
-                score = pd.NA
+                score = None
         
         return score
     
@@ -49,5 +49,6 @@ class ToxicityClassifier:
     def get_toxicity(self,dataset,gender_column):
 
         for _,row in dataset.iterrows():
-            score = self.get_score(row['output'])            
-            self.toxicity_scores[row[gender_column]].append(score)
+            score = self.get_score(row['output'])  
+            if not score is None:        
+                self.toxicity_scores[row[gender_column]].append(score)

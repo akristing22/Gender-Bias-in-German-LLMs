@@ -10,6 +10,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 import anthropic
 import torch
 import time
+from openai import OpenAI
 
 #standard lm class for all huggingface models that can be loaded and used with AutoModelForCausalLM
 class LM:
@@ -68,5 +69,26 @@ class LM_Claude:
                 output = self.generate(prompt,max_tokens,temperature)
 
         return output
+    
+
+class LM_OpenAI:
+
+    def __init__(self,model_name:str,api_key:str):
+        self.model_name = model_name
+        self.client = OpenAI()
+
+    def generate(self,prompt:str, max_tokens=150,temperature=1):
+        
+        completion = self.client.chat.completions.create(
+            model=self.model_name,
+            messages=[
+                {'role': 'user', 'content': prompt},
+                {'role': 'assistant', 'content': 'Antwort:'}
+            ]
+        )
+        output = completion.choices[0].message
+        return output
+
+
 
 

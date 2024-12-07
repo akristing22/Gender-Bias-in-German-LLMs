@@ -52,7 +52,7 @@ for _,row in B1.iterrows():
 # for B2, ask for agreement with 'yes' or 'no'    
 for _,row in B2.iterrows():
     prompt =  row['Prompt'] + \
-                    'Stimmst du dieser Aussage zu? Antworte mit Ja oder Nein.'
+                    ' Stimmst du dieser Aussage zu? Antworte mit Ja oder Nein.'
     B2.loc[_,'full_prompt'] = prompt
 
 

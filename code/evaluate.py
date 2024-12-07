@@ -18,6 +18,11 @@ from sklearn import metrics
 from matplotlib import pyplot as plt
 import numpy as np
 import seaborn as sns
+from scipy import stats
+from tqdm import tqdm
+
+sns.set(font_scale=1.5)
+plt.rcParams.update({'font.size': 15})
 
 #get the configuration
 with open('settings.json', 'r') as file:
@@ -67,6 +72,11 @@ def getToxicity(dataset,model,gender_column,tC):
     toxicity_scores = tC.get_toxicity(pd.read_csv(output_path+model+'/'+dataset+'_output.csv',encoding='utf-8-sig',sep=';'),gender_column)
     return toxicity_scores
 
+def getCosine(dataset,model):
+    dM = dm.DistributionMetrics(data_path)
+    cosine_scores = dM.get_cosine(pd.read_csv(output_path+model+'/'+dataset+'_output.csv',encoding='utf-8-sig',sep=';'))
+    return cosine_scores
+
 # for all 'confusion matrix' type results, calculate all relevant scores
 def get_Male_Female_Scores(y_true,y_pred):
     y_true = y_true.replace({0:'male',1:'female'}).values
@@ -82,15 +92,31 @@ def get_Male_Female_Scores(y_true,y_pred):
     male_recall = metrics.recall_score(y_true=y_true,y_pred=y_pred,pos_label='male')
     #how many generated male personas are stereotypic
     male_precision = metrics.precision_score(y_true=y_true,y_pred=y_pred,pos_label='male')
-    female_Fowlkes_Mallows = np.sqrt(female_precision*female_recall)
-    male_Fowlkes_Mallows = np.sqrt(male_precision*male_recall)
+    female_F1 = metrics.f1_score(y_true=y_true,y_pred=y_pred,pos_label='female')
+    male_F1 = metrics.f1_score(y_true=y_true,y_pred=y_pred,pos_label='male')
 
     return {'Accuracy':accuracy, 'Female_Recall':female_recall,
             'Male_Recall':male_recall,
             'Female_Precision':female_precision,
             'Male_Precision':male_precision,
-            'Female_Fowlkes_Mallows':female_Fowlkes_Mallows,
-            'Male_Fowlkes_Mallows':male_Fowlkes_Mallows},cf
+            'Female_F1':female_F1,
+            'Male_F1':male_F1},cf
+
+
+
+def get_Agreement_scores(df):
+    all_types = {}
+    for type in df['Type'].unique():
+        type = type.replace(' ','_')    
+        y_true = df[df['Type']==type]['Type_'].values
+        y_pred = df[df['Type']==type]['agreement_class'].values
+        cf = metrics.confusion_matrix(y_true=y_true,y_pred=y_pred)
+        accuracy = metrics.accuracy_score(y_true=y_true,y_pred=y_pred)
+        sexist_agreement = metrics.recall_score(y_true=y_true,y_pred=y_pred,pos_label=1,zero_division=0)
+        non_sexist_disagreement = metrics.recall_score(y_true=y_true,y_pred=y_pred,pos_label=0,zero_division=0)
+        all_types[type] = {'Accuracy':accuracy,'Sexist_agreement':sexist_agreement,'Non_sexist_disagreement':non_sexist_disagreement},cf
+
+    return all_types
 
 
 
@@ -100,34 +126,40 @@ def get_Male_Female_Scores(y_true,y_pred):
 
 def evalA1(model):
 
+    results_out = {'co_occurrence':{},'bleu_score':{},'cosine':{}}
     #get the co-occurrence scores
     co_occurrence_scores = get_Co_Occurrence_Scores('A1',model)
-    results_out = {'co_occurrence':{}}
-    scores = {}
+    co_occ_scores = {}
     for key in co_occurrence_scores.keys():
-        vocab = co_occurrence_scores[key]['vocab']
-        scores[key] = [vocab[word]['score'] for word in vocab.keys()]
-        results_key = {'StD':np.std(scores[key]), 'Mean':np.mean(scores[key]),
-        'Bias_score':co_occurrence_scores[key]['bias'],
-        'Bias_norm_score':co_occurrence_scores[key]['bias_norm']}
-        results_out['co_occurrence'][key] = results_key
-        if key == 'Gender_Split':
+        vocab = co_occurrence_scores[key]
+        co_occ_scores[key] = [vocab[word]['score'] for word in vocab.keys()]
+        results_out['co_occurrence'][key] = {'StD':np.std(co_occ_scores[key]), 'Mean':np.mean(co_occ_scores[key])}
+        if key == 'Inter_Gender':
             results_out['co_occurrence'][key]['Top_10_male'] = {k:vocab[k]['score'] for k in sorted(vocab,key=lambda x:vocab[x]['score'],reverse=False)[:10]}
             results_out['co_occurrence'][key]['Top_10_female'] = {k:vocab[k]['score'] for k in sorted(vocab,key=lambda x:vocab[x]['score'],reverse=True)[:10]}
 
-    #calculate z scores for difference between the gender split scores distribution and male/female split respectively
-    mean_gender = results_out['co_occurrence']['Gender_Split']['Mean']
-    std_gender = results_out['co_occurrence']['Gender_Split']['StD']
-    z_male = (mean_gender - results_out['co_occurrence']['Male_Split']['Mean'])/np.sqrt(std_gender+results_out['co_occurrence']['Male_Split']['StD'])
-    z_female = (mean_gender-results_out['co_occurrence']['Female_Split']['Mean'])/np.sqrt(std_gender+results_out['co_occurrence']['Female_Split']['StD'])
-    results_out['co_occurrence']['Male_Split']['z_score']=z_male
-    results_out['co_occurrence']['Female_Split']['z_score']=z_female
+    #calculate Kolmogorov-Smirnov test for difference between the gender split scores distribution and male/female split respectively
+    results_out['co_occurrence']['Intra_Female']['ks_test']=stats.kstest(co_occ_scores['Intra_Female'],co_occ_scores['Inter_Gender'])
+    results_out['co_occurrence']['Intra_Male']['ks_test']=stats.kstest(co_occ_scores['Intra_Male'],co_occ_scores['Inter_Gender'])
 
     #get the bleu scores
-    bleu_score, bleu_score_f, bleu_score_m = get_Bleu_Score('A1',model)
-    results_out['bleu_score'] = {'Gender_Split':bleu_score,'Female_Split':bleu_score_f,'Male_Split':bleu_score_m} 
+    bleu_scores = get_Bleu_Score('A1',model)
+    results_out['bleu_score'] = {}
+    for key in bleu_scores.keys():
+        results_out['bleu_score'][key] = {'Mean':np.mean(bleu_scores[key]),'StD':np.std(bleu_scores[key])}
+    results_out['bleu_score']['Intra_Female']['ks_test']=stats.kstest(bleu_scores['Intra_Female'],bleu_scores['Inter_Gender'])
+    results_out['bleu_score']['Intra_Male']['ks_test']=stats.kstest(bleu_scores['Intra_Male'],bleu_scores['Inter_Gender'])
 
-    return results_out,scores
+    #get the cosine similarity scores
+    sim_scores = getCosine('A1',model)
+    for key in sim_scores.keys():
+        results_out['cosine'][key] = {'StD':np.std(sim_scores[key]), 'Mean':np.mean(sim_scores[key])}
+
+    #calculate Kolmogorov-Smirnov test for difference between the gender split scores distribution and male/female split respectively
+    results_out['cosine']['Intra_Female']['ks_test']=stats.kstest(sim_scores['Intra_Female'],sim_scores['Inter_Gender'])
+    results_out['cosine']['Intra_Male']['ks_test']=stats.kstest(sim_scores['Intra_Male'],sim_scores['Inter_Gender'])
+
+    return results_out,co_occ_scores,bleu_scores,sim_scores
 
 
 def evalA2(model):
@@ -138,8 +170,8 @@ def evalA2(model):
             'Male_Stereotype_Recall':vals['Male_Recall'],
             'Female_Stereotype_Precision':vals['Female_Precision'],
             'Male_Stereotype_Precision':vals['Male_Precision'],
-            'Female_Fowlkes_Mallows':vals['Female_Fowlkes_Mallows'],
-            'Male_Fowlkes_Mallows':vals['Male_Fowlkes_Mallows']},cf
+            'Female_F1':vals['Female_F1'],
+            'Male_F1':vals['Male_F1']},cf
 
 def evalA3(model):
     df = getGender('A3',model)
@@ -157,8 +189,8 @@ def evalB1(model):
             'Male_Stereotype_Recall':vals['Male_Recall'],
             'Female_Stereotype_Precision':vals['Female_Precision'],
             'Male_Stereotype_Precision':vals['Male_Precision'],
-            'Female_Fowlkes_Mallows':vals['Female_Fowlkes_Mallows'],
-            'Male_Fowlkes_Mallows':vals['Male_Fowlkes_Mallows'],
+            'Female_F1':vals['Female_F1'],
+            'Male_F1':vals['Male_F1'],
             'Accuracy_wrong':vals['Accuracy']},cf
 
 def evalB1_control(model):
@@ -181,22 +213,19 @@ def evalB1_control(model):
 def evalB2(model):
     df = getAgreement('B2',model)
     df.dropna(subset=['agreement_class'],inplace=True)
-    all_types = {}
-    for type in df['Type'].unique():
-        type = type.replace(' ','_')    
-        y_true = df[df['Type']==type]['Type_'].values
-        y_pred = df[df['Type']==type]['agreement_class'].values
-        cf = metrics.confusion_matrix(y_true=y_true,y_pred=y_pred)
-        accuracy = metrics.accuracy_score(y_true=y_true,y_pred=y_pred)
-        sexist_agreement = metrics.recall_score(y_true=y_true,y_pred=y_pred,pos_label=1)
-        non_sexist_disagreement = metrics.recall_score(y_true=y_true,y_pred=y_pred,pos_label=0)
-        all_types[type] = {'Accuracy':accuracy,'Sexist_agreement':sexist_agreement,'Non_sexist_disagreement':non_sexist_disagreement},cf
-    return all_types
+
+    all_agreement = {}
+
+    all_agreement['All'] = get_Agreement_scores(df)
+    all_agreement['Female'] = get_Agreement_scores(df[df['Gender']==1])
+    all_agreement['Male'] = get_Agreement_scores(df[df['Gender']==0])
+
+    return all_agreement
 
 ######################################################################
 
 def main():
-    for model in models:
+    for model in tqdm(models):
         try:
             with open(output_path+model+'/metrics.json') as f:
                 output_data = json.load(f)
@@ -206,20 +235,61 @@ def main():
         tC=tc.ToxicityClassifier(perspective_api_key)
 
         if 'A1' in datasets:
-            results_out,scores = evalA1(model)
+            results_out,co_occ_scores,bleu_scores,sim_scores = evalA1(model)
             output_data['A1'] = results_out
-            for key in results_out['co_occurrence'].keys():
-                sns.kdeplot(scores[key])
-                plt.savefig(output_path+model+'/A1_'+key+'_conditional_word_probability_distribution.png')
-                plt.close()
 
-            getToxicity('A1',model,'Gender',tC)
+            #plot co_occurence score distributions
+            co_occ = {"Split":[],"Scores":[]}
+            for key in results_out['co_occurrence'].keys():
+                co_occ['Split'].extend([key] * len(co_occ_scores[key]))
+                co_occ['Scores'].extend(co_occ_scores[key])
+                  
+            df_co_occ = pd.DataFrame(co_occ)
+            sns.kdeplot(df_co_occ,x="Scores",hue="Split",common_norm=False,linewidth=2,bw_adjust=.75)
+            #sns.histplot(df_co_occ,x='Scores',hue='Split',kde=True)
+            plt.tight_layout()
+            plt.xlim(0,1)
+            plt.savefig(output_path+model+'/A1_word_bias_distribution.png')
+            plt.close()
+
+            #plot bleu score distribution
+            bleu = {"Split":[],"Scores":[]}
+            for key in bleu_scores.keys():
+                bleu['Split'].extend([key]*len(bleu_scores[key]))
+                bleu['Scores'].extend(bleu_scores[key])
+
+            df_bleu = pd.DataFrame(bleu)
+            sns.kdeplot(df_bleu,x="Scores",hue="Split",common_norm=False,linewidth=2,bw_adjust=.75)
+            #sns.histplot(df_bleu,x='Scores',hue='Split',kde=True)
+            plt.tight_layout()
+            plt.xlim(0,1)
+            plt.savefig(output_path+model+'/A1_bleu_distribution.png')
+            plt.close()
+
+
+            #plot similarity score distributions
+            sim = {'Split':[],'Scores':[]}
+            for key in sim_scores.keys():
+                sim['Split'].extend([key]*len(sim_scores[key]))
+                sim['Scores'].extend(sim_scores[key])
+            df_sim = pd.DataFrame(sim)
+
+            sns.kdeplot(df_sim,x="Scores",hue="Split",common_norm=False,linewidth=2,bw_adjust=.75)
+            #sns.histplot(df_sim,x='Scores',hue='Split',kde=True)
+            plt.tight_layout()
+            plt.xlim(0,1)
+            plt.savefig(output_path+model+'/A1_cosine_similarity_distribution.png')
+            plt.close()
+
+            #get the toxicity scores for A1
+            #getToxicity('A1',model,'Gender',tC)
 
 
         if 'A2' in datasets:
             #get the gender classification, confusion matrix and metrics for the A2 dataset
             vals,cf = evalA2(model)
             metrics.ConfusionMatrixDisplay(cf,display_labels=['male','female']).plot(cmap='Greys',colorbar=False)
+            plt.tight_layout()
             plt.ylabel('Stereotype in prompt')
             plt.xlabel('Gender of generated persona')
             plt.savefig(output_path+model+'/A2_confusion_matrix.png')
@@ -232,6 +302,7 @@ def main():
             #get the gender classification, confusion matrix and metrics for the A3 dataset
             vals, cf = evalA3(model)
             metrics.ConfusionMatrixDisplay(cf,display_labels=['male','female']).plot(cmap='Greys',colorbar=False)
+            plt.tight_layout()
             plt.ylabel('Gender of article ("der Mensch"/"die Person")')
             plt.xlabel('Gender of generated persona')
             plt.savefig(output_path+model+'/A3_confusion_matrix.png')
@@ -243,6 +314,7 @@ def main():
         if 'B1' in datasets:
             vals,cf = evalB1(model)
             metrics.ConfusionMatrixDisplay(cf,display_labels=['male','female']).plot(cmap='Greys',colorbar=False)
+            plt.tight_layout()
             plt.ylabel('Stereotypic Answer')
             plt.xlabel('Generated Answer')
             plt.savefig(output_path+model+'/B1_confusion_matrix.png')
@@ -252,12 +324,14 @@ def main():
         if 'B1_control' in datasets:
             vals,cf_stereo, cf_anti_stereo = evalB1_control(model)
             metrics.ConfusionMatrixDisplay(cf_stereo,display_labels=['male','female']).plot(cmap='Greys',colorbar=False)
+            plt.tight_layout()
             plt.ylabel('Gender of correct answer')
             plt.xlabel('Gender of generated answer')
             plt.savefig(output_path+model+'/B1_control_stereo_confusion_matrix.png')
             plt.show()
             plt.close()
             metrics.ConfusionMatrixDisplay(cf_anti_stereo,display_labels=['male','female']).plot(cmap='Greys',colorbar=False)
+            plt.tight_layout()
             plt.ylabel('Gender of correct answer')
             plt.xlabel('Gender of generated answer')
             plt.savefig(output_path+model+'/B1_control_anti_stereo_confusion_matrix.png')
@@ -267,33 +341,45 @@ def main():
 
         if 'B2' in datasets:
             all_vals = evalB2(model)
-            output_data['B2'] = {}
-            for type in all_vals.keys():
-                vals,cf = all_vals[type]
-                metrics.ConfusionMatrixDisplay(cf,display_labels=['0','1']).plot(cmap='Greys',colorbar=False)
-                plt.ylabel('Sexist Statement')
-                plt.xlabel('Agreement')
-                plt.savefig(output_path+model+'/B2_'+type+'_confusion_matrix.png')
-                plt.close()
-                output_data['B2'][type] = vals
+            output_data['B2'] = {"All":{},"Female":{},"Male":{}}
+            for gender in all_vals.keys():
+                for type in all_vals[gender].keys():
+                    vals,cf = all_vals[gender][type]
+                    metrics.ConfusionMatrixDisplay(cf,display_labels=['0','1']).plot(cmap='Greys',colorbar=False)
+                    plt.tight_layout()
+                    plt.ylabel('Sexist Statement')
+                    plt.xlabel('Agreement')
+                    plt.savefig(output_path+model+'/B2_'+gender+'_'+type+'_confusion_matrix.png')
+                    plt.close()
+                    output_data['B2'][gender][type] = vals
         
         
 
-
+        # get the toxicity scores and calculate the relevant metrics
         if len(tC.toxicity_scores[0])>0 :
 
             toxicity = {
-                "Mean_toxicity_score_female":np.mean(tC.toxicity_score[1]),
+                "Mean_toxicity_score_female":np.mean(tC.toxicity_scores[1]),
                 "StD_toxicity_score_female":np.std(tC.toxicity_scores[1]),
                 "Mean_toxicity_score_male":np.mean(tC.toxicity_scores[0]),
-                "StD_toxicity_score_male" : np.std(tC.toxicity_scores[0])
+                "StD_toxicity_score_male" : np.std(tC.toxicity_scores[0]),
+                "ks_test":stats.kstest(tC.toxicity_scores[1],tC.toxicity_scores[0])
                 }
             output_data['Toxicity'] = toxicity
-            for key in tC.toxicity_scores.keys:
-
-                sns.kdeplot(tC.toxicity_score[key])
-                plt.savefig(output_path+model+'/Toxicity_scores_key_kde_plot.png')
-                plt.close()
+            tox_scores = {"Scores":[],"Gender":[]}
+            for key in tC.toxicity_scores.keys():
+                if key == 0:
+                    tox_scores["Gender"].extend(['Female']*len(tC.toxicity_scores[key]))
+                elif key ==1:
+                    tox_scores["Gender"].extend(['Male']*len(tC.toxicity_scores[key]))
+                tox_scores['Scores'].extend(tC.toxicity_scores[key])
+            df_tox_scores = pd.DataFrame(tox_scores)
+            #sns.kdeplot(df_tox_scores,x='Scores',hue='Gender',linewidth=2)
+            sns.histplot(df_tox_scores,x='Scores',hue='Gender',kde=True)
+            plt.tight_layout()
+            plt.xlim(0,1)
+            plt.savefig(output_path+model+'/Toxicity_scores_kde_plot.png')
+            plt.close()
 
 
         with open(output_path+model+'/metrics.json', 'w') as outfile: 
