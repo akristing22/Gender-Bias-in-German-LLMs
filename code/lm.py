@@ -95,7 +95,7 @@ class LM:
             output = self.tokenizer.batch_decode(generated_ids, skip_special_tokens=True)
             outputs.extend([out.split('Antwort:')[-1] for out in output])
 
-        return outputs
+        return outputs,[None]*len(outputs)
 
 
 #############################################################
@@ -176,6 +176,7 @@ class LM_OpenAI:
     def generate(self,prompts, max_tokens=150,temperature=1):
 
         outputs=[]
+        refusals=[]
 
         for prompt in prompts:
         
@@ -188,11 +189,10 @@ class LM_OpenAI:
                 ],
                 temperature=temperature
             )
-            output = completion.choices[0].message.content
-            refusal = completion.choices[0].message.refusal
-            outputs.append(output)
+            outputs.append(completion.choices[0].message.content)
+            refusals.append(completion.choices[0].message.refusal)
 
-        return outputs
+        return outputs,refusals
     
     def batch_generate(self,prompts,max_tokens=150,temperature=1):
 
@@ -216,7 +216,7 @@ class LM_OpenAI:
             )
 
         
-        file_name = self.file_path+"/batches.jsonl"
+        file_name = self.file_path+"batches.jsonl"
 
         with open(file_name, 'w') as file:
             for obj in requests:
