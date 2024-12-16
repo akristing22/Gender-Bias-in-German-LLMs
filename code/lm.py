@@ -168,9 +168,9 @@ class LM_Anthropic:
 
 class LM_OpenAI:
 
-    def __init__(self,model_name:str,api_key:str,file_path:str):
+    def __init__(self,model_name:str,api_key:str,file_path:str = None):
         self.model_name = model_name
-        self.client = OpenAI(api_key)
+        self.client = OpenAI(api_key=api_key)
         self.file_path = file_path
 
     def generate(self,prompts, max_tokens=150,temperature=1):
@@ -188,7 +188,8 @@ class LM_OpenAI:
                 ],
                 temperature=temperature
             )
-            output = completion.choices[0].message
+            output = completion.choices[0].message.content
+            refusal = completion.choices[0].message.refusal
             outputs.append(output)
 
         return outputs
