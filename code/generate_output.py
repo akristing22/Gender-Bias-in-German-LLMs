@@ -52,7 +52,7 @@ def get_datasets():
         ########################################
         #### UNCOMMENT HERE WHEN SAMPLING ######
         ########################################
-        #dataset = sample(dataset,10)
+        dataset = sample(dataset,10)
 
 
         datasets[dataset_name]=dataset
