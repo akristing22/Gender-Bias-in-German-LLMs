@@ -176,7 +176,6 @@ class LM_OpenAI:
     def generate(self,prompts, max_tokens=150,temperature=1):
 
         outputs=[]
-        refusals=[]
 
         for prompt in prompts:
         
@@ -190,9 +189,8 @@ class LM_OpenAI:
                 temperature=temperature
             )
             outputs.append(completion.choices[0].message.content)
-            refusals.append(completion.choices[0].message.refusal)
 
-        return outputs,refusals
+        return outputs
     
     def batch_generate(self,prompts,max_tokens=150,temperature=1):
 

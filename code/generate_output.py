@@ -43,16 +43,16 @@ def get_datasets():
         #### CHANGE NUMBER HERE ################
         ########################################
 
-        #if dataset is smaller than 1000 prompts, multiply it
-        if dataset.shape[0] < 1000:
+        #if dataset is smaller than 2000 prompts, multiply it
+        if dataset.shape[0] < 2000:
             original = dataset.copy()
-            for _ in range(0,int(np.floor(1000/dataset.shape[0]))):
+            for _ in range(0,int(np.floor(2000/dataset.shape[0]))):
                 dataset = pd.concat([dataset,original],ignore_index=True)
 
         ########################################
         #### UNCOMMENT HERE WHEN SAMPLING ######
         ########################################
-        dataset = sample(dataset,10)
+        #dataset = sample(dataset,10)
 
 
         datasets[dataset_name]=dataset
@@ -81,8 +81,7 @@ def get_output(model, datasets,batch=True):
         if batch and (type(model)==LM_Anthropic or type(model)==LM_OpenAI):
             message_batch_ids[dataset]=model.batch_generate(data['full_prompt'].values,temperature=0.7,max_tokens=max_t)
         elif not batch and type(model)==LM_OpenAI:
-            outputs,refusals = model.generate(data['full_prompt'].values,temperature=0.7,max_tokens=max_t)
-            data['refusal']=refusals
+            outputs = model.generate(data['full_prompt'].values,temperature=0.7,max_tokens=max_t)
         else:
             outputs = model.generate(data['full_prompt'].values,temperature=0.7,max_tokens=max_t)    
             data['output']=outputs
