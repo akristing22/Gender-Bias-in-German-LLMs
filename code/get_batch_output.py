@@ -76,15 +76,19 @@ if 'GPT' in models:
 
             outputs = {}
             refusals = {}
-            for result in client.files.content(batch_object.output_file_id):
-                outputs[result.custom_id] = result.response.body.choices[0].message.content
-                refusals[result.custom_id] = result.response.body.choices[0].message.refusal
+            response_text = client.files.content(batch_object.output_file_id).text
+            for result in response_text.split("\n"):
+                if result.strip() == "":
+                    continue
+                result = json.loads(result)
+                outputs[result['custom_id']] = result['response']['body']['choices'][0]['message']['content']
+                refusals[result['custom_id']] = result['response']['body']['choices'][0]['message']['refusal']
 
             data = pd.read_csv(output_path+'GPT/'+dataset+'_output.csv',encoding='utf-8-sig',sep=';')
 
             for out_id in outputs.keys():
-                data.loc[int(out_id),'output'] = outputs[int(out_id)].strip()
-                data.loc[int(out_id),'refusal'] = outputs[int(out_id)].strip()
+                data.loc[int(out_id),'output'] = outputs[out_id].strip() if outputs[out_id] is not None else outputs[out_id]
+                data.loc[int(out_id),'refusal'] = refusals[out_id].strip() if refusals[out_id] is not None else refusals[out_id]
 
             data.to_csv(output_path+'GPT/'+dataset+'_output.csv',encoding='utf-8-sig',sep=';',index=False)
         
