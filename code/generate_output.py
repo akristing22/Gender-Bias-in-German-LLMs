@@ -80,10 +80,12 @@ def get_output(model, datasets,batch=True):
 
         if batch and (type(model)==LM_Anthropic or type(model)==LM_OpenAI):
             message_batch_ids[dataset]=model.batch_generate(data['full_prompt'].values,temperature=0.7,max_tokens=max_t)
-        else:
-            outputs,refusals = model.generate(data['full_prompt'].values,temperature=0.7,max_tokens=max_t)    
-            data['output']=outputs
+        elif not batch and type(model)==LM_OpenAI:
+            outputs,refusals = model.generate(data['full_prompt'].values,temperature=0.7,max_tokens=max_t)
             data['refusal']=refusals
+        else:
+            outputs = model.generate(data['full_prompt'].values,temperature=0.7,max_tokens=max_t)    
+            data['output']=outputs
             datasets[dataset] = data
 
     if batch and type(model)==LM_Anthropic:

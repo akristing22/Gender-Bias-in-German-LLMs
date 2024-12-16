@@ -95,7 +95,7 @@ class LM:
             output = self.tokenizer.batch_decode(generated_ids, skip_special_tokens=True)
             outputs.extend([out.split('Antwort:')[-1] for out in output])
 
-        return outputs,[None]*len(outputs)
+        return outputs
 
 
 #############################################################
