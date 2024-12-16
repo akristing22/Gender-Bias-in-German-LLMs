@@ -81,7 +81,9 @@ def get_output(model, datasets,batch=True):
         if batch and (type(model)==LM_Anthropic or type(model)==LM_OpenAI):
             message_batch_ids[dataset]=model.batch_generate(data['full_prompt'].values,temperature=0.7,max_tokens=max_t)
         else:
-            data['output'] = model.generate(data['full_prompt'].values,temperature=0.7,max_tokens=max_t)    
+            outputs,refusals = model.generate(data['full_prompt'].values,temperature=0.7,max_tokens=max_t)    
+            data['output']=outputs
+            data['refusal']=refusals
             datasets[dataset] = data
 
     if batch and type(model)==LM_Anthropic:
@@ -110,7 +112,7 @@ def main():
         if model == 'Claude':
             myLM = LM_Anthropic(models[model],anthropic_api_key)
         elif model =='GPT':
-            myLM = LM_OpenAI(models[model],openai_api_key)
+            myLM = LM_OpenAI(models[model],openai_api_key,file_path=(output_path+model+'/'))
         else: 
             myLM = LM(local_path,models[model],login_token)
         start2 = time.time()
