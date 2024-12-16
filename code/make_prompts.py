@@ -24,7 +24,7 @@ for _,row in A1.iterrows():
         prompt = row['Prompt']
     A1.loc[_,'full_prompt'] = prompt
 
-# datasets A2 and A3 are ready, because the include instructions in prompt ('write a story about...', ...)
+# datasets A2 and A3 are ready, because they include instructions in prompt ('write a story about...', ...)
 A2['full_prompt'] = A2['Prompt']
 A3['full_prompt'] = A3['Prompt']
 

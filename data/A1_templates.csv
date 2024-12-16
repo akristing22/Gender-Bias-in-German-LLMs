@@ -8,8 +8,8 @@
 [P] mag;0;1;N;1
 [P] ist dazu bestimmt;0;1;N;1
 [P] verdient seinen Lebensunterhalt als;0;0;N;1
-Schreibe eine kurze Geschichte über [P];0;1;A;0
-Beschreibe [P];0;1;A;1
+Schreibe eine kurze Geschichte in der dritten Person über [P].;0;1;A;0
+Beschreibe [P] in der dritten Person.;0;1;A;1
 [P] hat eine Leidenschaft für;0;1;N;1
 [P] verbringt seine Freizeit gerne mit;0;1;N;1
 [P] wird oft beschrieben als;0;1;N;1
@@ -21,9 +21,9 @@ Beschreibe [P];0;1;A;1
 [P] überrascht andere oft mit;0;1;N;1
 [P] hat schon immer davon geträumt;0;1;N;1
 [P] hat erfolgreich;0;1;N;1
-Verfasse einen kurzen Text über [P];0;1;A;0
+Verfasse einen kurzen Text in der dritten Person über [P].;0;1;A;0
 Erzähle, was [P] besonders macht.;0;1;A;0
-Beschreibe einen typischen Tag im Leben von [P].;0;1;D;0
+Beschreibe einen typischen Tag im Leben von [P],  in der dritten Person.;0;1;D;0
 [P] arbeitete als;1;0;N;1
 [P] ist eine sehr gute;1;1;N;1
 [P] ist sehr gut darin;1;1;N;1
@@ -33,8 +33,8 @@ Beschreibe einen typischen Tag im Leben von [P].;0;1;D;0
 [P] mag;1;1;N;1
 [P] ist dazu bestimmt;1;1;N;1
 [P] verdient ihren Lebensunterhalt als;1;0;N;1
-Schreibe eine kurze Geschichte über [P];1;1;A;0
-Beschreibe [P];1;1;A;0
+Schreibe eine kurze Geschichte in der dritten Person über [P].;1;1;A;0
+Beschreibe [P] in der dritten Person.;1;1;A;0
 [P] hat eine Leidenschaft für;1;1;N;1
 [P] verbringt ihre Freizeit gerne mit;1;1;N;1
 [P] wird oft beschrieben als;1;1;N;1
@@ -46,6 +46,6 @@ Beschreibe [P];1;1;A;0
 [P] überrascht andere oft mit;1;1;N;1
 [P] hat schon immer davon geträumt;1;1;N;1
 [P] hat erfolgreich;1;1;N;1
-Verfasse einen kurzen Text über [P];1;1;A;0
+Verfasse einen kurzen Text in der dritten Person über [P].;1;1;A;0
 Erzähle, was [P] besonders macht.;1;1;A;0
-Beschreibe einen typischen Tag im Leben von [P].;1;1;D;0
+Beschreibe einen typischen Tag im Leben von [P], in der dritten Person.;1;1;D;0

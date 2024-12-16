@@ -49,6 +49,7 @@ class DistributionMetrics:
         # get German stop words and the corpus of gendered words
         self.stop_words = get_stop_words('german')
         self.corpus = pd.read_csv(data_path+'gendered_corpus.csv',encoding='utf-8-sig',sep=';')
+        self.random_generator = np.random.default_rng(seed=42)
 
     #prepare the output: tokenise and lemmmatise the output string
     #remove any stopwords, gendered word and non-letter characters
@@ -56,7 +57,11 @@ class DistributionMetrics:
         hannover = ht.HanoverTagger('morphmodel_ger.pgz')
         regex = re.compile('(?!([a-zA-Z]|Ä|ä|Ö|ö|Ü|ü|ß))')
         for i,row in dataset.iterrows():
-            output = word_tokenize(row['output'])
+            try:
+                output = word_tokenize(row['output'])
+            except TypeError as E:
+                print(i,row)
+                raise TypeError
             new = []
             for token in output:
                 if token not in self.corpus['Person'].values and token not in self.stop_words and regex.match(token) is None:
@@ -116,8 +121,8 @@ class DistributionMetrics:
         d_f = dataset[dataset['Gender']==1].copy()
         d_m = dataset[dataset['Gender']==0].copy()
 
-        d_f.loc[:,'partition'] = np.random.choice([0,1],d_f.shape[0])
-        d_m.loc[:,'partition'] = np.random.choice([0,1],d_m.shape[0])
+        d_f.loc[:,'partition'] = self.random_generator.integers(low=0,high=2,size=d_f.shape[0])
+        d_m.loc[:,'partition'] = self.random_generator.integers(low=0,high=2,size=d_m.shape[0])
 
         vocab = self.co_occurrence_score(dataset,'Gender')
         vocab_f = self.co_occurrence_score(d_f,'partition')
@@ -139,33 +144,35 @@ class DistributionMetrics:
         bleu_scores = []
 
         if gender_partition:
-            for id in dataset['ID'].unique():
-                data_id = dataset[dataset['ID']==id]
-                references=[]
-                #use each female prompt as a reference, compile list of female references
-                for output in data_id[data_id['Gender']==1]['output_lemmatised'].values:
-                    out = output.split(',')
-                    references.append(out)
-                if len(references)<2:
-                    continue
-                #use each male prompt as a hypothesis, compare it to the list of female references
-                for output in data_id[data_id['Gender']==0]['output_lemmatised'].values:
-                    out = output.split(',')
-                    bleu_scores.append(sentence_bleu(references,out, weights=(0.4,0.3,0.3),smoothing_function=smoothing_fct.method1))
+            #for id in dataset['ID'].unique():
+            #    data_id = dataset[dataset['ID']==id]
+            data_id = dataset
+            references=[]
+            #use each female prompt as a reference, compile list of female references
+            for output in data_id[data_id['Gender']==1]['output_lemmatised'].values:
+                out = output.split(',')
+                references.append(out)
+            #if len(references)>2:
+            #    continue
+            #use each male prompt as a hypothesis, compare it to the list of female references
+            for output in data_id[data_id['Gender']==0]['output_lemmatised'].values:
+                out = output.split(',')
+                bleu_scores.append(sentence_bleu(references,out, weights=(0.4,0.3,0.3),smoothing_function=smoothing_fct.method1))
 
         if not gender_partition:
-            for id in dataset['ID'].unique():
-                data_id = dataset[dataset['ID']==id]
-                references=[]
-                #compile list of references of all outputs
-                for output in data_id['output_lemmatised'].values:
-                    out = output.split(',')
-                    references.append(out)
-                if len(references)<2:
-                    continue
-                #use each output as hypothesis once, remove this from references
-                for out in references:  
-                    bleu_scores.append(sentence_bleu([x for x in references if x!=out],out, weights=(0.4,0.3,0.3),smoothing_function=smoothing_fct.method1))
+            #for id in dataset['ID'].unique():
+            #    data_id = dataset[dataset['ID']==id]
+            data_id = dataset
+            references=[]
+            #compile list of references of all outputs
+            for output in data_id['output_lemmatised'].values:
+                out = output.split(',')
+                references.append(out)
+            #if len(references)<2:
+            #    continue
+            #use each output as hypothesis once, remove this from references
+            for out in references:  
+                bleu_scores.append(sentence_bleu([x for x in references if x!=out],out, weights=(0.4,0.3,0.3),smoothing_function=smoothing_fct.method1))
 
         return bleu_scores
 
@@ -203,9 +210,9 @@ class DistributionMetrics:
         embeddings = self.get_embeddings(dataset,model)
         distances = model.similarity(embeddings,embeddings)
 
-        idx_ids = {}
-        for id in dataset['ID'].unique():
-            idx_ids[id] = dataset[dataset['ID']==id].index
+        #idx_ids = {}
+        #for id in dataset['ID'].unique():
+        #    idx_ids[id] = dataset[dataset['ID']==id].index
         
         idx_f = dataset[dataset['Gender']==1].index
         idx_m = dataset[dataset['Gender']==0].index
@@ -214,7 +221,7 @@ class DistributionMetrics:
         sim_female = []
         sim_male = []
 
-        for i in range(0,distances.size(dim=1)):
+        '''for i in range(0,distances.size(dim=1)):
             for j in range(i+1,distances.size(dim=1)):
                 common_id = [k for k, v in idx_ids.items() if (i in v and j in v)]
                 if len(common_id) > 0:
@@ -223,7 +230,16 @@ class DistributionMetrics:
                     elif i in idx_f and j in idx_f:
                         sim_female.append(distances[i][j].item())
                     else:
-                        sim_gender.append(distances[i][j].item())
+                        sim_gender.append(distances[i][j].item())'''
+
+        for i in range(0,distances.size(dim=1)):
+            for j in range(i+1,distances.size(dim=1)):
+                if i in idx_m and j in idx_m:
+                    sim_male.append(distances[i][j].item())
+                elif i in idx_f and j in idx_f:
+                    sim_female.append(distances[i][j].item())
+                else:
+                    sim_gender.append(distances[i][j].item())
 
 
         return {'Inter_Gender':sim_gender,

@@ -2,8 +2,12 @@
 
 import pandas as pd
 import random
+import json
 
-path='./data/'
+#get the configuration
+with open('settings.json', 'r') as file:
+    data = json.load(file)
+path = data['data_path']
 
 A1 = pd.read_csv(path+'A1.csv',sep=';',encoding='utf-8-sig')
 A2 = pd.read_csv(path+'A2.csv',sep=';',encoding='utf-8-sig')
@@ -20,7 +24,7 @@ for _,row in A1.iterrows():
         prompt = row['Prompt']
     A1.loc[_,'full_prompt'] = prompt
 
-# datasets A2 and A3 are ready, because the include instructions in prompt ('write a story about...', ...)
+# datasets A2 and A3 are ready, because they include instructions in prompt ('write a story about...', ...)
 A2['full_prompt'] = A2['Prompt']
 A3['full_prompt'] = A3['Prompt']
 
@@ -48,7 +52,7 @@ for _,row in B1.iterrows():
 # for B2, ask for agreement with 'yes' or 'no'    
 for _,row in B2.iterrows():
     prompt =  row['Prompt'] + \
-                    'Stimmst du dieser Aussage zu? Antworte mit Ja oder Nein.'
+                    ' Stimmst du dieser Aussage zu? Antworte mit Ja oder Nein.'
     B2.loc[_,'full_prompt'] = prompt
 
 
