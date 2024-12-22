@@ -33,6 +33,8 @@ class LM:
         # how many tokens can be processed at the same time, as given by memory restraints
         # free memory after loading model in bytes
         free_memory = torch.cuda.mem_get_info()[0]
+        print('Memory available after loading the model')
+        print(free_memory)
         # calculated as in https://www.baseten.co/blog/llm-transformer-inference-guide/#3500759-estimating-total-generation-time-on-each-gpu
         self.kv_cache_tokens = free_memory/(2 * 2 * self.model.config.num_hidden_layers * self.model.config.hidden_size)
    
@@ -87,10 +89,14 @@ class LM:
 
         for batch in batches:
 
-            messages = [prompt + '\nAntwort:\n' for prompt in batch]
-            inputs = self.tokenizer(messages,return_tensors='pt',padding=True,return_attention_mask=True).to('cuda')
+            messages = [[{'role': 'user', 'content': prompt},
+                        {'role': 'assistant', 'content': '\nAntwort:\n'}] for prompt in batch]
+
+            inputs = self.tokenizer.apply_chat_template(messages, add_generation_prompt=False, return_tensors="pt",padding=True,tokenize=True, return_dict=True, continue_final_message=True).to('cuda')
             attention_mask = inputs['attention_mask']
             generated_ids = self.model.generate(inputs.input_ids,temperature=temperature, attention_mask=attention_mask, max_new_tokens=max_tokens,do_sample=True)
+
+            inputs = self.tokenizer.apply_chat_template(messages, add_generation_prompt=False, return_tensors="pt",padding=True,tokenize=True, return_dict=True, continue_final_message=True).to('cuda')
 
             output = self.tokenizer.batch_decode(generated_ids, skip_special_tokens=True)
             outputs.extend([out.split('Antwort:')[-1] for out in output])
@@ -214,21 +220,21 @@ class LM_OpenAI:
             )
 
         
-        file_name = self.file_path+"batches.jsonl"
+        file_name = self.file_path+'batches.jsonl'
 
         with open(file_name, 'w') as file:
             for obj in requests:
                 file.write(json.dumps(obj) + '\n')
 
         batch_file = self.client.files.create(
-            file=open(file_name, "rb"),
-            purpose="batch"
+            file=open(file_name, 'rb'),
+            purpose='batch'
             )
 
         batch_job = self.client.batches.create(
             input_file_id=batch_file.id,
-            endpoint="/v1/chat/completions",
-            completion_window="24h"
+            endpoint='/v1/chat/completions',
+            completion_window='24h'
             )  
         os.remove(file_name)      
 
