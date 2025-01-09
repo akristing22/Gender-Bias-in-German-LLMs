@@ -46,10 +46,10 @@ class GenderClassifier:
 
         prompts = [row['output']+instruction for _,row in df.iterrows()]
 
-        outputs = model.generate(prompts,1,0.7)
+        outputs = model.generate(prompts,5,0.7)
 
         for i,output in enumerate(outputs):
-            df.loc[i,'gender_output'] = output
+            df.loc[i,'gender_output'] = output.strip()
             if 'W' in output:
                 df.loc[i,'gender_class_lm'] = 1
             elif 'M' in output:
