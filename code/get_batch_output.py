@@ -43,7 +43,7 @@ if 'Claude' in models.keys():
             data = pd.read_csv(output_path+'Claude/'+dataset+'_output.csv',encoding='utf-8-sig',sep=';')
 
             for out_id in outputs.keys():
-                data.loc[int(out_id),'output'] = outputs[out_id].strip()
+                data.loc[int(out_id),'output'] = outputs[out_id].strip() if outputs[out_id] is not None else outputs[out_id]
 
             data.to_csv(output_path+'Claude/'+dataset+'_output.csv',encoding='utf-8-sig',sep=';',index=False)
 
