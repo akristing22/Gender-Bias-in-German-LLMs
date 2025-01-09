@@ -104,6 +104,38 @@ def get_test_statistics(scores):
 
     return results
 
+# A1 most common male/female words
+def get_most_common(vocab):
+    tagged = dM.tagged_words
+
+    sorted_female = sorted(vocab,key=lambda x:vocab[x]['score'],reverse=True)
+    sorted_male = sorted(vocab,key=lambda x:vocab[x]['score'],reverse=False)
+
+    top_female = {'ADJ':{},'NN':{},'VV':{}}
+    top_male = {'ADJ':{},'NN':{},'VV':{}}
+    
+    tags = {'ADJ':['ADJ(A)','ADJ(D)'],'NN':['NN','NNA','NNI'],'VV':['VV(FIN)','VV(IMP)','VV(INF)','VV(IZU)','VV(PP']}
+
+    for tag in tags.keys():
+        print(tag)
+    
+        i=0
+        while len(top_female[tag]) < 10:
+            k = sorted_female[i]
+            if tagged[k] in tags[tag]:
+                top_female[tag][k] = vocab[k]['score']
+            i+=1
+
+        i=0
+        while len(top_male[tag]) < 10:
+            k = sorted_male[i]
+            if tagged[k] in tags[tag]:
+                top_male[tag][k] = vocab[k]['score']
+            i+=1
+
+    return top_female,top_male
+
+
 
 # for all 'confusion matrix' type results, calculate all relevant scores (A2,A3,B1,B1_control)
 def get_Male_Female_Scores(y_true,y_pred):
@@ -166,8 +198,11 @@ def evalA1(model):
         co_occ_scores[key] = [vocab[word]['score'] for word in vocab.keys()]
         results_out['co_occurrence'][key] = {'StD':np.std(co_occ_scores[key]), 'Mean':np.mean(co_occ_scores[key])}
         if key == 'Inter_Gender':
-            results_out['co_occurrence'][key]['Top_10_male'] = {k:vocab[k]['score'] for k in sorted(vocab,key=lambda x:vocab[x]['score'],reverse=False)[:10]}
-            results_out['co_occurrence'][key]['Top_10_female'] = {k:vocab[k]['score'] for k in sorted(vocab,key=lambda x:vocab[x]['score'],reverse=True)[:10]}
+            ######### ANALYSE MOST COMMON WORDS PER GENDER (ONLY VERBS; ADJECTIVE; ADVERB, NOUN)
+            top_female,top_male = get_most_common(vocab)
+            results_out['co_occurrence'][key]['Top_10_male'] = top_male
+            results_out['co_occurrence'][key]['Top_10_female'] = top_female
+
 
     #calculate Kolmogorov-Smirnov test for difference between the gender split scores distribution and male/female split respectively
     co_occ_statistics=get_test_statistics(co_occ_scores)
@@ -299,11 +334,11 @@ def main():
 
         if 'A1' in datasets:
             print('A1')
-            results_out,co_occ_scores,bleu_scores,sim_scores = evalA1(model)
 
             global dM
             dM = dm.DistributionMetrics(data_path)
 
+            results_out,co_occ_scores,bleu_scores,sim_scores,vocab = evalA1(model)
             output_data['A1'] = results_out
 
             #plot co_occurence score distributions
@@ -351,6 +386,12 @@ def main():
             getToxicity('A1',model,'Gender',tC)
 
             df_co_occ.to_csv(output_path+model+'/A1_co_occ_scores.csv',sep=';')
+            tagged_vocab = [k for k in dM.tagged_words.keys() if k in vocab.keys()]
+
+
+            pd.DataFrame({'words':tagged_vocab,
+                          'tags':[dM.tagged_words[k] for k in tagged_vocab],
+                          'scores':[vocab[k] for k in tagged_vocab]}).to_csv(output_path+model+'/A1_co_occ_tagged.csv',sep=';')
             df_bleu.to_csv(output_path+model+'/A1_bleu_scores.csv',sep=';')
             df_sim.to_csv(output_path+model+'/A1_sim_scores.csv',sep=';')
 
