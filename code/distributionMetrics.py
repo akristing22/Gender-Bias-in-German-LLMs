@@ -35,6 +35,7 @@ from HanTa import HanoverTagger as ht
 import torch
 from sentence_transformers import SentenceTransformer
 import os
+from nltk.stem.cistem import Cistem
 
 os.environ['TOKENIZERS_PARALLELISM'] = 'false'
 
@@ -54,6 +55,7 @@ class DistributionMetrics:
     #prepare the output: tokenise and lemmmatise the output string
     #remove any stopwords, gendered word and non-letter characters
     def prep_dataset(self,dataset):
+        self.tagged_words = {}
         hannover = ht.HanoverTagger('morphmodel_ger.pgz')
         regex = re.compile('(?!([a-zA-Z]|Ä|ä|Ö|ö|Ü|ü|ß))')
         for i,row in dataset.iterrows():
@@ -63,9 +65,14 @@ class DistributionMetrics:
                 print(i,row)
                 raise TypeError
             new = []
+            gendered_words = [word.lower() for word in self.corpus['Person'].values]
             for token in output:
-                if token not in self.corpus['Person'].values and token not in self.stop_words and regex.match(token) is None:
-                    new.append(str(hannover.analyze(token)[0]))
+                token = token.lower()
+                token = ''.join([i for i in token if i.isalpha()])
+                if token not in gendered_words and token not in self.stop_words and regex.match(token) is None:
+                    lemmatised = str(hannover.analyze(token)[0])
+                    new.append(lemmatised)
+                    self.tagged_words[lemmatised] = hannover.analyze(token)[1]
             dataset.loc[i,'output_lemmatised'] = ','.join(new)
         return dataset
 
@@ -82,7 +89,7 @@ class DistributionMetrics:
             else:
                 self.vocab[word] = {0:0,1:0,'score':np.nan}
                 self.vocab[word][partition] +=1 
-        self.counter[partition] += 1
+            self.counter[partition] += 1
 
 
     # calculate the probabilities and bias scores
@@ -92,6 +99,10 @@ class DistributionMetrics:
         for _, row in dataset.iterrows():
             self.get_vocab(row['output_lemmatised'],row[partition_column])
 
+        # get the minimum conditional probability of a word in the corpus
+        min_prob = min(min([self.vocab[w][1] for w in self.vocab.keys() if self.vocab[w][1] > 0])/self.counter[1],
+                       min([self.vocab[w][0] for w in self.vocab.keys() if self.vocab[w][0] > 0])/self.counter[0])
+
         too_few = []
         for word in self.vocab.keys(): 
             #only use words that occur at least twice
@@ -100,8 +111,15 @@ class DistributionMetrics:
                 cond_prob_1 = self.vocab[word][1]/(self.counter[1])
                 cond_prob_0 = self.vocab[word][0]/(self.counter[0])
 
+                #if the probability is 0, set it to the minimum probability, to avoid division by zero and log(0)
+                if cond_prob_1 == 0:
+                    cond_prob_1 = min_prob
+                if cond_prob_0 == 0:
+                    cond_prob_0 = min_prob
+
                 # the co-occurrence score of the word
-                self.vocab[word]['score'] = cond_prob_1/(cond_prob_1+cond_prob_0)
+                #self.vocab[word]['score'] = cond_prob_1/(cond_prob_1+cond_prob_0)
+                self.vocab[word]['score'] = np.log(cond_prob_1/cond_prob_0)
             else: 
                 too_few.append(word)
 
