@@ -37,27 +37,24 @@ login_token = data['login_token_huggingface']
 
 #A1
 def get_Co_Occurrence_Scores(dataset,model):
-    dM = dm.DistributionMetrics(data_path)
     co_occurrence_scores = dM.get_bias_cos(pd.read_csv(output_path+model+'/'+dataset+'_output.csv',encoding='utf-8-sig',sep=';').dropna(subset=['output']))
     return co_occurrence_scores
 
 #A1
 def get_Bleu_Score(dataset,model):
-    dM = dm.DistributionMetrics(data_path)
     bleu_scores = dM.get_bias_bleu(pd.read_csv(output_path+model+'/'+dataset+'_output.csv',encoding='utf-8-sig',sep=';').dropna(subset=['output']))
     return bleu_scores
 
 #A1
 def getCosine(dataset,model):
-    dM = dm.DistributionMetrics(data_path)
     cosine_scores = dM.get_cosine(pd.read_csv(output_path+model+'/'+dataset+'_output.csv',encoding='utf-8-sig',sep=';').dropna(subset=['output']))
     return cosine_scores
 
 # get the predicted gender of the person generated in the output of llms (A2,A3)
-def getGender(dataset,model):
+def getGender(dataset,model,myLM):
     gc = classifiers.GenderClassifier(data_path)
     df = gc.extract_gender(pd.read_csv(output_path+model+'/'+dataset+'_output.csv',encoding='utf-8-sig',sep=';').dropna(subset=['output']))
-    df = gc.extract_gender_lm(df,lm.LM(model_path,'mistralai/Mistral-Nemo-Instruct-2407',login_token=login_token))
+    df = gc.extract_gender_lm(df,myLM)
     df.to_csv(output_path+model+'/'+dataset+'_output.csv',encoding='utf-8-sig',sep=';',index=False)
     size=df.shape[0]
     df = df[df['gender_class']==df['gender_class_lm']]
@@ -284,6 +281,12 @@ def evalB2(model):
 ######################################################################
 
 def main():
+
+    #define the model for gender extraction, only load once and use for all
+    global myLM
+    myLM = lm.LM(model_path,'mistralai/Mistral-Nemo-Instruct-2407',login_token=login_token)
+
+
     for model in tqdm(models):
         print(model)
         try:
@@ -297,6 +300,10 @@ def main():
         if 'A1' in datasets:
             print('A1')
             results_out,co_occ_scores,bleu_scores,sim_scores = evalA1(model)
+
+            global dM
+            dM = dm.DistributionMetrics(data_path)
+
             output_data['A1'] = results_out
 
             #plot co_occurence score distributions
