@@ -355,7 +355,7 @@ def main():
             df_co_occ = pd.DataFrame(co_occ)
             sns.kdeplot(df_co_occ,x="Scores",hue='Partition',common_norm=False,linewidth=2,bw_adjust=.75)
             plt.tight_layout()
-            plt.xlim(0,1)
+            plt.xlim(-5,5)
             plt.xlabel('Word scores')
             plt.savefig(output_path+model+'/GenderPersona_word_bias_distribution.png')
             plt.close()
@@ -383,7 +383,7 @@ def main():
 
             sns.kdeplot(df_sim,x="Scores",hue='Partition',common_norm=False,linewidth=2,bw_adjust=.75)
             plt.tight_layout()
-            plt.xlim(0,1)
+            plt.xlim(-0.25,1)
             plt.savefig(output_path+model+'/GenderPersona_cosine_similarity_distribution.png')
             plt.close()
 
