@@ -14,6 +14,7 @@ import seaborn as sns
 from scipy import stats
 from tqdm import tqdm
 import lm
+from sentence_transformers import SentenceTransformer
 importlib.reload(dm)
 importlib.reload(classifiers)
 
@@ -48,7 +49,7 @@ def get_Bleu_Score(dataset,model):
 
 #GenderPersona
 def getCosine(dataset,model):
-    cosine_scores = dM.get_cosine(pd.read_csv(output_path+model+'/'+dataset+'_output.csv',encoding='utf-8-sig',sep=';').dropna(subset=['output']))
+    cosine_scores = dM.get_cosine(pd.read_csv(output_path+model+'/'+dataset+'_output.csv',encoding='utf-8-sig',sep=';').dropna(subset=['output']),embedding_model)
     return cosine_scores
 
 # get the predicted gender of the person generated in the output of llms (StereoPersona,NeutralPersona)
@@ -316,9 +317,14 @@ def evalSexistStatements(model):
 
 def main():
 
+    if 'GenderPersona' in datasets:
+        global embedding_model
+        embedding_model = SentenceTransformer("jinaai/jina-embeddings-v3", trust_remote_code=True,device='cuda',model_kwargs={'use_flash_attn':False})
+
     #define the model for gender extraction, only load once and use for all
-    global myLM
-    myLM = lm.LM(model_path,'mistralai/Mistral-Nemo-Instruct-2407',login_token=login_token)
+    if 'StereoPersona' in datasets or 'NeutralPersona' in datasets:
+        global myLM
+        myLM = lm.LM(model_path,'mistralai/Mistral-Nemo-Instruct-2407',login_token=login_token)
 
 
     for model in tqdm(models):

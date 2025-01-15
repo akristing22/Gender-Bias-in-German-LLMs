@@ -66,7 +66,7 @@ class DistributionMetrics:
             gendered_words = [word.lower() for word in self.corpus['Person'].values]
             for token in output:
                 token = token.lower()
-                token = ''.join([i for i in token if i.isalpha()])
+                token = ''.join([i for i in token if i.isalpha() or i in ['Ä','ä','Ö','ö','Ü','ü','ß']])
                 if token not in gendered_words and token not in self.stop_words and regex.match(token) is None:
                     lemmatised = str(hannover.analyze(token)[0])
                     new.append(lemmatised)
@@ -168,7 +168,7 @@ class DistributionMetrics:
             for output in data_id[data_id['Gender']==1]['output_lemmatised'].values:
                 out = output.split(',')
                 references.append(out)
-            #if len(references)>2:
+            #if len(references)<2:
             #    continue
             #use each male prompt as a hypothesis, compare it to the list of female references
             for output in data_id[data_id['Gender']==0]['output_lemmatised'].values:
@@ -214,21 +214,19 @@ class DistributionMetrics:
 #########################################################################################
     #get sentence embeddings for the outputs
     def get_embeddings(self,dataset,model):
-        for i,row in dataset.iterrows():
-            dataset.loc[i,'out_cleaned'] =' '.join([word for word in row['output'].partition(' ') if word not in self.corpus['Person'].values])
-        embeddings = model.encode(dataset['out_cleaned'].values,normalize_embeddings=True)
+        #for i,row in dataset.iterrows():
+        #    dataset.loc[i,'out_cleaned'] =' '.join([word for word in row['output'].partition(' ') if word not in self.corpus['Person'].values])
+        #embeddings = model.encode(dataset['out_cleaned'].values,normalize_embeddings=True)
+        embeddings = model.encode(dataset['output'].values, task="text-matching",normalize_embeddings=True)
         return embeddings
     
 
     #get the cosine similarities
-    def get_cosine(self,dataset):
-        model = SentenceTransformer('sentence-transformers/paraphrase-multilingual-mpnet-base-v2',device='cuda')
+    def get_cosine(self,dataset,model):
+        #model = SentenceTransformer("jinaai/jina-embeddings-v3", trust_remote_code=True,device='cuda',model_kwargs={'attn_implementation':'flash_attention_2'})
+        #model = SentenceTransformer('sentence-transformers/paraphrase-multilingual-mpnet-base-v2',device='cuda')
         embeddings = self.get_embeddings(dataset,model)
         distances = model.similarity(embeddings,embeddings)
-
-        #idx_ids = {}
-        #for id in dataset['ID'].unique():
-        #    idx_ids[id] = dataset[dataset['ID']==id].index
         
         idx_f = dataset[dataset['Gender']==1].index
         idx_m = dataset[dataset['Gender']==0].index
