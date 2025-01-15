@@ -24,6 +24,8 @@ login_token=data['login_token_huggingface']
 anthropic_api_key=data['anthropic_api_key']
 local_path=data['model_path']
 openai_api_key = data['openai_api_key']
+min_size = data['min_size']
+temperature = data['temperature']
 
 #for trial runs, e.g. for prompt engineering
 #use if you want to use a smaller test dataset
@@ -38,19 +40,15 @@ def get_datasets():
 
         dataset = pd.read_csv(data_path+dataset_name+'.csv',sep=';',encoding='utf-8-sig')
 
-        ########################################
-        #### IF YOU WANT MORE SAMPLES ##########
-        #### CHANGE NUMBER HERE ################
-        ########################################
-
-        #if dataset is smaller than 2000 prompts, multiply it
-        if dataset.shape[0] < 2000:
+        #if dataset is smaller than min_size prompts, multiply it
+        if dataset.shape[0] < min_size:
             original = dataset.copy()
-            for _ in range(0,int(np.floor(2000/dataset.shape[0]))):
+            for _ in range(0,int(np.floor(min_size/dataset.shape[0]))):
                 dataset = pd.concat([dataset,original],ignore_index=True)
 
         ########################################
         #### UNCOMMENT HERE WHEN SAMPLING ######
+        #### FOR TEST PURPOSES            ######
         ########################################
         #dataset = sample(dataset,10)
 
@@ -78,12 +76,15 @@ def get_output(model, datasets,batch=True):
 
         data = datasets[dataset]
 
+        #########################################################
+        #### IF YOU USE OTHER MODEL, ADD THE GENERATION HERE ####
+        #########################################################
         if batch and (type(model)==LM_Anthropic or type(model)==LM_OpenAI):
-            message_batch_ids[dataset]=model.batch_generate(data['full_prompt'].values,temperature=0.7,max_tokens=max_t)
+            message_batch_ids[dataset]=model.batch_generate(data['full_prompt'].values,temperature=temperature,max_tokens=max_t)
         elif not batch and type(model)==LM_OpenAI:
-            outputs = model.generate(data['full_prompt'].values,temperature=0.7,max_tokens=max_t)
+            outputs = model.generate(data['full_prompt'].values,temperature=temperature,max_tokens=max_t)
         else:
-            outputs = model.generate(data['full_prompt'].values,temperature=0.7,max_tokens=max_t)    
+            outputs = model.generate(data['full_prompt'].values,temperature=temperature,max_tokens=max_t)    
             data['output']=outputs
             datasets[dataset] = data
 
@@ -109,10 +110,14 @@ def main():
             Path(output_path+model).mkdir(parents=True,exist_ok=True)
 
         print(model)
+        ############################################################
+        ###### if using different model, add condition here ########
+        ###### and use your new lm class                    ########
+        ############################################################
         start1 = time.time()
-        if model == 'Claude':
+        if 'Claude' in model:
             myLM = LM_Anthropic(models[model],anthropic_api_key)
-        elif model =='GPT':
+        elif 'GPT' in model:
             myLM = LM_OpenAI(models[model],openai_api_key,file_path=(output_path+model+'/'))
         else: 
             myLM = LM(local_path,models[model],login_token)
