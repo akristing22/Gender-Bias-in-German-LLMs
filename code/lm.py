@@ -96,7 +96,7 @@ class LM:
             attention_mask = inputs['attention_mask']
             generated_ids = self.model.generate(inputs.input_ids,temperature=temperature, attention_mask=attention_mask, max_new_tokens=max_tokens,do_sample=True)
 
-            inputs = self.tokenizer.apply_chat_template(messages, add_generation_prompt=False, return_tensors="pt",padding=True,tokenize=True, return_dict=True, continue_final_message=True).to('cuda')
+            #inputs = self.tokenizer.apply_chat_template(messages, add_generation_prompt=False, return_tensors="pt",padding=True,tokenize=True, return_dict=True, continue_final_message=True).to('cuda')
 
             output = self.tokenizer.batch_decode(generated_ids, skip_special_tokens=True)
             outputs.extend([out.split('Antwort:')[-1] for out in output])
@@ -239,3 +239,18 @@ class LM_OpenAI:
         os.remove(file_name)      
 
         return batch_job.id
+
+
+#############################################################
+######## ADD CLASS HERE WHEN USING OTHER LMs ################
+#############################################################
+
+"""
+class LM_OTHER:
+
+    def __init__(self):
+
+    def generate(self):
+        
+        return outputs
+
