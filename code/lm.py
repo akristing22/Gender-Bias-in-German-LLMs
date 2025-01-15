@@ -254,3 +254,8 @@ class LM_OTHER:
         
         return outputs
 
+    def batch_generate(self):   
+
+        return batch_job.id
+    OR  return outputs
+"""
