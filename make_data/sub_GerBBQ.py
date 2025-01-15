@@ -1,12 +1,17 @@
-# fill in the templates from dataset B1
+# fill in the templates from dataset GerBBQ
 # fill the templates with names
 
 import pandas as pd
+import json
 
 #male=0, female=1
 #read all relevant files (templates, and substitutions)
-B1_templates = pd.read_csv('../data/B1_templates.csv',encoding='utf-8-sig',sep=';')
-Names = pd.read_csv('../data/Names.csv',encoding='utf-8-sig',sep=';')
+with open('settings.json', 'r') as file:
+    data = json.load(file)
+data_path = data['data_path']
+
+GerBBQ_templates = pd.read_csv(data_path+'GerBBQ_templates.csv',encoding='utf-8-sig',sep=';')
+Names = pd.read_csv(data_path+'Names.csv',encoding='utf-8-sig',sep=';')
 
 cols=['Ambiguous_Context',
         'Disambiguating_Context']
@@ -76,9 +81,9 @@ def sub(n1,n2,g1,g2,row):
 
 #substitute all name slots, in both possible order of names
 for f,m in zip(names_f,names_m):
-    for _,row in B1_templates.iterrows():
+    for _,row in GerBBQ_templates.iterrows():
         sub(f,m,1,0,row)
         sub(m,f,0,1,row)      
 
-B1 = pd.DataFrame(new)
-B1.to_csv('../data/B1.csv',index=False,encoding='utf-8-sig',sep=';')
+GerBBQ = pd.DataFrame(new)
+GerBBQ.to_csv(data_path+'GerBBQ.csv',index=False,encoding='utf-8-sig',sep=';')
