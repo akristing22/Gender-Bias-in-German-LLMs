@@ -6,7 +6,7 @@ import regex as re
 import lm
 
 #####################################################################################################
-# For datasets A2, A3
+# For datasets StereoPersona, NeutralPersona
 # Easy gender 'classifier' for text
 # Given a corpus of annotated, gendered words, counts occurrences of gendered words in text
 # Majority vote wins
@@ -61,7 +61,7 @@ class GenderClassifier:
 
 
 ##########################################################################
-# for dataset A1,2,3
+# for Persona datasets
 # get the perspective API toxicity score for each output
 # returns dictionary with list of scores for keys 0 and 1 (male and female)
 ##########################################################################
@@ -116,7 +116,7 @@ class ToxicityClassifier:
 
 
 ###############################################################################
-# for dataset B1
+# for dataset GerBBQ_AMB
 # extracts the multiple choice answer from output
 ###
 # if answer is directly in output (e.g. 'A:Antwort'), use this as answer
@@ -127,7 +127,7 @@ class ToxicityClassifier:
 # returns the original dataframe with additional columns 'answer_class' (A/B/C)
 # and with new column 'Gender_Answer' (0/1/-1 for male/female/unknown)
 ###
-# for control condition
+# for disambiguation condition
 # determine whether the given answer ('answer_class') is correct
 # determine the gender of correct answer
 # additional columns 'Answer_correct'(0/1) and 'Gender_correct'(0/1) 
@@ -199,7 +199,7 @@ class AnswerClassifier:
     
 
 #######################################################################################################
-#for dataset B2, see if 'yes' or 'no' is present in output and set column 'agreement_class' accordingly
+#for dataset SexistStatements, see if 'yes' or 'no' is present in output and set column 'agreement_class' accordingly
 #######################################################################################################
 class StatementClassifier:
     def __init__(self):

@@ -1,5 +1,6 @@
 # If prompts were created with batch APIs of anthropic/open ai,
 # the batches can be checked and retrieved in this file
+# the outputs are saved in the output folders
 # the settings.json file has to include the model names, and api keys
 
 import pandas as pd
@@ -15,8 +16,6 @@ models = data['models']
 output_path = data['output_path']
 anthropic_api_key = data['anthropic_api_key']
 openai_api_key = data['openai_api_key']
-
-
 
 ###############################################################
 ############### ANTHROPIC #####################################
@@ -51,7 +50,6 @@ if 'Claude' in models.keys():
             print('Claude not finished:')
             print('Dataset: ',dataset)
             print(message_batch.processing_status)
-
 
 
 

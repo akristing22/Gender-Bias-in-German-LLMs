@@ -69,11 +69,11 @@ def get_output(model, datasets,batch=True):
         print(dataset)
     
         #set different max_tokens for the datasets
-        if dataset in ['A1','A2','A3']:
+        if dataset in ['GenderPersona','StereoPersona','NeutralPersona']:
             max_t = 200
-        elif dataset in ['B1','B1_control']:
+        elif dataset in ['GerBBQ_AMB','GerBBQ_DIS']:
             max_t = 50
-        elif dataset == 'B2':
+        elif dataset == 'SexistStatements':
             max_t = 5
 
         data = datasets[dataset]

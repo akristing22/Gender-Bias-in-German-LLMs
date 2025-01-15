@@ -1,4 +1,4 @@
-# for dataset A1
+# for dataset GenderPersona
 # determines the metrics for distributional analysis
 # both scores are calculated three times:
 # 1) for the difference between gender ('Inter_Gender')
@@ -33,9 +33,7 @@ from nltk.translate.bleu_score import SmoothingFunction, sentence_bleu
 from nltk.tokenize import word_tokenize
 from HanTa import HanoverTagger as ht
 import torch
-from sentence_transformers import SentenceTransformer
 import os
-from nltk.stem.cistem import Cistem
 
 os.environ['TOKENIZERS_PARALLELISM'] = 'false'
 
@@ -238,17 +236,6 @@ class DistributionMetrics:
         sim_gender = []
         sim_female = []
         sim_male = []
-
-        '''for i in range(0,distances.size(dim=1)):
-            for j in range(i+1,distances.size(dim=1)):
-                common_id = [k for k, v in idx_ids.items() if (i in v and j in v)]
-                if len(common_id) > 0:
-                    if i in idx_m and j in idx_m:
-                        sim_male.append(distances[i][j].item())
-                    elif i in idx_f and j in idx_f:
-                        sim_female.append(distances[i][j].item())
-                    else:
-                        sim_gender.append(distances[i][j].item())'''
 
         for i in range(0,distances.size(dim=1)):
             for j in range(i+1,distances.size(dim=1)):
