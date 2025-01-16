@@ -17,7 +17,7 @@
 
     "model_path":"../models",
 
-    "datasets":["A1","A2","A3","B1","B1_control","B2"],
+    "datasets":["GenderPersona","StereoPersona","NeutralPersona","GerBBQ_AMB","GerBBQ_DIS","SexistStatements"],
 
     "data_path":"../data/",
 
