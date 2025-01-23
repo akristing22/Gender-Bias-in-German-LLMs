@@ -151,7 +151,7 @@ class DistributionMetrics:
     # 3) based on random partition in male prompts
     # return the scores as dictionary
     def get_bias_cos(self,dataset):
-        dataset = self.prep_dataset(dataset)
+        #dataset = self.prep_dataset(dataset)
 
         d_f = dataset[dataset['Gender']==1].copy()
         d_m = dataset[dataset['Gender']==0].copy()
@@ -215,7 +215,7 @@ class DistributionMetrics:
     # get bleu scores for 
     # distributional difference between gender and in each gender
     def get_bias_bleu(self, dataset):
-        dataset = self.prep_dataset(dataset)
+        #dataset = self.prep_dataset(dataset)
         d_f = dataset[dataset['Gender']==1]
         d_m = dataset[dataset['Gender']==0]
 
@@ -262,3 +262,11 @@ class DistributionMetrics:
         return {'Inter_Gender':sim_gender,
                 'Intra_Female':sim_female,
                 'Intra_Male':sim_male}
+    
+
+#################################################################################
+########## GET SCORES ###########################################################
+#################################################################################
+
+    def get_all_scores(self,dataset,embedding_model):
+
