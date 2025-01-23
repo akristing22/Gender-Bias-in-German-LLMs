@@ -56,6 +56,8 @@ class DistributionMetrics:
         self.tagged_words = {}
         hannover = ht.HanoverTagger('morphmodel_ger.pgz')
         regex = re.compile('(?!([a-zA-Z]|Ä|ä|Ö|ö|Ü|ü|ß))')
+        gendered_words = self.corpus['Person'].values
+
         for i,row in dataset.iterrows():
             try:
                 output = word_tokenize(row['output'])
@@ -63,14 +65,31 @@ class DistributionMetrics:
                 print(i,row)
                 raise TypeError
             new = []
-            gendered_words = [word.lower() for word in self.corpus['Person'].values]
             for token in output:
-                token = token.lower()
                 token = ''.join([i for i in token if i.isalpha() or i in ['Ä','ä','Ö','ö','Ü','ü','ß']])
                 if token not in gendered_words and token not in self.stop_words and regex.match(token) is None:
                     lemmatised = str(hannover.analyze(token)[0])
-                    new.append(lemmatised)
-                    self.tagged_words[lemmatised] = hannover.analyze(token)[1]
+                    if lemmatised not in gendered_words:
+                        tag = str(hannover.analyze(token)[1])
+
+                        # because lemmatiser keeps the female versions of proper nouns, remove '-in' endings for these
+                        if tag in ['NN','NNA'] and lemmatised[-2:] == 'in' and  hannover.analyze(lemmatised[0:-2])[1] in ['NN','NNA'] and lemmatised != 'Verein':
+                            lemmatised = lemmatised[0:-2]
+                        elif tag in ['NN','NNA'] and lemmatised[-1] == 'i' and  hannover.analyze(lemmatised[0:-1])[1] in ['NN','NNA']:
+                            lemmatised = lemmatised[0:-1]
+                        elif tag in ['NN','NNA'] and (lemmatised[-4:] == 'frau' or lemmatised[-4:] == 'mann'):
+                            lemmatised = lemmatised[:-4] + 'mensch'
+                        elif lemmatised == 'Schneiderin':
+                            lemmatised = 'Schneider'
+                        elif lemmatised == 'Tischleri':
+                            lemmatised = 'Tischler'
+                        elif lemmatised == 'Babysitterin':
+                            lemmatised = 'Babysitte'
+
+
+                            
+                        new.append(lemmatised)
+                        self.tagged_words[lemmatised] = tag
             dataset.loc[i,'output_lemmatised'] = ','.join(new)
         return dataset
 
@@ -214,17 +233,12 @@ class DistributionMetrics:
 #########################################################################################
     #get sentence embeddings for the outputs
     def get_embeddings(self,dataset,model):
-        #for i,row in dataset.iterrows():
-        #    dataset.loc[i,'out_cleaned'] =' '.join([word for word in row['output'].partition(' ') if word not in self.corpus['Person'].values])
-        #embeddings = model.encode(dataset['out_cleaned'].values,normalize_embeddings=True)
         embeddings = model.encode(dataset['output'].values, task="text-matching",normalize_embeddings=True)
         return embeddings
     
 
     #get the cosine similarities
     def get_cosine(self,dataset,model):
-        #model = SentenceTransformer("jinaai/jina-embeddings-v3", trust_remote_code=True,device='cuda',model_kwargs={'attn_implementation':'flash_attention_2'})
-        #model = SentenceTransformer('sentence-transformers/paraphrase-multilingual-mpnet-base-v2',device='cuda')
         embeddings = self.get_embeddings(dataset,model)
         distances = model.similarity(embeddings,embeddings)
         

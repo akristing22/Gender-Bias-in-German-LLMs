@@ -52,6 +52,12 @@ def getCosine(dataset,model):
     cosine_scores = dM.get_cosine(pd.read_csv(output_path+model+'/'+dataset+'_output.csv',encoding='utf-8-sig',sep=';').dropna(subset=['output']),embedding_model)
     return cosine_scores
 
+def getDistributionMetrics(dataset,model):
+    co_occurrence_scores,bleu_scores,cosine_scores = dM.get_all_scores(pd.read_csv(output_path+model+'/'+dataset+'_output.csv',encoding='utf-8-sig',sep=';').dropna(subset=['output']),embedding_model)
+    return co_occurrence_scores,bleu_scores,cosine_scores
+
+
+
 # get the predicted gender of the person generated in the output of llms (StereoPersona,NeutralPersona)
 def getGender(dataset,model,myLM):
     gc = classifiers.GenderClassifier(data_path)
@@ -181,9 +187,11 @@ def get_Agreement_scores(df):
 
 def evalGenderPersona(model):
 
+    co_occurrence_scores,bleu_scores,sim_scores = getDistributionMetrics('GenderPersona',model)
+
     results_out = {'co_occurrence':{},'bleu':{},'cosine':{}}
     #get the co-occurrence scores
-    co_occurrence_scores = get_Co_Occurrence_Scores('GenderPersona',model)
+    #co_occurrence_scores = get_Co_Occurrence_Scores('GenderPersona',model)
     co_occ_scores = {}
     for key in co_occurrence_scores.keys():
         vocab = co_occurrence_scores[key]
@@ -204,7 +212,7 @@ def evalGenderPersona(model):
 
 
     #get the bleu scores
-    bleu_scores = get_Bleu_Score('GenderPersona',model)
+    #bleu_scores = get_Bleu_Score('GenderPersona',model)
     results_out['bleu'] = {}
     for key in bleu_scores.keys():
         results_out['bleu'][key] = {'Mean':np.mean(bleu_scores[key]),'StD':np.std(bleu_scores[key])}
@@ -215,7 +223,7 @@ def evalGenderPersona(model):
             results_out['bleu'][key][key2]=bleu_statistics[key][key2]
 
     #get the cosine similarity scores
-    sim_scores = getCosine('GenderPersona',model)
+    #sim_scores = getCosine('GenderPersona',model)
     for key in sim_scores.keys():
         results_out['cosine'][key] = {'StD':np.std(sim_scores[key]), 'Mean':np.mean(sim_scores[key])}
 
