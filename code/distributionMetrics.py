@@ -270,3 +270,5 @@ class DistributionMetrics:
 
     def get_all_scores(self,dataset,embedding_model):
 
+        df_prepped = self.prep_dataset(dataset)
+        return self.get_bias_cos(df_prepped),self.get_bias_bleu(df_prepped),self.get_cosine(dataset,embedding_model)
