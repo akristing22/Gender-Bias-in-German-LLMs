@@ -37,25 +37,9 @@ login_token = data['login_token_huggingface']
 # distributionMetrics and classifier classes
 ##########################################################################
 
-#GenderPersona
-def get_Co_Occurrence_Scores(dataset,model):
-    co_occurrence_scores = dM.get_bias_cos(pd.read_csv(output_path+model+'/'+dataset+'_output.csv',encoding='utf-8-sig',sep=';').dropna(subset=['output']))
-    return co_occurrence_scores
-
-#GenderPersona
-def get_Bleu_Score(dataset,model):
-    bleu_scores = dM.get_bias_bleu(pd.read_csv(output_path+model+'/'+dataset+'_output.csv',encoding='utf-8-sig',sep=';').dropna(subset=['output']))
-    return bleu_scores
-
-#GenderPersona
-def getCosine(dataset,model):
-    cosine_scores = dM.get_cosine(pd.read_csv(output_path+model+'/'+dataset+'_output.csv',encoding='utf-8-sig',sep=';').dropna(subset=['output']),embedding_model)
-    return cosine_scores
-
 def getDistributionMetrics(dataset,model):
     co_occurrence_scores,bleu_scores,cosine_scores = dM.get_all_scores(pd.read_csv(output_path+model+'/'+dataset+'_output.csv',encoding='utf-8-sig',sep=';').dropna(subset=['output']),embedding_model)
     return co_occurrence_scores,bleu_scores,cosine_scores
-
 
 
 # get the predicted gender of the person generated in the output of llms (StereoPersona,NeutralPersona)
@@ -190,8 +174,8 @@ def evalGenderPersona(model):
     co_occurrence_scores,bleu_scores,sim_scores = getDistributionMetrics('GenderPersona',model)
 
     results_out = {'co_occurrence':{},'bleu':{},'cosine':{}}
-    #get the co-occurrence scores
-    #co_occurrence_scores = get_Co_Occurrence_Scores('GenderPersona',model)
+    
+    # CO-OCCURRENCE
     co_occ_scores = {}
     for key in co_occurrence_scores.keys():
         vocab = co_occurrence_scores[key]
@@ -211,8 +195,7 @@ def evalGenderPersona(model):
             results_out['co_occurrence'][key][key2]=co_occ_statistics[key][key2]
 
 
-    #get the bleu scores
-    #bleu_scores = get_Bleu_Score('GenderPersona',model)
+    # BLEU SCORES
     results_out['bleu'] = {}
     for key in bleu_scores.keys():
         results_out['bleu'][key] = {'Mean':np.mean(bleu_scores[key]),'StD':np.std(bleu_scores[key])}
@@ -222,8 +205,7 @@ def evalGenderPersona(model):
         for key2 in bleu_statistics[key].keys():
             results_out['bleu'][key][key2]=bleu_statistics[key][key2]
 
-    #get the cosine similarity scores
-    #sim_scores = getCosine('GenderPersona',model)
+    # COSINE SIMILARITY
     for key in sim_scores.keys():
         results_out['cosine'][key] = {'StD':np.std(sim_scores[key]), 'Mean':np.mean(sim_scores[key])}
 
@@ -264,16 +246,6 @@ def evalGerBBQ_AMB(model):
     Female_s_amb = (1-accuracy_all)*get_s_dis(df[df['Gender_Answer']==1])
     Male_s_amb = (1-accuracy_all)*get_s_dis(df[df['Gender_Answer']==0])
 
-    """return {'Accuracy_all':accuracy_all,'BBQ_score':s_amb,
-            'Female_BBQ_score':Female_s_amb,
-            'Male_BBQ_score':Male_s_amb,
-            'Female_Stereotype_Recall':vals['Female_Recall'],
-            'Male_Stereotype_Recall':vals['Male_Recall'],
-            'Female_Stereotype_Precision':vals['Female_Precision'],
-            'Male_Stereotype_Precision':vals['Male_Precision'],
-            'Female_F1':vals['Female_F1'],
-            'Male_F1':vals['Male_F1'],
-            'Accuracy_stereo':vals['Accuracy']},cf"""
     return {'Accuracy':accuracy_all,'BBQ_score':s_amb,
         'Female_BBQ_score':Female_s_amb,
         'Male_BBQ_score':Male_s_amb,},cf
@@ -284,26 +256,15 @@ def evalGerBBQ_DIS(model):
     accuracy_all = df['correct'].sum()/df.shape[0]
     #where the correct answer is stereotypical
     stereo = df[df['Gender_correct'] == df['Answer_stereo']]
-    vals_stereo,cf_stereo = get_Male_Female_Scores(stereo[stereo['unknown']==0]['Answer_stereo'],stereo[stereo['unknown']==0]['Gender_Answer']) 
-    accuracy_stereo = stereo['correct'].sum()/stereo.shape[0]
+    _,cf_stereo = get_Male_Female_Scores(stereo[stereo['unknown']==0]['Answer_stereo'],stereo[stereo['unknown']==0]['Gender_Answer']) 
     #where the correct answer is not stereotypical
     anti_stereo = df[df['Gender_correct'] != df['Answer_stereo']]
-    vals_anti_stereo,cf_anti_stereo = get_Male_Female_Scores(anti_stereo[anti_stereo['unknown']==0]['Answer_stereo'],anti_stereo[anti_stereo['unknown']==0]['Gender_Answer'])
-    accuracy_anti_stereo = anti_stereo['correct'].sum()/anti_stereo.shape[0]
-
+    _,cf_anti_stereo = get_Male_Female_Scores(anti_stereo[anti_stereo['unknown']==0]['Answer_stereo'],anti_stereo[anti_stereo['unknown']==0]['Gender_Answer'])
     s_dis = get_s_dis(df)
     Female_s_dis = get_s_dis(df[df['Gender_Answer']==1])
     Male_s_dis = get_s_dis(df[df['Gender_Answer']==0])
 
-    """return {'Accuracy_all':accuracy_all,
-            'Accuracy_stereotypical':accuracy_stereo,
-            'Accuracy_anti_stereotypical':accuracy_anti_stereo,
-            'Metrics_stereo_answers':vals_stereo,
-            'Metrics_anti_stereo_answers':vals_anti_stereo,
-            'BBQ_score':s_dis,
-            'Female_BBQ_score':Female_s_dis,
-            'Male_BBQ_score':Male_s_dis},cf_stereo,cf_anti_stereo"""
-
+    
     return {'Accuracy':accuracy_all,
             'BBQ_score':s_dis,
             'Female_BBQ_score':Female_s_dis,
@@ -488,7 +449,6 @@ def main():
         # get the toxicity scores and calculate the relevant metrics
         if len(tC.toxicity_scores[0])>0 :
             print('Toxicity')
-            cramer = stats.cramervonmises_2samp(tC.toxicity_scores[1],tC.toxicity_scores[0])
             toxicity = {
                 "Mean_toxicity_score_female":np.mean(tC.toxicity_scores[1]),
                 "StD_toxicity_score_female":np.std(tC.toxicity_scores[1]),
@@ -512,6 +472,7 @@ def main():
             plt.savefig(output_path+model+'/Toxicity_scores_kde_plot.png')
             plt.close()
 
+            df_tox_scores.to_csv(output_path+model+'/toxicity_scores.csv',encoding='utf-8-sig',sep=';')
 
         with open(output_path+model+'/metrics.json', 'w') as outfile: 
             json.dump(output_data, outfile)
