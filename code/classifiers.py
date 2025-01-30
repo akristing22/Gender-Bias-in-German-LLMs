@@ -95,7 +95,7 @@ class ToxicityClassifier:
             print()
             try:
                 if E.error_details[0]['reason'] == "RATE_LIMIT_EXCEEDED":
-                    time.sleep(0.1)
+                    time.sleep(1)
                     score = self.get_score(output)
                 else:
                     score = None
