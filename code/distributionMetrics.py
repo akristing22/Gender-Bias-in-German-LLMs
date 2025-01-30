@@ -74,17 +74,16 @@ class DistributionMetrics:
 
                         # because lemmatiser keeps the female versions of proper nouns, remove '-in' endings for these
                         if tag in ['NN','NNA'] and lemmatised[-2:] == 'in' and  hannover.analyze(lemmatised[0:-2])[1] in ['NN','NNA'] and lemmatised != 'Verein':
-                            lemmatised = lemmatised[0:-2]
+                            lemmatised = hannover.analyze(lemmatised[0:-2])[0]
                         elif tag in ['NN','NNA'] and lemmatised[-1] == 'i' and  hannover.analyze(lemmatised[0:-1])[1] in ['NN','NNA']:
-                            lemmatised = lemmatised[0:-1]
+                            lemmatised = hannover.analyze(lemmatised[0:-1])[0]
                         elif tag in ['NN','NNA'] and (lemmatised[-4:] == 'frau' or lemmatised[-4:] == 'mann'):
                             lemmatised = lemmatised[:-4] + 'mensch'
                         elif lemmatised == 'Schneiderin':
                             lemmatised = 'Schneider'
                         elif lemmatised == 'Tischleri':
                             lemmatised = 'Tischler'
-                        elif lemmatised == 'Babysitterin':
-                            lemmatised = 'Babysitte'
+                            
 
 
                             
