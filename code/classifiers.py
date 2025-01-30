@@ -48,7 +48,7 @@ class GenderClassifier:
 
         outputs = model.generate(prompts,5,0.7)
 
-        for i,output in enumerate(outputs):
+        for i,output in zip(df.index,outputs):
             df.loc[i,'gender_output'] = output.strip()
             if 'W' in output:
                 df.loc[i,'gender_class_lm'] = 1
