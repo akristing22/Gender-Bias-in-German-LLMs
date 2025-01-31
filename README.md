@@ -12,4 +12,4 @@ Two datasets include Q&A tasks:
 - GerBBQ+
 - SexistStatements
 
-A comprehensive description of the datasets, metrics and implementation can be found in the [pdf file of my thesis](['Gender Bias in German LLMs.pdf'](https://github.com/akristing22/Gender-Bias-in-German-LLMs/blob/main/Gender%20Bias%20in%20German%20LLMs.pdf))
+A comprehensive description of the datasets, metrics and implementation can be found in the (['thesis file'](https://github.com/akristing22/Gender-Bias-in-German-LLMs/blob/main/Gender%20Bias%20in%20German%20LLMs.pdf))
