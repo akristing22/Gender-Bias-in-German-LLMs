@@ -19,4 +19,4 @@ Huggingface login token, and api keys can be specified here.
 
 Currently, models supported by the AutoModelForCausalLM class of Huggingface's transfomer library, and models reachable via Anthropic and OpenAI APIs can be used. When applying other models, use the data files directly for generation, or adapt the [lm.py](https://github.com/akristing22/Gender-Bias-in-German-LLMs/blob/main/code/lm.py) file (and [generate_output.py](https://github.com/akristing22/Gender-Bias-in-German-LLMs/blob/main/code/generate_output.py). 
 
-
+The GenderPersona dataset is a translation and extension of the HONEST dataset of [Nozza et al](https://doi.org/10.18653/v1/2021.naacl-main.191). The GerBBQ+ dataset is mainly a translation of the BBQ dataset of [Parrish et al](https://doi.org/10.18653/v1/2022.findings-acl.165).
