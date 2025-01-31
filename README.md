@@ -12,4 +12,11 @@ Two datasets include Q&A tasks:
 - GerBBQ+
 - SexistStatements
 
-A comprehensive description of the datasets, metrics and implementation can be found in the [thesis file](https://github.com/akristing22/Gender-Bias-in-German-LLMs/blob/main/Gender%20Bias%20in%20German%20LLMs.pdf)
+A comprehensive description of the datasets, metrics and implementation can be found in chapters 4,5 and 6 the [thesis file](https://github.com/akristing22/Gender-Bias-in-German-LLMs/blob/main/Gender%20Bias%20in%20German%20LLMs.pdf).
+
+The [settings file](https://github.com/akristing22/Gender-Bias-in-German-LLMs/blob/main/code/settings.json) can be edited to specify models and datasets that should be applied.
+Huggingface login token, and api keys can be specified here.
+
+Currently, models supported by the AutoModelForCausalLM class of Huggingface's transfomer library, and models reachable via Anthropic and OpenAI APIs can be used. When applying other models, use the data files directly for generation, or adapt the [lm.py](https://github.com/akristing22/Gender-Bias-in-German-LLMs/blob/main/code/lm.py) file (and [generate_output.py](https://github.com/akristing22/Gender-Bias-in-German-LLMs/blob/main/code/generate_output.py). 
+
+
